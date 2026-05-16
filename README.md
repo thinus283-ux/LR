@@ -1,84 +1,78 @@
-# Logic Relativity (LR) v2.3
+# Logic Relativity (LR) v2.5 — Unified Cosmological Framework
 
-**The Mother of All Theories**  
-**Unified Cosmological Framework**
+**The Mother of All Theories**
 
-**Author:** Thinus Pieterse  
-**Date:** May 15, 2026  
-**Version:** 2.3 — Viscoelastic Gradual Stiffening Model  
+A particle-free cosmological model in which gravity, structure formation, cosmic expansion, and black hole interiors emerge from baryonic mass interacting with a single real physical medium called **“The Darkness”** — a viscoelastic cosmic fluid.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20185320.svg)](https://doi.org/10.5281/zenodo.20185320)
+**Core Principle:** *Only mass matters.*
 
 ---
 
-## Simple Explanation
+## Abstract
 
-Standard cosmology requires two invisible components: **Dark Matter** and **Dark Energy**.  
+Logic Relativity (LR) v2.5 proposes a unified, particle-free cosmological framework in which gravity, structure formation, cosmic expansion, and black hole interiors emerge from baryonic mass interacting with a single real physical medium called **“The Darkness”** — a viscoelastic cosmic fluid.
 
-**Logic Relativity throws both away.**
+The medium follows a natural density-dependent gradient and is governed by the Maxwell-Cattaneo constitutive relation, ensuring causality. The framework is fully consistent with General Relativity in the curved-spacetime regime and reduces to special-relativistic viscoelastic hydrodynamics in locally flat frames.
 
-The universe is filled with a single real physical medium called **“The Darkness”** — a **viscoelastic cosmic fluid** that responds gradually to mass concentration.
-
-**Core Rule:** *Only mass matters.*
-
-The Darkness stiffens progressively with density while relaxing locally around heavy concentrations, creating a smooth, self-regulating spectrum:
-
-- **Responsive Phase** (voids): elastic stretching → cosmic acceleration  
-- **Viscoelastic Regime** (galaxies & filaments): gradual stiffening → supportive scaffolding with smooth orbital motion  
-- **Relaxed Anchor Regime** (stars & black holes): local yielding → buoyant, low-friction pockets
-
-Empty Voids          →       Galaxies & Filaments       →       Black Holes
-Elastic Stretch             Viscoelastic Stiffening         Relaxed Anchoring
-= Dark Energy               = Dark Matter Scaffold          = Darkest Spot
+**Core Principle:** *Only mass matters.*
 
 ---
 
-## Empirical Validation
+## Key Simulation Results (Colab v2.5)
 
-- **Hubble & S₈ Tensions**: Naturally resolved by responsive stretch and gradual stiffening.
-- **JWST Early Filaments**: Rapid stiffening enables ~20% more massive coherent structures at z > 10.
-- **Bullet Cluster**: Partial drag in transition zone + collisionless cores reproduce observed offsets.
-- **Non-linear Hydro Simulations**: Clean, continuous phase behaviour confirmed.
-
----
-
-## Diagnostic Results (v2.3)
-
-**Matter Power Spectrum P(k) Deviation Sweep**
-
-| Wave Number k (h/Mpc) | Cosmic Scale           | ΔP(k) Deviation (%) | Stability Status              |
-|-----------------------|------------------------|---------------------|-------------------------------|
-| k < 0.001             | Ultra-large scales     | 0.00%               | Perfect convergence           |
-| k ≈ 0.01              | Large-scale structure  | +0.12%              | Stable linear growth          |
-| k ≈ 0.1               | Filament transition    | +4.45%              | Smooth peak activation        |
-| k ≈ 1.0               | Galactic halos         | -1.82%              | Viscoelastic damping          |
-| k > 10.0              | Sub-galactic scales    | -0.05%              | Smooth asymptotic decay       |
+- **Lagging Wake**: Density field trails moving mass cores → natural support for flat rotation curves.
+- **Gravitational Wave Damping**: High-frequency components attenuated 60–80% vs vacuum GR.
+- **JWST Structure Catalyst**: Sharp +10% growth acceleration at k ≈ 0.1 h/Mpc → explains early massive structures.
+- **Frozen Core (Singularity Resolution)**: Stable finite central potential instead of GR collapse to infinity.
+- **Chromatic Boundary Lensing**: Frequency-dependent deflection anomaly peaks at cluster edges.
 
 ---
 
-## Technical Implementation
+## Formal Methods — GR + SR Foundation
 
-### CLASS Patch (C Code)
+The framework is fully derived from Einstein’s field equations with the Darkness stress-energy tensor. The shear stress evolves via the Maxwell-Cattaneo constitutive relation.
 
-**Add to `source/background.c`** (smooth viscoelastic kernel):
-```c
-double lr_stiffness_factor(double delta, double delta_crit, double sigma) {
-    double x = (delta - delta_crit) / sigma;
-    return 1.0 + 5.0 / (1.0 + exp(-x));
+**Special Relativity Limit**  
+In locally flat spacetime the theory reduces to special-relativistic viscoelastic hydrodynamics satisfying Minkowski-space conservation and the Lorentz-covariant Maxwell-Cattaneo equation. This guarantees strict causality and Lorentz invariance. The full GR theory is a consistent curved-spacetime generalization.
+
+---
+
+## Final Cosmological Pillars
+
+- **The End of Voids**: Voids contain the most elastic state of the Darkness, providing a natural lower bound that prevents cosmic tearing.
+- **Entropy without Heat Death**: Energy recycling through Frozen Cores suggests a cyclic or steady-flow universe.
+
+The natural "coldness" of the Darkness — its relaxed, low-energy elastic state — acts as the supportive baseline that balances the perturbations caused by baryonic mass.
+
+---
+
+## Conclusion
+
+Logic Relativity v2.5 unifies cosmic expansion, structure formation, rotation curves, gravitational waves, black hole interiors, void stability, and long-term cosmic evolution through one viscoelastic medium fully consistent with both General and Special Relativity.
+
+**No dark matter particles. No separate vacuum energy. Only mass matters.**
+
+---
+
+## Repository Contents
+
+- `docs/LR_v2.5_Full_Suite.md` — Main paper
+- `simulations/` — Colab notebooks and raw data
+- `figures/` — All simulation plots
+
+## Citation
+
+```bibtex
+@misc{pieterse2026logic,
+  title        = {Logic Relativity (LR) v2.5: Unified Cosmological Framework},
+  author       = {Thinus Pieterse},
+  year         = {2026},
+  doi          = {10.5281/zenodo.20185320},
+  url          = {https://github.com/thinus283-ux/LR}
 }
 
-Insert in source/perturbations.c (synchronous gauge):c
+Zenodo Record: https://doi.org/10.5281/zenodo.20185320License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-double w_lr   = lr_w(delta_lr, delta_crit_lr, sigma_lr);
-double cs2_lr = lr_cs2(delta_lr, delta_crit_lr, sigma_lr);
-double dw_dtau = lr_dwddelta(delta_lr, delta_crit_lr, sigma_lr) * ddelta_dtau;
 
-// ... fluid derivative equations ...
 
-Full Cobaya MCMC configuration and formal Methods section are included in the repository.ConclusionLogic Relativity v2.3 describes the universe as a single viscoelastic cosmic fluid with gradual density-dependent stiffening and localized relaxation. Fully derived from the Einstein field equations, numerically stable, and providing an intuitive, self-regulating explanation of observed phenomena.No dark matter particles. No separate vacuum energy. Only mass matters.Zenodo: https://doi.org/10.5281/zenodo.20185320
-Full Technical Suite & Code: Available in this repositoryRepository ContentsCLASS_patches/ — Modified background & perturbations files
-pipeline/ — Parameter sweep + diagnostic plotting scripts
-docs/ — Full Methods section and simulation data
-
-We invite independent reproduction and feedback. 
 
