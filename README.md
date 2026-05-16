@@ -252,5 +252,4 @@ The single viscoelastic medium naturally resolves multiple long-standing issues 
 - **Linear perturbations & CLASS integration:** Full Boltzmann code runs completed, showing preserved CMB peak structure with viscoelastic damping in P(k)
 - **Major tensions addressed:** Hubble tension and \(S_8\) tension resolved within the same single-medium framework
 - **Remaining challenge:** Achieving full quantitative agreement with Planck CMB (peak amplitudes, damping tail, polarization) and BBN constraints through further parameter optimization
-
-**v4.0 builds directly on v3.5.1 and v2.5**, unifying the original covariant action formulation with explicit cosmological validation via CLASS, timescale mathematics, radial vortex decay, thermodynamic consistency, and unified mechanical pictures.** All prior galactic-scale simulations remain fully compatible. The theory operates entirely within General Relativity using one physical medium — “The Darkness”.
+.**v4.0 builds directly on v3.5.1 and v2.5**, unifying the original covariant action formulation with explicit cosmological validation via CLASS, timescale mathematics, radial vortex decay, thermodynamic consistency, and unified mechanical pictures. All prior galactic-scale simulations remain fully compatible. The theory operates entirely within General Relativity using one physical medium — “The Darkness”.
