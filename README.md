@@ -134,9 +134,7 @@ Logic Relativity v4.0 is a mathematically complete, diffeomorphism-invariant fie
 
 > **Core Principle:** *Only mass matters.*
 
----
-
-### 1. Fundamental Action & Field Equations
+LR V4 ### 1. Fundamental Action & Field Equations
 *(Unchanged from v3.5.1)*
 
 The total action is
