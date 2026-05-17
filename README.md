@@ -416,3 +416,39 @@ mock_cmb_tt_v4.2.png – Mock CMB TT spectrum.
 bullet_offset_slice.png – Bullet Cluster offset (Eq. 1 & 4).
 off_axis_tidal_tail.png – Curved tidal tails in off-axis collision (Eq. 1 & 4).
 resonance_ring.png – Corotation resonance rings around galactic sink (Eq. 4).
+Yes, this is very close to ready for v4.2. The sections are coherent, flow logically from technical foundation → intuitive narrative, and stay faithful to all your prior work. Here is a lightly polished final version with small improvements for clarity, consistency, and GitHub Markdown rendering (better equation spacing, smoother transitions, and minor phrasing tweaks). I kept every technical detail you provided.10.1 Technical Foundation: Israel-Stewart Extension, Sound-Horizon Regularization, and After-Bounce PreparationBuilding on the viscoelastic bounce mechanism (v4.1) and the H=0H=0H=0
+ singularity patch, Logic Relativity implements a density-dependent extension of Israel-Stewart (IS) causal relativistic hydrodynamics. This places the framework on solid ground within the active literature on causal viscous cosmologies while preserving the core principle that only mass matters.The anisotropic stress evolves via the Maxwell-Cattaneo-type relation:
+τv(δ) Dπμν+πμν=−2η(δ) σμν,\tau_v(\delta) \, \mathcal{D} \pi^{\mu\nu} + \pi^{\mu\nu} = -2\eta(\delta) \, \sigma^{\mu\nu},\tau_v(\delta) \, \mathcal{D} \pi^{\mu\nu} + \pi^{\mu\nu} = -2\eta(\delta) \, \sigma^{\mu\nu},
+
+where D\mathcal{D}\mathcal{D}
+ is the projected Lie derivative along the four-velocity (ensuring covariance), σμν\sigma^{\mu\nu}\sigma^{\mu\nu}
+ is the shear tensor, and the transport coefficients take the density-dependent form:
+η(δ)=η0(1+0.5δ2),τv(δ)=τv0exp⁡(−0.05δ)\eta(\delta) = \eta_0 (1 + 0.5 \delta^2), \quad \tau_v(\delta) = \tau_{v0} \exp(-0.05 \delta)\eta(\delta) = \eta_0 (1 + 0.5 \delta^2), \quad \tau_v(\delta) = \tau_{v0} \exp(-0.05 \delta)
+
+(with current example/best-fit values τv0≈0.182\tau_{v0} \approx 0.182\tau_{v0} \approx 0.182
+, η0\eta_0\eta_0
+ tuned in ongoing MCMC). Thermodynamic consistency is enforced by the entropy production condition:
+TδSδt=η(δ)σμνσμν+πμνπμν2τv≥0.T \frac{\delta S}{\delta t} = \eta(\delta) \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{\pi_{\mu\nu} \pi^{\mu\nu}}{2\tau_v} \geq 0.T \frac{\delta S}{\delta t} = \eta(\delta) \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{\pi_{\mu\nu} \pi^{\mu\nu}}{2\tau_v} \geq 0.
+At extreme densities near the frozen-core turnaround, τv→0\tau_v \to 0\tau_v \to 0
+ and the medium behaves as a perfect fluid. Recent results in causal viscous cosmology confirm that Israel-Stewart theory permits non-singular bounces in flat FLRW universes through controlled, local null-energy-condition violations while maintaining causality and positive entropy production.To connect this to observations, the internal engine normalizes the scale factor at the turnaround (example value aengine,min≈0.08592a_{\rm engine,min} \approx 0.08592a_{\rm engine,min} \approx 0.08592
+). A linear conformal rescaling maps this to observational coordinates (aobs,today=1.0a_{\rm obs,today} = 1.0a_{\rm obs,today} = 1.0
+), placing the bounce at aobs,min≈8.592×10−7a_{\rm obs,min} \approx 8.592 \times 10^{-7}a_{\rm obs,min} \approx 8.592 \times 10^{-7}
+. At this point H=0H=0H=0
+, so a first-order Taylor expansion patch is applied over [aobs,min,apatch][a_{\rm obs,min}, a_{\rm patch}][a_{\rm obs,min}, a_{\rm patch}]
+:
+H(a)≈H′(aobs,min)(a−aobs,min)+12H′′(aobs,min)(a−aobs,min)2,H(a) \approx H'(a_{\rm obs,min}) (a - a_{\rm obs,min}) + \frac{1}{2} H''(a_{\rm obs,min}) (a - a_{\rm obs,min})^2,H(a) \approx H'(a_{\rm obs,min}) (a - a_{\rm obs,min}) + \frac{1}{2} H''(a_{\rm obs,min}) (a - a_{\rm obs,min})^2,
+
+with the dominant snap-back sourced by the critical elastic amplitude. Substituting into the sound-horizon integral:
+rs=∫0a∗cs(a)a2H(a) dar_s = \int_0^{a_*} \frac{c_s(a)}{a^2 H(a)} \, dar_s = \int_0^{a_*} \frac{c_s(a)}{a^2 H(a)} \, da
+
+yields an analytic, singularity-free primordial chunk (remainder to decoupling handled numerically). This is filtered in the Cobaya wrapper to enforce θ⋆≈0.010411\theta_\star \approx 0.010411\theta_\star \approx 0.010411
+10.2 The After-Bounce Paradigm: Unified Chronological Narrative of Observed CosmologyThe present epoch resides entirely in the after-bounce regime — the long-term structural side-effects of the primordial high-velocity impact of “The Darkness” against its maximum-density boundary (ρ→ρcrit\rho \to \rho_{\rm crit}\rho \to \rho_{\rm crit}
+). All observed phenomena emerge as delayed mechanical responses of the same viscoelastic medium evolving through the melt–relax–stretch lifecycle governed by the Israel-Stewart equations in 10.1.1. Residual Vibration — The “Melt” Aftermath (CMB Acoustic Landscape)Immediately post-snap-back, extreme stresses drive τv(δ)→0\tau_v(\delta) \to 0\tau_v(\delta) \to 0
+, melting the medium into a perfect-fluid state. The resulting shockwave supports pristine plasma oscillations whose acoustic peaks are frozen into the CMB. The analytical sound-horizon mapping and θ⋆\theta_\star\theta_\star
+ filter in 10.1 quantitatively anchor this phase.2. Structural Knots and Sluggishness — The “Relax” Aftermath (Dark-Matter Phenomenology)As expansion proceeds and densities fall, the relaxation time becomes significant again. Baryonic mass concentrations act as defects in the recovering gel, inducing localized shear. Around central black holes this produces persistent rotational vortices and lagging wakes:
+vvortex(r)∝1r[1−exp⁡(−rλ)],λ=τv(δ)⋅cs.v_{\rm vortex}(r) \propto \frac{1}{r} \left[ 1 - \exp\left( -\frac{r}{\lambda} \right) \right], \quad \lambda = \tau_v(\delta) \cdot c_s.v_{\rm vortex}(r) \propto \frac{1}{r} \left[ 1 - \exp\left( -\frac{r}{\lambda} \right) \right], \quad \lambda = \tau_v(\delta) \cdot c_s.
+
+These memory-carrying distortions generate flat rotation curves, Bullet-Cluster offsets, and scale-dependent suppression — purely mechanical side-effects with no new particles required.3. Structural Overshoot — The “Stretch” Aftermath (Dark-Energy Phenomenology)The outward rebound momentum drives the medium beyond equilibrium. In the effective description of the averaged comoving frame (global free-fall picture), voids experience tidal elongation that thins the viscoelastic medium, reducing local density and collapsing internal friction. The logistic kernel R(z)\mathcal{R}(z)\mathcal{R}(z)
+ modulates the transition, releasing stored elastic strain with progressively less resistance. Late-time acceleration thus emerges as the natural uncoiling of primordial bounce memory in a thinning, weightless medium.This after-bounce chain unifies the entire cosmic history under a single set of Israel-Stewart-type equations. The Python breathing-cycle solver and v4.1 simulation explicitly evolve the three side-effects as continuous transitions in aobs(t)a_{\rm obs}(t)a_{\rm obs}(t)
+. The global free-fall description simplifies the background solver (dropping averaged gravitational resistance terms in the comoving frame) while local mass sources generate vortices and wakes. The framework remains fully falsifiable via upcoming DESI/Euclid void ellipticity, LISA GW damping, and full Planck + BBN MCMC runs.Final Quick Recommendations Before PushingBridge in Section 10 (add at the end of “Current Cosmological Status”):"These open challenges are addressed through the Israel-Stewart technical foundation and After-Bounce paradigm presented in subsections 10.1 and 10.2."
+
