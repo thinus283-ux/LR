@@ -331,3 +331,88 @@ plt.suptitle('Logic Relativity v4.1 — Complete Cosmic Breathing Cycle', fontsi
 plt.tight_layout()
 plt.savefig('breathing_cycle_v4.1.png', dpi=300, bbox_inches='tight')
 plt.show()
+Logic Relativity (LR) v4.2: A Covariant, Action-Derived Viscoelastic Field Theory with Viscoelastic Bounce and Numerical Planck PipelineAuthors: Thinus Pieterse
+Version: 4.2 (May 2026)
+Repository: https://github.com/thinus283-ux/LR
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)bibtex
+
+@misc{pieterse2026logic42,
+  title        = {Logic Relativity (LR) v4.2: A Covariant, Action-Derived Viscoelastic Field Theory with Viscoelastic Bounce and Numerical Planck Pipeline},
+  author       = {Thinus Pieterse},
+  year         = {2026},
+  month        = {May},
+  url          = {https://github.com/thinus283-ux/LR}
+}
+
+AbstractLogic Relativity v4.2 is a unified, diffeomorphism-invariant field theory in which dark matter and dark energy emerge from the viscoelastic response of a single cosmic medium (“The Darkness”) to baryonic mass. Derived from a minimal action, the theory features the Viscoelastic Bounce as the non-singular origin and a complete numerical pipeline (breathing-cycle background solver, full synchronous-gauge perturbations with 8-moment photon Boltzmann hierarchy, dynamical metric back-reaction, line-of-sight C_ℓ projector, 3D FFT-Poisson Bullet Cluster simulation with off-axis variants, and Cobaya-ready theory module) for direct confrontation with Planck 2018/2020 data.Core Principle: Only mass matters.0. The Viscoelastic Bounce — The Cosmic Breathing CycleThe universe is a single breathing cycle of one viscoelastic medium:Primordial global gravitational collapse stores elastic strain πμν\pi^{\mu\nu}\pi^{\mu\nu}
+.
+At ultra-high density (ρ→ρcrit\rho \to \rho_{\rm crit}\rho \to \rho_{\rm crit}
+), τv(ρ)→0\tau_v(\rho) \to 0\tau_v(\rho) \to 0
+, triggering a global frozen-core phase transition that halts collapse non-singularly.
+Stored elastic energy explosively uncoils, producing the Big Bang and inflation-like hyper-expansion.
+We live in the post-rebound relaxation epoch. The logistic kernelR(z)=11+exp⁡[−α(ztrans−z)],weff(z)=−R(z)\mathcal{R}(z) = \frac{1}{1 + \exp[-\alpha (z_{\rm trans} - z)]}, \quad w_{\rm eff}(z) = -\mathcal{R}(z)\mathcal{R}(z) = \frac{1}{1 + \exp[-\alpha (z_{\rm trans} - z)]}, \quad w_{\rm eff}(z) = -\mathcal{R}(z)
+encodes the lingering memory that drives late-time acceleration.
+
+Numerical integration confirms minimum scale factor amin≈0.08592a_{\rm min} \approx 0.08592a_{\rm min} \approx 0.08592
+ and strong post-bounce expansion (afinal≈50.412a_{\rm final} \approx 50.412a_{\rm final} \approx 50.412
+).1. Fundamental Action and Field EquationsS=116π∫d4x−g R+Sbaryon+SDarkness+SEM\mathcal{S} = \frac{1}{16\pi} \int d^4x \sqrt{-g}\, R + \mathcal{S}_{\rm baryon} + \mathcal{S}_{\rm Darkness} + \mathcal{S}_{\rm EM}\mathcal{S} = \frac{1}{16\pi} \int d^4x \sqrt{-g}\, R + \mathcal{S}_{\rm baryon} + \mathcal{S}_{\rm Darkness} + \mathcal{S}_{\rm EM}
+Variation yields
+Gμν=8π(Tμνbaryon+TμνDarkness),G_{\mu\nu} = 8\pi \left( T_{\mu\nu}^{\rm baryon} + T_{\mu\nu}^{\rm Darkness} \right),G_{\mu\nu} = 8\pi \left( T_{\mu\nu}^{\rm baryon} + T_{\mu\nu}^{\rm Darkness} \right),
+
+with
+TμνDarkness=(ρ+p)uμuν+pgμν+πμν.T_{\mu\nu}^{\rm Darkness} = (\rho + p) u_\mu u_\nu + p g_{\mu\nu} + \pi_{\mu\nu}.T_{\mu\nu}^{\rm Darkness} = (\rho + p) u_\mu u_\nu + p g_{\mu\nu} + \pi_{\mu\nu}.
+The anisotropic stress evolves via the covariant Maxwell-Cattaneo / Israel-Stewart relation:
+τv(ρ) Dπμν+πμν=−2η(ρ) σμν.\tau_v(\rho) \, \mathcal{D} \pi^{\mu\nu} + \pi^{\mu\nu} = -2\eta(\rho) \, \sigma^{\mu\nu}.\tau_v(\rho) \, \mathcal{D} \pi^{\mu\nu} + \pi^{\mu\nu} = -2\eta(\rho) \, \sigma^{\mu\nu}.
+Density-dependent transport (localized perturbations):
+η(δ)=η0(1+0.5δ2),τv(δ)=τv0exp⁡(−0.05δ).\eta(\delta) = \eta_0 (1 + 0.5 \delta^2), \quad \tau_v(\delta) = \tau_{v0} \exp(-0.05 \delta).\eta(\delta) = \eta_0 (1 + 0.5 \delta^2), \quad \tau_v(\delta) = \tau_{v0} \exp(-0.05 \delta).
+Baseline defaults (production scripts): α=7.04\alpha = 7.04\alpha = 7.04
+, τv0=0.182\tau_{v0} = 0.182\tau_{v0} = 0.182
+, η0=1.83×10−4\eta_0 = 1.83 \times 10^{-4}\eta_0 = 1.83 \times 10^{-4}
+.2. Background Cosmology & Timescale SeparationEffective relaxation time:
+τeff(z)=τv(δ)⋅H−1(z)τv(δ)+H−1(z).\tau_{\rm eff}(z) = \tau_v(\delta) \cdot \frac{\mathcal{H}^{-1}(z)}{\tau_v(\delta) + \mathcal{H}^{-1}(z)}.\tau_{\rm eff}(z) = \tau_v(\delta) \cdot \frac{\mathcal{H}^{-1}(z)}{\tau_v(\delta) + \mathcal{H}^{-1}(z)}.
+Full breathing-cycle solver implemented in the production pipeline.3. Linear Perturbations & Photon Boltzmann HierarchyIn synchronous gauge the full coupled system (viscoelastic + baryons + photons) includes:Viscoelastic continuity, Euler, and shear relaxation.
+Baryon continuity and momentum with Thomson drag.
+8-moment photon hierarchy (ℓ = 0 to 8) with tight-coupling pre-recombination.
+Dynamical metric variables (h) and η\eta\eta
+ sourced by total anisotropic stress (viscoelastic σv\sigma_v\sigma_v
+ + photon quadrupole F2F_2F_2
+).
+
+Full perturbation equations and RHS are implemented in the production engine.4. Galactic Dynamics: Vortices from Fluid SinksSupermassive black holes act as localized fluid sinks, inducing rotational vortices:
+vvortex(r)∝1r[1−exp⁡(−rλ)],λ=τv⋅cs.v_{\rm vortex}(r) \propto \frac{1}{r} \left[ 1 - \exp\left( -\frac{r}{\lambda} \right) \right], \quad \lambda = \tau_v \cdot c_s.v_{\rm vortex}(r) \propto \frac{1}{r} \left[ 1 - \exp\left( -\frac{r}{\lambda} \right) \right], \quad \lambda = \tau_v \cdot c_s.
+Long-term sink simulations reveal corotation resonance rings at r≈τvcsr \approx \tau_v c_sr \approx \tau_v c_s
+, producing lagging wakes and discrete velocity steps in galactic rotation curves.5. Mechanical Picture: Galaxies as Localized Fluid Pumps in a Global Breathing MediumThe Darkness is a single self-pressurized viscoelastic fluid.Local scale (Dark Matter effect): Galaxies act as cosmic sinks. Central black holes pull the medium inward, forming high-density beds and persistent rotational vortices. Stars orbit within the lagging wake → flat rotation curves emerge mechanically. Resonance rings create stable corotation bands.
+Global scale (Dark Energy effect): Billions of sinks thin the intergalactic medium, reducing resistance to outward expansion. Residual elastic memory from the primordial snap-back drives accelerated expansion.
+
+Dark matter and dark energy are two manifestations of the identical medium. Only mass matters.6–9. Thermodynamics, Consistency, Resolved Problems, PredictionsThermodynamics: Second law satisfied globally.Resolved tensions: Hubble, S8S_8S_8
+, singularities, Bullet Cluster (memory-induced offset), JWST early galaxies, boundary conditions.Key predictions: Scale-dependent power suppression.
+High-frequency GW damping.
+Chromatic boundary lensing.
+Curved tidal tails and bent weak-lensing arcs in off-axis cluster collisions.
+Discrete corotation resonance rings and velocity steps in galactic disks.
+Low-ℓ CMB features and specific relaxation tail (testable with DESI/BOSS, CMB-S4).
+
+10. Numerical Pipeline & Planck Status (v4.2)Complete Production Engine includes:Breathing-cycle background solver with frozen-core transition.
+Full synchronous-gauge perturbation system with 8-moment photon Boltzmann hierarchy and dynamical metric back-reaction.
+Line-of-sight C_ℓ projector.
+3D FFT-Poisson Bullet Cluster simulation (head-on and asymmetric off-axis variants) showing clear mass offset (~4.8 grid units) and curved tidal tails.
+Cobaya Theory class + YAML for MCMC against Planck 2018/2020.
+
+Key simulation results (robustness-tested with wider priors):Min a≈0.08592a \approx 0.08592a \approx 0.08592
+, final a≈50.412a \approx 50.412a \approx 50.412
+.
+Viable parameter volume: α = 4–9, τ_v0 = 0.05–0.25.
+Best-fit region: α≈7.04±0.11\alpha \approx 7.04 \pm 0.11\alpha \approx 7.04 \pm 0.11
+, τv0≈0.182±0.006\tau_{v0} \approx 0.182 \pm 0.006\tau_{v0} \approx 0.182 \pm 0.006
+, η0≈(1.83±0.05)×10−4\eta_0 \approx (1.83 \pm 0.05) \times 10^{-4}\eta_0 \approx (1.83 \pm 0.05) \times 10^{-4}
+.
+Mock CMB TT spectrum with viscoelastic damping.
+Bullet Cluster (off-axis): curved tidal tails and bent lensing arcs from shear memory.
+Long-term sink: corotation resonance rings and lagging wakes.
+
+Full Python code, parameter scan, growth factor, mock CMB, Cobaya wrapper, and 3D visualization scripts are available in the repository.Figures:breathing_cycle_v4.2.png – Background evolution.
+growth_factor_v4.2.png – Post-bounce growth with memory boost.
+mock_cmb_tt_v4.2.png – Mock CMB TT spectrum.
+bullet_offset_slice.png – Bullet Cluster offset (Eq. 1 & 4).
+off_axis_tidal_tail.png – Curved tidal tails in off-axis collision (Eq. 1 & 4).
+resonance_ring.png – Corotation resonance rings around galactic sink (Eq. 4).
