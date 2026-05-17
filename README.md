@@ -516,9 +516,44 @@ Comprehensive tests confirm the robustness of the v4.3 safeguards.
 Long-term integrations (Forward Euler, Corrected Euler, Symplectic Verlet) show **100% numerical stability** (no NaNs/Infs). A monotonic increase in kinetic energy is observed across all schemes. This is a **physical** viscoelastic relaxation effect consistent with the After-Bounce Paradigm (ongoing outward momentum redistribution). It will be balanced by coupling to a Poisson gravity solver in v4.4.
 
 **Full verification notebooks** are available in `/simulations/v4.3_stability_tests/`.
+MCMC Pipeline Development - Cobaya + Strong Viscoelastic Likelihood (May 2026)Status: Fully operational & production-grade in Google Colab
+Latest Update: 17 May 2026 — Stronger physics model + high-statistics runs (50k–100k samples)OverviewA robust Cobaya MCMC framework for constraining the viscoelastic vacuum substrate parameters (α, τ_v0, η₀, β) within the Structural Plenitude Theory (SPT).Key AchievementsStable Colab environment with automated package handling and robust chain loading.
+Advanced ViscoelasticLikelihood class with strong inter-parameter couplings.
+Enhanced physics model including viscosity damping, structural memory, cross-coupling, and non-linear terms.
+High-statistics runs with tight convergence (R-1 < 0.01).
+Derived parameter theta_star automatically computed and tracked.
+Publication-quality triangle plots and LaTeX tables via GetDist.
 
+Parameter SpaceParameter
+Description
+Prior Range
+Reference Value
+alpha
+Viscoelastic scaling factor
+[0.0, 0.5]
+0.12
+tau_v0
+Baseline relaxation time
+[0.01, 2.0]
+0.182
+eta0
+Intrinsic viscosity coefficient
+[0.0, 1.0]
+0.2
+beta
+Power-law structural exponent
+[0.25, 0.65]
+0.45
+theta_star
+Derived acoustic scale
+—
+~0.010411
 
+Current ResultsSharp posterior contours with clear degeneracies (especially α–τ_v0 and η₀–β).
+Well-constrained theta_star distribution.
+Excellent mixing in high-statistics runs.
 
+Repository Filesnotebooks/colab_strong_viscoelastic_mcmc.ipynb — Main production notebook
+src/viscoelastic_likelihood.py — Standalone likelihood class
+results/plots/triangle_strong.png — Latest high-statistics figure
 
-
-  
