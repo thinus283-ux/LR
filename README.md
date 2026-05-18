@@ -117,12 +117,12 @@ $$
   author       = {Thinus Pieterse},
   year         = {2026},
   month        = {May},
-  doi          = {10.5281/zenodo.YOUR_NEW_DOI_HERE},
+  doi          ={10.5281/zenodo.YOUR_NEW_DOI_HERE},
   url          = {https://github.com/thinus283-ux/LR},
   note         = {Version 3.5.1 — Full Covariant Action Formulation}
 }
 
-Zenodo Record: https://doi.org/10.5281/zenodo.**YOUR_NEW_DOI_HERE**
+Zenodo Record: https://doi.org/10.5281/zenodo.
 License: Creative Commons Attribution 4.0 International (CC BY 4.0)
  
 ## Logic Relativity (LR) v4.0: A Covariant, Action-Derived Viscoelastic Field Theory Replacing the Dark Sector
