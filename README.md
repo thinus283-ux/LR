@@ -883,3 +883,130 @@ $$
   year         = {2026},
   url          = {https://github.com/thinus283-ux/LR}
 }
+# Logic Relativity (LR) v4.4 — Geometric Memory Cosmology
+### The Universe as Self-Regulating Torsional Funnel Geometry
+
+**Author:** Thinus Pieterse  
+**Version:** v4.4 (May 2026)  
+**Repository:** https://github.com/thinus283-ux/LR  
+**Core Principle:** *Only mass matters.* The cumulative distribution of baryonic mass naturally induces localized, piecewise conic deformations in the spacetime fabric. These self-regulating torsional funnels emerge dynamically from a galaxy’s total mass. On cosmic scales the entire universe travels with **Cosmic Super Inertia** through vacuum — the origin of observed zero-G.  
+
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+## Abstract
+Logic Relativity v4.4 is a fully diffeomorphism-invariant framework built on general relativity. Large-scale gravitational phenomena arise as geometric consequences of ordinary baryonic mass distributions. Piecewise conic torsional funnels produce flat rotation curves. Black holes act as extreme anchors that punch narrow throats through the funnel, forming whirlpool-like vortices before pinching off. On the largest scales the cosmos coasts with **Cosmic Super Inertia**, while planets behave as gyroscopes riding this perfect inertial flow. All effects remain purely geometric, first-order, and ghost-free.
+
+## Cosmic Super Inertia — The Global Zero-G Ride
+The entire universe was launched in the primordial blast and now coasts through vacuum with **Cosmic Super Inertia**.  
+
+> **The Falling Box Analogy:** A sealed box moving at constant velocity in perfect vacuum contains a rock, a feather, and a coin — all appear frozen in mid-air to an internal observer. There is no drag, no differential forces. This is why space feels zero-G.
+
+## 1. Fundamental Action
+$$
+\mathcal{S} = \frac{1}{16\pi} \int d^4x \sqrt{-g}\, R + \mathcal{S}_{\rm baryon} + \mathcal{S}_{\rm geom} + \mathcal{S}_{\rm EM}
+$$
+
+**Geometric Term:**
+$$
+\mathcal{L}_{\rm geom} = -\frac{1}{2} g^{\mu\nu} \nabla_\mu \phi \nabla_\nu \phi - V(\phi, \delta_{\rm total}) + \frac{\lambda}{2} \mathcal{K}_{\alpha\beta} \mathcal{K}^{\alpha\beta}
+$$
+where the projective tensor (ensuring ghost-free propagation) is
+$$
+\mathcal{K}_{\mu\nu} = \nabla_\mu \phi \nabla_\nu \phi - \frac{1}{4} g_{\mu\nu} (\nabla^\lambda \phi)(\nabla_\lambda \phi).
+$$
+
+The explicit smoothed potential is
+$$
+V(\phi, \delta) = \frac{V_0}{2} \left[1 + \tanh\left(\frac{\delta - \delta_{\rm thresh}}{\sigma}\right)\right] \phi^2 + \frac{\beta}{4} \phi^4.
+$$
+
+## 2. Explicit Localized Metric for Galactic Funnels
+$$
+ds^2 = -e^{2\Phi(r)} \, dt^2 + e^{2\Lambda(r)} \, dr^2 + r^2 d\Omega^2.
+$$
+In the weak-field wide-mouth region the effective potential is
+$$
+\Phi(r) = \frac{v_0^2}{c^2} \ln\left(\frac{r}{r_0}\right) + C_1 + \frac{C_2}{r^2} + \mathcal{O}\left(\frac{1}{r^4}\right),
+$$
+yielding the circular velocity
+$$
+v^2(r) = r \frac{d\Phi}{dr} c^2 \approx v_0^2 \left(1 + \frac{2C_2}{r^2 \ln(r/r_0)}\right) \to v_0 \quad (\text{constant at large } r).
+$$
+Numerical validation confirms flat curves at ~220 km/s. The spatial component satisfies
+$$
+e^{2\Lambda(r)} \approx e^{-2\Phi(r)} \left(1 + \frac{8\pi G}{c^4} \int_0^r s T_{00}^{\rm geom}(s) \, ds \right)
+$$
+in the wide-mouth limit, ensuring consistency with null geodesics and weak lensing.
+
+## 3. Master Equations
+**Einstein Equation:**
+$$
+G_{\mu\nu} = 8\pi (T_{\mu\nu}^{\rm baryon} + T_{\mu\nu}^{\rm geom}),
+$$
+where
+$$
+T_{\mu\nu}^{\rm geom} = \partial_\mu \phi \partial_\nu \phi - \frac{1}{2} g_{\mu\nu} (\partial \phi)^2 + \text{projective } \mathcal{K}\text{-terms}.
+$$
+
+**Embedding Equation:**
+$$
+\Box \phi + \frac{\partial V}{\partial \phi} = -S(\delta_{\rm total}).
+$$
+In static spherical coordinates this reduces to the Poisson-like form
+$$
+\frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{d\phi}{dr} \right) = -S(\delta_{\rm total}).
+$$
+Conservation holds automatically:
+$$
+\nabla_\mu T^{\mu\nu}_{\rm geom} = 0.
+$$
+
+**Global Cosmic Super Inertia:** On scales much larger than individual funnels the background metric is flat and the universe coasts with perfect collective motion.
+
+## 4. Linear Perturbations & CMB Compatibility
+In synchronous gauge:
+$$
+\delta \ddot{\phi} + 3\mathcal{H} \delta \dot{\phi} + \left( k^2 + m_{\rm eff}^2(\phi) \right) \delta\phi = - \delta S(\bar{\delta}_{\rm total}),
+$$
+where
+$$
+m_{\rm eff}^2(\phi) = \frac{\partial^2 V}{\partial \phi^2} = V_0 \left[1 + \tanh(\cdots)\right] + \text{higher-order terms}.
+$$
+This couples cleanly to the standard Boltzmann hierarchy and supports the observed acoustic peaks.
+
+## 5. Core Geometric Mechanism: Torsional Funnels & Black Holes
+Baryonic mass distributions carve wide-mouthed funnels. Stars ride uniform linear slopes, yielding flat rotation curves.
+
+**Black Holes — Narrow Throat & Whirlpool Pinch-Off**  
+When sufficient mass concentrates at the center, the singularity becomes extreme enough to punch a narrow throat through the funnel. Matter and geometry accelerate through this constricted region, forming a vortex-like whirlpool as the rapid central flow meets the slower, wider body of the surrounding funnel.  
+
+At extreme densities the Frozen-Core threshold (\( V(\phi, \delta) \to \infty \)) causes the throat to pinch off cleanly. This geometrically isolates the interior, regularizes the core, and causes the singularity to disappear into darkness while the outer wide mouth (governed by total galactic mass) continues to support the flat rotation curve.
+
+## 6. Planets as Gyroscopes Riding Cosmic Super Inertia
+Each planet is a spinning gyroscope coasting inside the global inertial flow. Local funnels (anchored by central black holes) provide gentle guiding torques that preserve axial tilt, produce precession, and maintain spin-orbit alignment.
+
+## 7. Early-Universe Structure
+Dense monolithic clouds undergo direct collapse, rapidly carving deep funnels with central black hole throats.
+
+## 8. Late-Universe Evolution
+Distributed mass sustains funnels. Lateral relaxation drives acceleration while gyroscopic rigidity preserves planetary stability.
+
+## 9. Timeline Narrative
+The primordial blast launches the cosmos into **Cosmic Super Inertia**. Early direct collapse creates black holes that punch narrow throats and form whirlpool vortices in the first funnels. Later, galactic funnels and planetary gyroscopes maintain local order while the global inertial coast continues — the reason space feels zero-G. Funnels form dynamically from total mass, with black holes providing extreme central pinch-off.
+
+## 10. Numerical Validation
+- Flat rotation curves from total baryonic mass (outer funnel).  
+- Smooth transitions with negligible tidal forces.  
+- Black hole throat deepening and pinch-off consistent with non-singular cores.  
+- Gyroscopic stability confirmed.  
+
+Full validation notebooks (`LR_v4.4_Validation.ipynb` and `Master_Breakthroughs.ipynb`) are available in the repository.
+
+**Citation (v4.4):**
+```bibtex
+@misc{pieterse2026logic44,
+  title        = {Logic Relativity (LR) v4.4: Geometric Memory Cosmology — Self-Regulating Torsional Funnel Geometry},
+  author       = {Thinus Pieterse},
+  year         = {2026},
+  url          = {https://github.com/thinus283-ux/LR}
+}
