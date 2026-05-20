@@ -1238,18 +1238,24 @@ MOAT v4.5 — Mother Of All Theories},
   author       = {Thinus Pieterse},
   year         = {2026},
   url          = {[https://github.com/thinus283-ux/LR]
-## Key Simulation Visuals (v4.x)
+# Logic Relativity (LR) v4.x
 
-### Hubble Tension Resolution
-![H(z)](figures/hz_comparison_publication.png)  
-*Late-time boost from the viscoelastic logistic kernel while preserving early-universe behavior.*
+**A viscoelastic single-medium framework ("The Darkness") unifying dark matter, dark energy, and resolving multiple cosmological tensions.**
 
-### S₈ / Clustering Tension
-![P(k)](figures/pk_suppression_publication.png)  
-*Scale-dependent suppression from viscoelastic memory effects.*
+**"Only mass matters"**
 
-### Galactic Rotation Curves
-![Rotation Curve](figures/rotation_curve_publication.png)  
-*Flat curves from central vortex + lagging wakes (no dark matter particles required).*
+## Key Results (May 2026)
 
-**All plots generated from the same Colab notebook** — see `simulations/LR_visual_tests.ipynb`
+### Optimized H(z) Fit on Real Data
+- **LR χ² = 4.28** (p-value ≈ 0.978)  
+- **ΛCDM χ² = 6.27**  
+**Best parameters**: α=0.50, z_trans=3.0, H₀≈69.52, Ω_m=0.25
+
+![H(z) Summary](figures/LR_summary_3panel.png)
+
+### All Tests Overview
+![3-Panel Summary](figures/LR_summary_3panel.png)
+
+- **Hubble Tension**: Late-time boost via logistic kernel — beats ΛCDM on real Cosmic Chronometers + Pantheon+ data.
+- **S₈ / Clustering Tension**: Scale-dependent suppression from viscoelastic memory.
+- **Galactic Rotation Curves**: Flat curves from central vortex + lagging wakes (no dark matter particles needed).
