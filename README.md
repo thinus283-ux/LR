@@ -1237,5 +1237,19 @@ If you use this framework or the numerical solvers in your research, please cite
 MOAT v4.5 — Mother Of All Theories},
   author       = {Thinus Pieterse},
   year         = {2026},
-  url          = {[https://github.com/thinus283-ux/LR](https://github.com/thinus283-ux/LR)}
-}
+  url          = {[https://github.com/thinus283-ux/LR]
+## Key Simulation Visuals (v4.x)
+
+### Hubble Tension Resolution
+![H(z)](figures/hz_comparison_publication.png)  
+*Late-time boost from the viscoelastic logistic kernel while preserving early-universe behavior.*
+
+### S₈ / Clustering Tension
+![P(k)](figures/pk_suppression_publication.png)  
+*Scale-dependent suppression from viscoelastic memory effects.*
+
+### Galactic Rotation Curves
+![Rotation Curve](figures/rotation_curve_publication.png)  
+*Flat curves from central vortex + lagging wakes (no dark matter particles required).*
+
+**All plots generated from the same Colab notebook** — see `simulations/LR_visual_tests.ipynb`
