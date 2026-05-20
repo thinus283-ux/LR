@@ -1269,3 +1269,69 @@ MOAT v4.5 — Mother Of All Theories},
 **Single viscoelastic medium ("The Darkness") successfully addresses background constraints while resolving late-time tensions.**
 
 ![Summary](figures/LR_summary_3panel.png)
+# Logic Relativity (LR) — The MOAT  
+**Mother of All Theories**
+
+**A Viscoelastic Single-Medium Framework Unifying Cosmology**
+
+*"Only mass matters"* — One cosmic medium ("The Darkness") that explains dark matter, dark energy, Hubble tension, S₈ tension, flat rotation curves, early galaxy formation (JWST), orbital decay, and more from first principles.
+
+## Abstract (MOAT Vision)
+Logic Relativity (LR) is a covariant viscoelastic extension of General Relativity. Using a projected Lie derivative for covariance, a logistic relaxation kernel, and Israel-Stewart-like causal hydrodynamics, a single medium naturally produces both dark matter-like and dark energy-like behavior from baryonic mass alone.
+
+**This is the MOAT — the Mother of All Theories** — an ambitious attempt at unification through irreversible thermodynamics and viscoelasticity.
+
+## Key Results (May 2026)
+
+- **Hubble Tension**: MCMC posterior H₀ = 70.75⁺².⁷⁹₋².⁴⁵ km/s/Mpc with χ² = 4.28 on Cosmic Chronometers + Pantheon+ data (competitive with / better than baseline ΛCDM).
+- **S₈ Tension**: Strong scale-dependent suppression via viscoelastic memory (χ² ≈ 12.93).
+- **Galactic Dynamics**: Central vortex + lagging wakes produce flat rotation curves without dark matter particles (optimized joint fit).
+- **Early Universe**: Tight-coupling protection (τ_v → 0 at high density/redshift) preserves BBN abundances (Yp ≈ 0.247, D/H consistent) and CMB acoustic peaks.
+- **Background Evolution**: Smooth transition from early radiation era to late-time acceleration.
+- **Growth & Structure**: Late damping helps S₈ while early boost supports JWST early massive galaxies.
+- **CMB Power Spectrum & Polarization**: CLASS/CAMB runs show preserved acoustic peaks with high-ℓ damping from viscoelastic memory/anisotropic stress.
+- **Strong-Field Tests**: 5D geodesic orbital decay induced by shear-stiffening vacuum substrate drag (non-linear drag consistent with cosmic expansion).
+
+**MCMC Corner Plot** (H(z) posterior):  
+![MCMC Corner](figures/mcmc_corner_plot.png)
+
+## Master Test Summary
+![MOAT Master Summary](figures/MOAT_master_summary.png)
+
+**Full CLASS/CAMB CMB Test** (TT + EE/TE polarization):  
+![CMB TT + Polarization](figures/full_cmb_polarization_master.png)  
+**Key observation**: Acoustic peaks preserved at low-to-mid multipoles (tight-coupling protected), high-ℓ damping from viscoelastic memory.
+
+**Joint H0–S₈ Contour**  
+![H0–S₈ Resolution](figures/h0_s8_joint_contour.png)
+
+**Strong-Field Geodesic Decay**  
+![Orbital Decay](figures/joint_geodesic_cosmological.png)
+
+**Distinctive Predictions**:
+- Chromatic boundary lensing (multi-wavelength)
+- High-frequency gravitational wave damping (LISA-relevant)
+- Non-singular Frozen Cores
+- Stable cosmic voids
+
+## Repository Contents
+- `simulations/LR_master_tests.ipynb` — All tests, MCMC, CLASS/CAMB runs, geodesic simulations, plots in one reproducible notebook
+- `figures/` — Complete set of publication-style figures (H(z), P(k), rotation curves, CMB TT + polarization, master summary, H0–S₈ contour, geodesic decay, etc.)
+- Mathematical formulation (projected Lie derivative, logistic kernel, vortex mechanism, non-linear substrate drag, etc.) inside the notebook
+
+## How to Explore the MOAT
+1. Open `LR_master_tests.ipynb` in Google Colab
+2. Run all cells
+3. Explore the `figures/` folder
+
+**"The Darkness"** — a single viscoelastic cosmic medium that does it all.
+
+**Status**: Independent research by Thinus Pieterse (Pretoria, ZA). Full CLASS integration, perturbation hierarchy, and strong-field simulations in progress.
+
+**Keywords**: Mother of All Theories, Viscoelastic Cosmology, Hubble Tension, S₈ Tension, Unified Dark Sector, Modified Gravity, Causal Hydrodynamics, Irreversible Thermodynamics, Orbital Decay
+
+---
+
+**Comments, criticism, and collaboration are warmly welcome.**
+
+Last updated: May 20, 2026
