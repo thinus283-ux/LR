@@ -1,54 +1,21 @@
-# Logic Relativity (LR) v3.1.5
+# Logic Relativity (LR) v4.4
 
-**A covariant viscoelastic cosmological framework** ("The Darkness" as single medium).
-  
-**Logic Relativity v3.1.5** — Core numerical development.
+**A covariant viscoelastic cosmological framework** based on a single medium ("The Darkness").
 
-### Core Update in v3.1.5 the viscoelastic anisotropic stress tensor **π^{μν}** using the Maxwell-Cattaneo-type relation from the action:
-
-τ_v(δ) 𝒟π^{μν} + π^{μν} = -2η(δ) σ^{μν}
-
-with **density-dependent relaxation time** τ_v(δ):  
-- Thicker / faster-relaxing near baryonic matter  
-- Thins out with distance from matter 
-
-This produces lagging wakes and flat rotation curves more directly from the theory, instead of ad-hoc fitting functions.
-# Logic Relativity (LR) v3.1.5
-
-**A covariant viscoelastic cosmological framework** ("The Darkness" as single medium).
-  
-**Logic Relativity v3.1.5** — Core numerical development.
-
-### Core Update in v 3.1.5
+**v4.4 Core Development (20 May 2026)**  
 We are now directly solving the viscoelastic anisotropic stress tensor **π^{μν}** using the Maxwell-Cattaneo-type relation from the action:
 
 τ_v(δ) 𝒟π^{μν} + π^{μν} = -2η(δ) σ^{μν}
 
-with **density-dependent relaxation time** τ_v(δ):  
-- Thicker / faster-relaxing near baryonic matter  
-- Thins out with distance from matter  
+with **density-dependent relaxation time τ_v(δ)**: thicker and faster-relaxing near baryonic matter, thinning out with distance.
 
-This produces lagging wakes and flat rotation curves more directly from the theory, instead of ad-hoc fitting functions.
+**Key Improvement in v4.4:**  
+Rotation curves now emerge from first-principles integration of the stress evolution (core numerical solver) rather than ad-hoc wake + vortex functions. The medium naturally produces lagging wakes on galactic scales while relaxing quickly on planetary scales.
 
-**Status:**  
-The core solver is stable and produces rising inner curves with flattening at large radii. Quantitative SPARC matching is in progress (χ² being reduced). The single-medium viscoelastic approach maintains strong scale separation.
+**Current Status:**  
+The core solver is stable and produces rising inner profiles with flattening at large radii. Quantitative SPARC matching is ongoing (χ² being reduced). The single-medium viscoelastic approach maintains strong scale separation.
 
-**Key Predictions (unchanged):**
-- Flat rotation curves via lagging wakes (no DM particles)
-- Hubble tension resolution via breathing cycle / phase transition
-- S8 tension via scale-dependent damping
-- Chromatic boundary lensing
-- Frozen cores in black holes
-  
-
-
-
-
-
-**Darkness Lagrangian density:**
-$$
-\mathcal{L}_{\rm Darkness} = -\rho(\delta) - \frac{1}{2} \pi_{\alpha\beta}\pi^{\alpha\beta} - \frac{\tau_v(\delta)}{4} (\mathcal{D}\pi_{\alpha\beta})(\mathcal{D}\pi^{\alpha\beta}) + \eta(\delta) \, \pi_{\alpha\beta}\sigma^{\alpha\beta}
-$$
+**Core Principle:** *Only mass matters.*
 
 **Electromagnetic coupling:**
 $$
