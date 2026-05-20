@@ -1233,9 +1233,9 @@ All unified equations are computable, singularity-free, and produce sensible cos
 If you use this framework or the numerical solvers in your research, please cite this work as follows:
 ```bibtex
 @misc{pieterse2026moat,
-  title        = {Logic Relativity MOAT v4.5 — Mother Of All Theories},
+  title        = {Logic Relativity 
+MOAT v4.5 — Mother Of All Theories},
   author       = {Thinus Pieterse},
   year         = {2026},
   url          = {[https://github.com/thinus283-ux/LR](https://github.com/thinus283-ux/LR)}
 }
-
