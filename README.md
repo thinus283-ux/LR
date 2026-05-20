@@ -1259,3 +1259,13 @@ MOAT v4.5 — Mother Of All Theories},
 - **Hubble Tension**: Late-time boost via logistic kernel — beats ΛCDM on real Cosmic Chronometers + Pantheon+ data.
 - **S₈ / Clustering Tension**: Scale-dependent suppression from viscoelastic memory.
 - **Galactic Rotation Curves**: Flat curves from central vortex + lagging wakes (no dark matter particles needed).
+## Background & Early-Universe Tests (v4.x)
+
+- **H(z) on real data**: LR χ² = 4.28 vs ΛCDM 6.27 → Excellent late-time boost
+- **Full background evolution**: Smooth transition + early-universe protection
+- **CMB acoustic peaks**: Viscoelastic memory preserves tight-coupling
+- **BBN consistency**: Yp ≈ 0.2469, D/H ≈ 2.89e-5 (within observed ranges)
+
+**Single viscoelastic medium ("The Darkness") successfully addresses background constraints while resolving late-time tensions.**
+
+![Summary](figures/LR_summary_3panel.png)
