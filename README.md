@@ -10,6 +10,22 @@
 
 with **density-dependent relaxation time** τ_v(δ):  
 - Thicker / faster-relaxing near baryonic matter  
+- Thins out with distance from matter 
+
+This produces lagging wakes and flat rotation curves more directly from the theory, instead of ad-hoc fitting functions.
+# Logic Relativity (LR) v3.1.5
+
+**A covariant viscoelastic cosmological framework** ("The Darkness" as single medium).
+  
+**Logic Relativity v3.1.5** — Core numerical development.
+
+### Core Update in v 3.1.5
+We are now directly solving the viscoelastic anisotropic stress tensor **π^{μν}** using the Maxwell-Cattaneo-type relation from the action:
+
+τ_v(δ) 𝒟π^{μν} + π^{μν} = -2η(δ) σ^{μν}
+
+with **density-dependent relaxation time** τ_v(δ):  
+- Thicker / faster-relaxing near baryonic matter  
 - Thins out with distance from matter  
 
 This produces lagging wakes and flat rotation curves more directly from the theory, instead of ad-hoc fitting functions.
@@ -23,11 +39,11 @@ The core solver is stable and produces rising inner curves with flattening at la
 - S8 tension via scale-dependent damping
 - Chromatic boundary lensing
 - Frozen cores in black holes
+  
 
-### 1. Fundamental Action
-$$
-\mathcal{S} = \frac{1}{16\pi} \int d^4x \sqrt{-g}\, R + \mathcal{S}_{\rm baryon} + \mathcal{S}_{\rm Darkness} + \mathcal{S}_{\rm EM}
-$$
+
+
+
 
 **Darkness Lagrangian density:**
 $$
