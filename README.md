@@ -1,39 +1,28 @@
-# Logic Relativity (LR) v3.5.1 — Unified Covariant Cosmological Framework
+# Logic Relativity (LR) v3.1.5
 
-**The Mother of All Theories**
+**A covariant viscoelastic cosmological framework** ("The Darkness" as single medium).
+  
+**Logic Relativity v3.1.5** — Core numerical development.
 
-> **Current Version:** Logic Relativity (LR) **v3.5.1** (May 2026)  
-> A fully covariant, action-derived viscoelastic field theory replacing the dark sector.
+### Core Update in v3.1.5 the viscoelastic anisotropic stress tensor **π^{μν}** using the Maxwell-Cattaneo-type relation from the action:
 
----
+τ_v(δ) 𝒟π^{μν} + π^{μν} = -2η(δ) σ^{μν}
 
-## Abstract (v3.5.1)
+with **density-dependent relaxation time** τ_v(δ):  
+- Thicker / faster-relaxing near baryonic matter  
+- Thins out with distance from matter  
 
-Logic Relativity v3.5.1 presents a mathematically complete and numerically validated cosmological framework in which **dark matter and dark energy emerge entirely** from the viscoelastic response of a single cosmic medium (“**The Darkness**”) to baryonic mass.
+This produces lagging wakes and flat rotation curves more directly from the theory, instead of ad-hoc fitting functions.
 
-All dynamics are derived from a diffeomorphism-invariant action using extended irreversible thermodynamics. General covariance is enforced by a projected Lie derivative in the Maxwell-Cattaneo constitutive relation. Finite relaxation times generate retarded density wakes that naturally produce flat rotation curves and accelerated early structure formation matching JWST observations. At extreme densities the logistic kernel saturates, forming stable non-singular **“Frozen Cores”**.
+**Status:**  
+The core solver is stable and produces rising inner curves with flattening at large radii. Quantitative SPARC matching is in progress (χ² being reduced). The single-medium viscoelastic approach maintains strong scale separation.
 
-**Core Principle:** *Only mass matters.*
-
----
-
-## v2.5 Summary (Legacy Overview)
-
-Logic Relativity (LR) v2.5 proposed a particle-free cosmological framework in which gravity, structure formation, cosmic expansion, and black hole interiors emerge from baryonic mass interacting with a single real physical medium called **“The Darkness”** — a viscoelastic cosmic fluid.
-
-**Key Simulation Results (v2.5):**
-- **Lagging Wake** → natural flat rotation curves
-- **Gravitational Wave Damping** (high-frequency)
-- **JWST Structure Catalyst** — early massive galaxy formation
-- **Frozen Core Singularity Resolution**
-- **Chromatic Boundary Lensing**
-
----
-
-## Full Formal Framework — v3.5.1
-
-### Metric Convention
-Mostly-plus signature: (−, +, +, +)
+**Key Predictions (unchanged):**
+- Flat rotation curves via lagging wakes (no DM particles)
+- Hubble tension resolution via breathing cycle / phase transition
+- S8 tension via scale-dependent damping
+- Chromatic boundary lensing
+- Frozen cores in black holes
 
 ### 1. Fundamental Action
 $$
