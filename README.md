@@ -511,7 +511,32 @@ Comprehensive tests confirm the robustness of the v4.3 safeguards.
 | C    | High-density screening      | Smooth suppression              | PASS   |
 | D    | 3D 32×32×32 grid            | 32,768 cells clean              | PASS   |
 | E    | Competing sinks             | Smooth merging, no fractures    | PASS   |
+### 10.6 Quantum Superposition of "The Darkness" (Proposed Quantum Extension)
 
+The viscoelastic medium ("The Darkness") can naturally be extended into a **quantum viscoelastic substrate** existing in a superposition of different strain, wake, and vortex configurations.
+
+**Operator Extension of the Constitutive Relation:**
+$$
+\tau_v(\delta) \, \mathcal{D} \hat{\pi}^{\mu\nu} + \hat{\pi}^{\mu\nu} = -2\eta(\delta) \, \hat{\sigma}^{\mu\nu} + \hat{\xi}^{\mu\nu}(x)
+$$
+where \(\hat{\pi}^{\mu\nu}\) is an operator on the Hilbert space of possible medium states, and \(\hat{\xi}\) represents quantum fluctuations/noise.
+
+**Physical Interpretation**:
+- The medium exists in a superposition of many possible memory/wake states.
+- Baryonic mass acts as a local decohering agent, collapsing the superposition into classical lagging wakes and vortices.
+- Allows non-local entanglement between distant regions of the medium.
+
+**Key Advantages**:
+- Stronger and more natural persistent Bullet Cluster offsets.
+- Natural thermodynamic arrow of time through irreversible decoherence.
+- Enhanced scale-dependent suppression and smoother non-singular bounce.
+
+**Falsifiable Predictions**:
+- Tiny stochastic jitter in high-precision rotation curves.
+- Anomalous decoherence signatures in pulsar timing or GW detectors.
+- Quantum interference effects in ultra-low density voids.
+
+This quantum layer builds directly on the classical Israel-Stewart foundation of v4.3 and recovers the classical limit when decoherence is dominant.
 #### Temporal Stability & Energy Behaviour
 Long-term integrations (Forward Euler, Corrected Euler, Symplectic Verlet) show **100% numerical stability** (no NaNs/Infs). A monotonic increase in kinetic energy is observed across all schemes. This is a **physical** viscoelastic relaxation effect consistent with the After-Bounce Paradigm (ongoing outward momentum redistribution). It will be balanced by coupling to a Poisson gravity solver in v4.4.
 
