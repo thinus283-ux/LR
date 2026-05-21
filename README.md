@@ -92,22 +92,6 @@ The density-dependent relaxation time τ_v(δ) enforces the duality: near high b
 This inertia-based superposition strengthens v4.4 as the primary computational engine while MOAT provides the overarching unified description.
 
 ### 6. Early-Universe Consistency & Unique Signatures
-- **Silk Damping Protection**: In the tight-coupling era (\(z \gg 1000\)), \(\lim_{z \to \infty} \tau_v(z) = 0\), forcing perfect-fluid behaviour and preserving the high-\(\ell\) damping tail.
-- **High-Frequency Primordial Gravitational Wave Damping**: The non-zero anisotropic stress introduces dissipative drag proportional to \(\eta(\delta) \cdot \omega^2 / (1 + \omega^2 \tau_v^2)\). High-frequency gravitational waves experience measurable amplitude attenuation.
-
-### 7. Maxwell-Cattaneo Thermodynamics
-The theory satisfies the Second Law globally. The local entropy production rate is
-
-$$
-T \frac{\delta S}{\delta t} = \eta(\delta) \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{\pi_{\mu\nu} \pi^{\mu\nu}}{2\tau_v} \geq 0
-$$
-
-when \(\eta(\delta) > 0\).
-
----
-
-### 8. Problems Solved by LR v4.0
-The single viscoelastic medium naturally resolves multiple long-standing issues within General Relativity:
 
 - **Hubble Tension**: Phase transition + timescale separation raises late-time \(H_0\) while preserving early-universe expansion.
 - **Dark Matter / Flat Rotation Curves**: Central vortex + radial decay law + lagging wakes provide gravitational support without particles.
