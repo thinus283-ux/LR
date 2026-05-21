@@ -91,7 +91,7 @@ The density-dependent relaxation time τ_v(δ) enforces the duality: near high b
 
 This inertia-based superposition strengthens v4.4 as the primary computational engine while MOAT provides the overarching unified description.
 
-### 6. Early-Universe Consistency & Unique Signatures
+### Early-Universe Consistency & Unique Signatures
 
 - **Hubble Tension**: Phase transition + timescale separation raises late-time \(H_0\) while preserving early-universe expansion.
 - **Dark Matter / Flat Rotation Curves**: Central vortex + radial decay law + lagging wakes provide gravitational support without particles.
@@ -104,7 +104,7 @@ This inertia-based superposition strengthens v4.4 as the primary computational e
 
 ---
 
-### 9. Key Predictions & Falsifiability
+### Key Predictions & Falsifiability
 - Flat galactic rotation curves via central vortex + lagging wakes
 - Accelerated early galaxy formation (JWST-consistent)
 - Chromatic boundary lensing at density gradients
@@ -115,7 +115,7 @@ This inertia-based superposition strengthens v4.4 as the primary computational e
 
 ---
 
-### 10. Current Cosmological Status
+###  Current Cosmological Status
 - **Background expansion:** Naturally reproduces the observed Hubble history through a single viscoelastic phase transition and timescale separation
 - **Linear perturbations & CLASS integration:** Full Boltzmann code runs completed, showing preserved CMB peak structure with viscoelastic damping in P(k)
 - **Major tensions addressed:** Hubble tension and \(S_8\) tension resolved within the same single-medium framework
