@@ -1,6 +1,6 @@
 # Logic Relativity (LR) v3.4 — Viscoelastic Framework (Pre-v4)
 
-**Core Idea (v3.x series):** Viscoelastic response of a single cosmic medium ("The Darkness") to baryonic mass. Early version focused on Maxwell-Cattaneo stress evolution without full geometric funnel or Super Inertia unification.
+**Core Idea (v3.4 series):** Viscoelastic response of a single cosmic medium ("The Darkness") to baryonic mass. Early version focused on Maxwell-Cattaneo stress evolution without full geometric funnel or Super Inertia unification.
 
 **Master Equations (v3.4 baseline):**
 G_{\mu\nu} = 8\pi (T_{\mu\nu}^{baryon} + T_{\mu\nu}^{Darkness})
@@ -17,7 +17,7 @@ T_{\mu\nu}^{Darkness} = (\rho + p) u_\mu u_\nu + p g_{\mu\nu} + \pi_{\mu\nu}
 - Frozen-core screening at high density
 - Background solver with timescale separation
 
-**Limitations addressed in v4.x:** No full anisotropic tensor solve, no torsional funnels, no Cosmic Super Inertia, weaker CMB coupling, no MOAT superposition.
+**Limitations addressed in v4.4:** No full anisotropic tensor solve, no torsional funnels, no Cosmic Super Inertia, weaker CMB coupling, no MOAT superposition.
 
 v4.0+ builds directly on v3.5.1 / v3.4 foundations.
 # Logic Relativity (LR) v4.4 — Complete Theory (21 May 2026)
