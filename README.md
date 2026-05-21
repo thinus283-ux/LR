@@ -1,112 +1,55 @@
 # Logic Relativity (LR) v4.4
 
-**A covariant viscoelastic cosmological framework** based on a single medium ("The Darkness").
+**A covariant viscoelastic cosmological framework** based on a single medium ("The Darkness") within General Relativity (Λ = 0).
 
-**v4.4 Core Development (20 May 2026)**  
-We are now directly solving the viscoelastic anisotropic stress tensor **π^{μν}** using the Maxwell-Cattaneo-type relation from the action:
-
-τ_v(δ) 𝒟π^{μν} + π^{μν} = -2η(δ) σ^{μν}
-
-with **density-dependent relaxation time τ_v(δ)**: thicker and faster-relaxing near baryonic matter, thinning out with distance.
-
-**Key Improvement in v4.4:**  
-Rotation curves now emerge from first-principles integration of the stress evolution (core numerical solver) rather than ad-hoc wake + vortex functions. The medium naturally produces lagging wakes on galactic scales while relaxing quickly on planetary scales.
-
-**Current Status:**  
-The core solver is stable and produces rising inner profiles with flattening at large radii. Quantitative SPARC matching is ongoing (χ² being reduced). The single-medium viscoelastic approach maintains strong scale separation.
+**Current Core (v4.4 - 21 May 2026)**  
+We directly solve the anisotropic stress tensor **π^{μν}** from first principles using the Maxwell-Cattaneo constitutive relation. Rotation curves, lagging wakes, central vortex anchoring at SMBHs, scale-dependent damping, and frozen cores now emerge naturally from the stress evolution.
 
 **Core Principle:** *Only mass matters.*
 
-**Electromagnetic coupling:**
+### Electromagnetic Coupling
 $$
-\mathcal{F}(\delta) = 1 + \alpha \, (\nabla_\lambda\delta)(\nabla^\lambda\delta) + \beta\eta(\delta)
+\mathcal{F}(\delta) = 1 + \alpha (\nabla_\lambda \delta)(\nabla^\lambda \delta) + \beta \eta(\delta)
 $$
 
 ### 2. Master Field Equations
 
-**Einstein Field Equation ($\Lambda=0$):**
+**Einstein Field Equations (Λ = 0):**
 $$
 G_{\mu\nu} = 8\pi \left( T_{\mu\nu}^{\rm baryon} + T_{\mu\nu}^{\rm Darkness} \right)
 $$
 
 **Darkness Stress-Energy Tensor:**
 $$
-T_{\mu\nu}^{\rm Darkness} = (\rho(\delta) + p(\delta)) u_\mu u_\nu + p(\delta) g_{\mu\nu} + \pi_{\mu\nu}
+T_{\mu\nu}^{\rm Darkness} = (\rho + p) u_\mu u_\nu + p \, g_{\mu\nu} + \pi_{\mu\nu}
 $$
 
-**Covariant Maxwell-Cattaneo Relation:**
+**Covariant Maxwell-Cattaneo Relation (Anisotropic Stress Evolution):**
 $$
-\tau_v(\delta) \, \mathcal{D} \pi^{\mu\nu} + \pi^{\mu\nu} = 2\eta(\delta) \, \sigma^{\mu\nu}
-$$
-
-**Projected Lie Derivative:**
-$$
-\mathcal{D} \pi^{\mu\nu} = \Delta^\mu{}_\alpha \Delta^\nu{}_\beta \Bigl( u^\lambda \nabla_\lambda \pi^{\alpha\beta} + \pi^{\lambda\beta} \nabla_\lambda u^\alpha + \pi^{\alpha\lambda} \nabla_\lambda u^\beta \Bigr)
+\tau_v(\delta) \,\mathcal{D}\pi^{\mu\nu} + \pi^{\mu\nu} = -2\eta(\delta)\,\sigma^{\mu\nu}
 $$
 
-**Modified Photon Ray Equation (Chromatic Lensing):**
+**Modified Photon Ray Equation (Chromatic Boundary Lensing):**
 $$
-\frac{D k^\mu}{d\lambda} = -\frac{1}{2} g^{\mu\nu} \partial_\nu \ln\mathcal{F}(\delta) \,(k^\alpha k_\alpha) - \frac{\beta}{2} (\partial^\mu\eta(\delta)) (u^\gamma k_\gamma)^2
+\frac{D k^\mu}{d\lambda} = -\frac{1}{2} g^{\mu\nu} \partial_\nu \ln\mathcal{F}(\delta) \, (k^\alpha k_\alpha) - \frac{\beta}{2} (\partial^\mu \eta(\delta)) (u^\gamma k_\gamma)^2
 $$
-### 1.5 The Darkness as Superposed Viscoelastic Medium (MOAT Unification)
 
-In the **MOAT** framework (unifying LR v4.3, v4.4 and earlier iterations), **"The Darkness"** is not a classical fluid nor a collection of conventional particles. Instead, it exists in a fundamental **wave-particle superposition** at all scales and epochs:
-
-- **Wave aspect**: The collective viscoelastic medium governed by the covariant Maxwell-Cattaneo constitutive relation  
-  $$
-  \tau_v(\delta) \,\mathcal{D}\pi^{\mu\nu} + \pi^{\mu\nu} = -2\eta(\delta)\,\sigma^{\mu\nu}
-  $$
-  This produces lagging wakes, central vortex anchoring at supermassive black holes, scale-dependent damping, and self-pressurization leading to late-time acceleration.
-
-- **Particle aspect**: Discrete quanta (Darkness excitations) that carry the memory of the stress tensor. These quanta remain **non-interacting with baryonic matter** except purely gravitationally. Any direct strong coupling would transfer momentum and energy catastrophically, effectively "crushing" ordinary structures — a constraint enforced by the superposition principle and the density-dependent relaxation time \(\tau_v(\delta)\), which rapidly damps interactions near high baryonic densities.
-
-The superposition is maintained globally: the wave nature dominates on galactic and cosmological scales (enabling coherent memory and the "cosmic snow globe" dynamics), while the particle nature ensures transparency on planetary, stellar, and laboratory scales. This dual character emerges naturally from the action-derived Lagrangian and satisfies thermodynamic consistency (Second Law via positive entropy production).
-
-#### Key Implications
-- **Protection of baryonic matter**: The non-interacting particle component prevents collapse or disruption of galaxies, stars, and planets, while the wave component still generates the observed gravitational effects (flat rotation curves, Bullet Cluster offsets, etc.).
-- **Frozen cores & singularity resolution**: At extreme densities (\(\tau_v \to 0\)), the wave aspect freezes the stress tensor, yielding regular black-hole interiors. The particle quanta remain decoupled, avoiding singularities.
-- **Unique predictions**: Subtle interference/diffraction signatures in gravitational wakes, possible quantized vortex modes around SMBHs, and an oscillatory component in chromatic boundary lensing (via \(\mathcal{F}(\delta)\) coupling).
-- **Einsteinian purity**: The entire construction remains within General Relativity (\(\Lambda = 0\)), fully diffeomorphism invariant, with "only mass matters" as the guiding principle. MOAT unifies the classical viscoelastic successes of v4.4 with this deeper superposed ontology.
-
-This superposition picture strengthens v4.4 as the primary computational engine while MOAT serves as the overarching unified description. Future quantum extensions may quantize the Darkness excitations explicitly without breaking classical GR predictions on observable scales.
-
-### 3. Geometric & Thermodynamic Consistency
 ### 1.5 The Darkness as Superposed Viscoelastic Medium (MOAT Unification)
 
 In the **MOAT** framework (unifying LR v4.3, v4.4 and earlier iterations), **"The Darkness"** exists in a fundamental **wave-particle superposition** at all scales and epochs. This superposition arises precisely **because of inertia** — the intrinsic resistance of the medium to rapid changes in its stress state, encoded in the finite relaxation time τ_v(δ).
 
-Zenodo Record: https://doi.org/10.5281/zenodo.
-License: Creative Commons Attribution 4.0 International (CC BY 4.0)
- 
-## Logic Relativity (LR) v4.0: A Covariant, Action-Derived Viscoelastic Field Theory Replacing the Dark Sector
+- **Wave aspect**: The collective viscoelastic medium governed by the covariant Maxwell-Cattaneo relation. It carries coherent, long-lived inertial memory (lagging wakes, vortex anchoring, self-pressurization).
+- **Particle aspect**: Discrete quanta (Darkness excitations) that carry localized inertial memory. These quanta remain **non-interacting with baryonic matter** except purely gravitationally.
 
-**Title:** Logic Relativity (LR) v4.0 — Full Covariant Viscoelastic Cosmology
+The density-dependent relaxation time τ_v(δ) enforces the duality: near high baryonic densities τ_v drops rapidly (wave aspect freezes, protecting matter); on galactic and cosmological scales the wave aspect dominates while the particle aspect maintains transparency. This dual character emerges naturally from the action-derived Lagrangian and satisfies thermodynamic consistency (Second Law via positive entropy production).
 
-**Abstract**  
-Logic Relativity v4.0 is a mathematically complete, diffeomorphism-invariant field theory in which dark matter and dark energy emerge entirely from the viscoelastic response of a single cosmic medium (“**The Darkness**”) to baryonic mass. Building directly on v3.5.1 and v2.5, it enforces general covariance through a projected Lie derivative in the Maxwell-Cattaneo constitutive relation. It has been successfully integrated into the CLASS Boltzmann code and multiple high-resolution simulations, reproducing the structure of CMB acoustic peaks while demonstrating natural scale-dependent suppression in the matter power spectrum.
+#### Key Implications
+- **Inertia-driven protection of baryonic matter**: Prevents crushing or disruption of galaxies, stars, and planets.
+- **Frozen cores & singularity resolution**: At extreme densities (τ_v → 0), inertial memory freezes cleanly → regular black-hole interiors.
+- **Unique predictions**: Inertial interference/diffraction in wakes, quantized vortex modes around SMBHs, oscillatory component in chromatic boundary lensing.
+- **Einsteinian purity**: Fully within GR (Λ = 0), diffeomorphism invariant, guided by *"only mass matters"*.
 
-> **Core Principle:** *Only mass matters.*
-
-LR V4 ### 1. Fundamental Action & Field Equations
-*(Unchanged from v3.5.1)*
-
-The total action is
-
-$$
-\mathcal{S} = \frac{1}{16\pi} \int d^4x \sqrt{-g}\, R + \mathcal{S}_{\rm baryon} + \mathcal{S}_{\rm Darkness} + \mathcal{S}_{\rm EM}
-$$
-
-Varying with respect to the metric yields the Einstein field equations
-
-$$
-G_{\mu\nu} = 8\pi \left( T_{\mu\nu}^{\rm baryon} + T_{\mu\nu}^{\rm Darkness} \right)
-$$
-
-with the Darkness stress-energy tensor
-
-$$
-T_{\mu\nu}^{\rm Darkness} = (\rho + p) u_\mu u_\nu + p g_{\mu\nu} + \pi_{\mu\nu}
-$$
+This inertia-based superposition strengthens v4.4 as the primary computational engine while MOAT provides the overarching unified description.
 
 The anisotropic stress \(\pi_{\mu\nu}\) evolves according to the covariant Maxwell-Cattaneo relation
 
