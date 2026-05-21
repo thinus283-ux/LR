@@ -70,35 +70,29 @@ The superposition is maintained globally: the wave nature dominates on galactic 
 
 This superposition picture strengthens v4.4 as the primary computational engine while MOAT serves as the overarching unified description. Future quantum extensions may quantize the Darkness excitations explicitly without breaking classical GR predictions on observable scales.
 
----
-
 ### 2. Master Field Equations
 ### 3. Geometric & Thermodynamic Consistency
-- General covariance guaranteed by projected Lie derivative \(\mathcal{D}\)
-- Second Law: \(\pi_{\mu\nu}\sigma^{\mu\nu} \geq 0\) when \(\eta(\delta) > 0\)
+### 1.5 The Darkness as Superposed Viscoelastic Medium (MOAT Unification)
 
-### 4. Momentum Exchange & Lagging Wake
-$$
-\mathbf{a}_{\rm wake} = -\frac{4\pi G \eta(\delta) \tau_v(\delta)}{1 + \tau_v(\delta) \partial_t} \Bigl( \nabla^2 \mathbf{v} + \frac{\partial\mathbf{v}}{\partial t} \Bigr) + \text{retarded gravitational pull}
-$$
+In the **MOAT** framework (unifying LR v4.3, v4.4 and earlier iterations), **"The Darkness"** exists in a fundamental **wave-particle superposition** at all scales and epochs. This superposition arises precisely **because of inertia** — the intrinsic resistance of the medium to rapid changes in its stress state, encoded in the finite relaxation time τ_v(δ).
 
-### 5. Frozen Core Singularity Resolution
-At extreme density the relaxation time \(\tau_v(\delta) \to 0\), shear stress vanishes, and the interior metric remains regular:
-$$
-ds^2 = -e^{2\Phi(r)} dt^2 + \left(1 - \frac{2m(r)}{r}\right)^{-1} dr^2 + r^2 d\Omega^2
-$$
+- **Wave aspect**: The collective viscoelastic medium governed by the covariant Maxwell-Cattaneo constitutive relation  
+  $$
+  \tau_v(\delta) \,\mathcal{D}\pi^{\mu\nu} + \pi^{\mu\nu} = -2\eta(\delta)\,\sigma^{\mu\nu}
+  $$
+  The wave nature carries coherent, long-lived inertial memory (lagging wakes, vortex anchoring, self-pressurization).
 
-### 6. Key Predictions & Falsifiability
-- Flat galactic rotation curves via lagging wake (no DM particles)
-- Accelerated early galaxy formation (JWST consistent)
-- Chromatic boundary lensing (radio/optical/X-ray difference)
-- High-frequency GW damping
-- Stable cosmic voids
-- Non-singular Frozen Cores (numerically verified)
+- **Particle aspect**: Discrete quanta (Darkness excitations) that carry localized inertial memory of the stress tensor. These quanta remain **non-interacting with baryonic matter** except purely gravitationally. Strong direct coupling would violate the inertial protection provided by the superposition, leading to catastrophic momentum transfer and collapse of ordinary structures.
 
-**v3.5.1 builds directly on v2.5 simulations** — all previous Colab notebooks and figures remain fully compatible.
+The density-dependent relaxation time τ_v(δ) enforces the duality: near high baryonic densities, τ_v drops rapidly → wave aspect freezes and inertial effects become short-lived (protecting matter); on galactic and cosmic scales, longer τ_v allows the wave aspect to dominate while the particle aspect maintains transparency. This dual character emerges naturally from the action-derived Lagrangian, the inertial memory in the constitutive relation, and satisfies thermodynamic consistency (Second Law via positive entropy production).
 
----
+#### Key Implications
+- **Inertia-driven protection of baryonic matter**: The superposition prevents crushing or disruption of galaxies, stars, and planets by separating coherent wave memory (gravitational effects) from localized particle inertia (non-interacting).
+- **Frozen cores & singularity resolution**: At extreme densities (τ_v → 0), inertial memory freezes cleanly → regular black-hole interiors.
+- **Unique predictions**: Inertial interference/diffraction in wakes, quantized vortex modes around SMBHs (inertial angular momentum quantization), and oscillatory features in chromatic boundary lensing.
+- **Einsteinian purity**: Remains fully within General Relativity (Λ = 0), fully diffeomorphism invariant, guided by *"only mass matters"*. MOAT unifies v4.4’s classical viscoelastic solver with this inertia-based superposed ontology.
+
+This inertia-origin explanation strengthens v4.4 as the primary computational engine while MOAT provides the overarching unified description.
 
 ## Repository Contents
 - `docs/LR_v2.5_Full_Suite.md` — Legacy paper
