@@ -92,16 +92,8 @@ The density-dependent relaxation time τ_v(δ) enforces the duality: near high b
 - **Unique predictions**: Inertial interference/diffraction in wakes, quantized vortex modes around SMBHs (inertial angular momentum quantization), and oscillatory features in chromatic boundary lensing.
 - **Einsteinian purity**: Remains fully within General Relativity (Λ = 0), fully diffeomorphism invariant, guided by *"only mass matters"*. MOAT unifies v4.4’s classical viscoelastic solver with this inertia-based superposed ontology.
 
-This inertia-origin explanation strengthens v4.4 as the primary computational engine while MOAT provides the overarching unified description.
+This inertia-origin explanation in v4.4 as the primary computational engine while MOAT provides the overarching unified description.
 
-## Repository Contents
-- `docs/LR_v2.5_Full_Suite.md` — Legacy paper
-- `simulations/` — Colab notebooks
-- `figures/` — Simulation plots
-
-## Citation (v3.5.1)
-
-```bibtex
 @misc{pieterse2026logic351,
   title        = {Logic Relativity (LR) v3.5.1: A Covariant, Action-Derived Viscoelastic Field Theory Replacing the Dark Sector},
   author       = {Thinus Pieterse},
