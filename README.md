@@ -75,34 +75,6 @@ This superposition picture strengthens v4.4 as the primary computational engine 
 
 In the **MOAT** framework (unifying LR v4.3, v4.4 and earlier iterations), **"The Darkness"** exists in a fundamental **wave-particle superposition** at all scales and epochs. This superposition arises precisely **because of inertia** — the intrinsic resistance of the medium to rapid changes in its stress state, encoded in the finite relaxation time τ_v(δ).
 
-- **Wave aspect**: The collective viscoelastic medium governed by the covariant Maxwell-Cattaneo constitutive relation  
-  $$
-  \tau_v(\delta) \,\mathcal{D}\pi^{\mu\nu} + \pi^{\mu\nu} = -2\eta(\delta)\,\sigma^{\mu\nu}
-  $$
-  The wave nature carries coherent, long-lived inertial memory (lagging wakes, vortex anchoring, self-pressurization).
-
-- **Particle aspect**: Discrete quanta (Darkness excitations) that carry localized inertial memory of the stress tensor. These quanta remain **non-interacting with baryonic matter** except purely gravitationally. Strong direct coupling would violate the inertial protection provided by the superposition, leading to catastrophic momentum transfer and collapse of ordinary structures.
-
-The density-dependent relaxation time τ_v(δ) enforces the duality: near high baryonic densities, τ_v drops rapidly → wave aspect freezes and inertial effects become short-lived (protecting matter); on galactic and cosmic scales, longer τ_v allows the wave aspect to dominate while the particle aspect maintains transparency. This dual character emerges naturally from the action-derived Lagrangian, the inertial memory in the constitutive relation, and satisfies thermodynamic consistency (Second Law via positive entropy production).
-
-#### Key Implications
-- **Inertia-driven protection of baryonic matter**: The superposition prevents crushing or disruption of galaxies, stars, and planets by separating coherent wave memory (gravitational effects) from localized particle inertia (non-interacting).
-- **Frozen cores & singularity resolution**: At extreme densities (τ_v → 0), inertial memory freezes cleanly → regular black-hole interiors.
-- **Unique predictions**: Inertial interference/diffraction in wakes, quantized vortex modes around SMBHs (inertial angular momentum quantization), and oscillatory features in chromatic boundary lensing.
-- **Einsteinian purity**: Remains fully within General Relativity (Λ = 0), fully diffeomorphism invariant, guided by *"only mass matters"*. MOAT unifies v4.4’s classical viscoelastic solver with this inertia-based superposed ontology.
-
-This inertia-origin explanation in v4.4 as the primary computational engine while MOAT provides the overarching unified description.
-
-@misc{pieterse2026logic351,
-  title        = {Logic Relativity (LR) v3.5.1: A Covariant, Action-Derived Viscoelastic Field Theory Replacing the Dark Sector},
-  author       = {Thinus Pieterse},
-  year         = {2026},
-  month        = {May},
-  doi          ={10.5281/zenodo.YOUR_NEW_DOI_HERE},
-  url          = {https://github.com/thinus283-ux/LR},
-  note         = {Version 3.5.1 — Full Covariant Action Formulation}
-}
-
 Zenodo Record: https://doi.org/10.5281/zenodo.
 License: Creative Commons Attribution 4.0 International (CC BY 4.0)
  
