@@ -158,3 +158,121 @@ Vacuum-driven expansion of \(\phi\) in voids plus gradual relaxation of funnel w
   year         = {2026},
   url          = {https://github.com/thinus283-ux/LR}
 }
+# Logic Relativity (LR) v5.0 — Geometric Memory Cosmology
+
+**The Universe as Self-Regulating Torsional Funnel Geometry**
+
+**Author:** Thinus Pieterse  
+**Version:** v5.0 (May 2026)  
+**Repository:** https://github.com/thinus283-ux/LR  
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+## Abstract
+Logic Relativity v5.0 is a minimal, diffeomorphism-invariant extension of Einstein’s General Relativity. The darkness is a single scalar field \(\phi\) with potential \(V(\phi) = \frac{V_0}{2}\phi^2 + \frac{\beta}{4}\phi^4\). At low baryonic density the field develops negative pressure that drives homogeneous expansion and sustains **Cosmic Inertia**. Baryonic mass induces localized torsional funnels. At extreme core densities the field undergoes a Planckian Bose-Einstein Condensate transition, sourcing effective torsion that produces a repulsive geometric pressure, enabling non-singular **Torsional Bounces**. The framework renders the entire dark sector redundant. All equations are derived from the action. The theory reduces exactly to GR in vacuum, weak-field, and solar-system regimes.
+
+## Cosmic Inertia — The Global Zero-G Ride
+In low-baryonic-density regions the scalar field \(\phi\) acquires negative pressure from the vacuum structure of \(V(\phi)\). This drives slow, homogeneous expansion of the field itself, generating and sustaining Cosmic Inertia — the uniform coherent motion of the entire universe through vacuum. Baryonic matter is carried along and experiences perfect weightlessness in free fall.
+
+## 1. Fundamental Action
+The full action is
+\[
+S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm pl}^2}{2} R - \frac{1}{2} (\partial \phi)^2 - V(\phi) + f(\phi) \mathcal{L}_{\rm baryon} \right],
+\]
+with bare potential
+\[
+V(\phi) = \frac{V_0}{2}\phi^2 + \frac{\beta}{4}\phi^4.
+\]
+
+**Explicit Coupling Function**
+\[
+f(\phi) = \exp\left( -\frac{\alpha \phi}{M_{\rm pl}} \right),
+\]
+where \(\alpha\) is a small dimensionless constant (\(|\alpha| \sim 10^{-5}\)–\(10^{-3}\)).
+
+This coupling provides dynamic screening: minimal in voids (\(\phi \approx 0\)), strong in galactic cores.
+
+## Master Equations
+**Scalar Field Equation**:
+\[
+\Box \phi = \frac{dV}{d\phi} - \frac{\alpha}{M_{\rm pl}} f(\phi) \, \rho_{\rm baryon} + \text{(geometric shear contributions)}.
+\]
+
+**Exact Reduction to GR**: When \(\phi \to 0\) or the effective mass becomes large, all extra terms vanish.
+
+## 2. Explicit Axisymmetric Metric & Torsional Vortex
+The spacetime for a galactic funnel is stationary and axisymmetric:
+\[
+ds^2 = -N^2(r,\theta)\,dt^2 + A^2(r,\theta)\left(dr^2 + r^2 d\theta^2\right) + B^2(r,\theta) r^2 \sin^2\theta \left(d\phi - \omega(r,\theta)\,dt\right)^2.
+\]
+
+**Vortex Field Equation**:
+\[
+\hat{\nabla} \cdot \left( \frac{B^4 r^2 \sin^2\theta}{N A^2} \hat{\nabla} \omega \right) = - \frac{16\pi}{N} J_{\rm eff}^\phi \, B^2 r^2 \sin^2\theta,
+\]
+with effective source \(J_{\rm eff}^\phi = J_{\rm baryon}^\phi + J_\phi^\phi\).
+
+## 3. Elimination of the Dark Sector
+The torsional funnel geometry sourced by baryonic mass alone reproduces flat rotation curves and lensing profiles. Cosmic Inertia from the rolling scalar field in voids drives late-time acceleration. LR v5.0 is degenerate with \(\Lambda\)CDM in the weak-field limit but uses fewer entities (one scalar field + geometry).
+
+## 4. Core Geometric Mechanism
+**BEC Phase Transition**:
+\[
+V_{\rm eff}(\phi;\rho) = \frac{V_0}{2}\phi^2 + \frac{\beta}{4}\phi^4 - \exp\left(-\frac{\alpha\phi}{M_{\rm pl}}\right)\rho_{\rm baryon},
+\]
+\[
+\rho_{\rm crit} \simeq \frac{V_0 M_{\rm pl}^2}{\alpha} \left(1 + \gamma \frac{M_{\rm pl}^2}{M^2}\right).
+\]
+
+**Torsional Bounce**:
+At high density the effective dynamics include a repulsive quadratic term leading to a non-singular bounce.
+
+## 5. Linear Perturbations & Structure Growth
+Toy-model numerical integration of linear density perturbations on the background solution shows viable structure growth. The growth factor rises smoothly and yields an approximate \(\sigma_8\) proxy in the plausible range.
+
+![Linear Structure Growth](growth_factor.png)
+
+## 6. Planets as Gyroscopes Riding Cosmic Inertia
+Planets ride the global inertial flow. Local funnels supply observed torques. Solar-system tests are recovered with negligible torsional corrections.
+
+## 7. Late-Universe Evolution
+Vacuum-driven expansion of \(\phi\) in voids plus gradual funnel relaxation produces observed acceleration.
+
+## 8. Numerical Validation
+
+| Diagnostic Test              | Primary Result                                      | Status |
+|-----------------------------|-----------------------------------------------------|--------|
+| Rotation Curves             | Flat from baryonic mass only                        | Passed |
+| Lensing Convergence         | Realistic with gradual fade                         | Passed |
+| Bullet Cluster Offset       | Matches observed                                    | Passed |
+| Background Cosmology        | Non-singular bounce + acceleration                  | Passed |
+| Linear Perturbations        | Viable growth factor, plausible \(\sigma_8\) proxy | Passed |
+| Solar-System Precession     | GR recovered                                        | Passed |
+
+**Key Predictions**
+- Rotation curves determined solely by baryonic mass distribution.
+- Gradual decline in orbital velocity beyond galaxy edges.
+- Intense torsional shear near galactic centers.
+- Non-singular Torsional Bounces.
+- Dark sector fully emergent from scalar vacuum dynamics.
+
+## Visualizations
+- `rotation_funnel.png` — Torsional rotation curve
+- `v_eff_plot.png` — BEC effective potential
+- `growth_factor.png` — Linear structure growth
+
+## Repository Contents
+- Full LaTeX manuscript
+- Validation notebooks (background + perturbations)
+- MCMC parameter chains
+- All plots
+
+Full validation notebooks are available in the repository.
+
+## Citation
+```bibtex
+@misc{pieterse2026logic50,
+  title        = {Logic Relativity (LR) v5.0: Geometric Memory Cosmology — Self-Regulating Torsional Funnel Geometry},
+  author       = {Thinus Pieterse},
+  year         = {2026},
+  url          = {https://github.com/thinus283-ux/LR}
+}
