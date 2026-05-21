@@ -70,7 +70,6 @@ The superposition is maintained globally: the wave nature dominates on galactic 
 
 This superposition picture strengthens v4.4 as the primary computational engine while MOAT serves as the overarching unified description. Future quantum extensions may quantize the Darkness excitations explicitly without breaking classical GR predictions on observable scales.
 
-### 2. Master Field Equations
 ### 3. Geometric & Thermodynamic Consistency
 ### 1.5 The Darkness as Superposed Viscoelastic Medium (MOAT Unification)
 
