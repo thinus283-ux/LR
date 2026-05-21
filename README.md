@@ -276,3 +276,17 @@ Full validation notebooks are available in the repository.
   year         = {2026},
   url          = {https://github.com/thinus283-ux/LR}
 }
+## Recent Related Developments
+
+In May 2026, theoretical physicists have shown that **charged black holes** undergoing Hawking evaporation can avoid classical singularities. The combination of accumulated charge repulsion and the negative-energy flux from Hawking radiation can prevent the central density from diverging, resulting in a regular core instead of a singularity (Di Filippo et al.).
+
+This result aligns with and complements the **non-singular core mechanism** in Logic Relativity v5.0. While the charged evaporation scenario relies on electromagnetic repulsion in semiclassical GR, LR v5.0 achieves singularity resolution for general (including neutral) astrophysical black holes through the Planckian \(\phi\)-BEC condensate and self-regulating torsional repulsion. Together, these approaches strengthen the growing theoretical case that singularities may be artifacts of incomplete classical descriptions rather than inevitable features of gravity.
+
+## Citation
+```bibtex
+@misc{pieterse2026logic50,
+  title        = {Logic Relativity (LR) v5.0: Geometric Memory Cosmology — Self-Regulating Torsional Funnel Geometry},
+  author       = {Thinus Pieterse},
+  year         = {2026},
+  url          = {https://github.com/thinus283-ux/LR}
+}
