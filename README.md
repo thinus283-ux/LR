@@ -74,38 +74,26 @@ $$
 
 This ensures smooth transitions across vastly different cosmic timescales while naturally yielding a higher late-time Hubble parameter.
 
----
+### 1.5 The Darkness as Superposed Viscoelastic Medium (MOAT Unification)
 
-### 3. Linear Perturbations & Viscoelastic Hierarchy
-In synchronous gauge, the linearized Maxwell-Cattaneo relation introduces scale-dependent memory:
+In the **MOAT** framework (unifying LR v4.3, v4.4 and earlier iterations), **"The Darkness"** exists in a fundamental **wave-particle superposition** at all scales and epochs. This superposition arises precisely **because of inertia** — the intrinsic resistance of the medium to rapid changes in its stress state, encoded in the finite relaxation time τ_v(δ).
 
-$$
-\tau_v(\bar{\delta}) \left( \sigma_D' + \frac{\theta_D}{3} \right) + \sigma_D = -\frac{2}{3} \frac{\eta(\bar{\delta})}{\bar{\rho}_D + \bar{p}_D} \theta_D
-$$
+- **Wave aspect**: The collective viscoelastic medium governed by the covariant Maxwell-Cattaneo constitutive relation. It carries coherent, long-lived inertial memory (lagging wakes, vortex anchoring, self-pressurization).
+- **Particle aspect**: Discrete quanta (Darkness excitations) that carry localized inertial memory. These quanta remain **non-interacting with baryonic matter** except purely gravitationally.
 
----
+The density-dependent relaxation time τ_v(δ) enforces the duality: near high baryonic densities τ_v drops rapidly (wave aspect freezes, protecting matter); on galactic and cosmological scales the wave aspect dominates while the particle aspect maintains transparency. This dual character emerges naturally from the action-derived Lagrangian and satisfies thermodynamic consistency (Second Law via positive entropy production).
 
-### 4. Galactic Dynamics: The Central Vortex Mechanism
-**Supermassive black holes** act as **spatial drills** that anchor deeply into The Darkness. Their rotation induces large-scale rotational vortices. The azimuthal velocity decays radially according to
+#### Key Implications
+- **Inertia-driven protection of baryonic matter**: Prevents crushing or disruption of galaxies, stars, and planets.
+- **Frozen cores & singularity resolution**: At extreme densities (τ_v → 0), inertial memory freezes cleanly → regular black-hole interiors.
+- **Unique predictions**: Inertial interference/diffraction in wakes, quantized vortex modes around SMBHs, oscillatory component in chromatic boundary lensing.
+- **Einsteinian purity**: Fully within GR (Λ = 0), diffeomorphism invariant, guided by *"only mass matters"*.
 
-$$
-v_{\rm vortex}(r) \propto \frac{1}{r} \left[ 1 - \exp\left( -\frac{r}{\lambda} \right) \right], \quad \lambda = \tau_v \cdot c_s
-$$
-
-Stars falling toward the center encounter this persistent swirling momentum. The combination of linear infall and rotational drag produces stable, high-velocity orbits — naturally generating flat rotation curves as a centrifugal flywheel effect sustained by the medium’s memory.
-
----
-
-### 5. The Cosmic Snow Globe – Unified Mechanical Picture
-The universe behaves as an **infinitely stretchable, self-pressurized snow globe** composed of the viscoelastic medium. Internal phase transitions and cumulative memory generate an outward pressure gradient that stretches the globe on cosmic scales, producing the observed accelerated expansion. Locally, central drills create inward gravitational slopes. The interplay of global self-pressurized stretching, local infall, and rotational vortex yields a self-consistent mechanical equilibrium across all scales — without separate dark sectors.
-
----
+This inertia-based superposition strengthens v4.4 as the primary computational engine while MOAT provides the overarching unified description.
 
 ### 6. Early-Universe Consistency & Unique Signatures
 - **Silk Damping Protection**: In the tight-coupling era (\(z \gg 1000\)), \(\lim_{z \to \infty} \tau_v(z) = 0\), forcing perfect-fluid behaviour and preserving the high-\(\ell\) damping tail.
 - **High-Frequency Primordial Gravitational Wave Damping**: The non-zero anisotropic stress introduces dissipative drag proportional to \(\eta(\delta) \cdot \omega^2 / (1 + \omega^2 \tau_v^2)\). High-frequency gravitational waves experience measurable amplitude attenuation.
-
----
 
 ### 7. Maxwell-Cattaneo Thermodynamics
 The theory satisfies the Second Law globally. The local entropy production rate is
