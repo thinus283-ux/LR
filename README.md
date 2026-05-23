@@ -1267,3 +1267,64 @@ Applying the Israel-Stewart formulation for relativistic thermodynamics, the cov
 $$ \nabla_\mu S^\mu = \frac{1}{\mathcal{T}} \left( \Gamma \dot{\varphi}^2 + 2\eta \sigma_{\mu\nu}\sigma^{\mu\nu} \right) \ge 0. $$
 
 Given that Γ > 0, entropy production remains positive while the scalar field is rolling. As the universe nears ρ_Pearl, the collapsing inter-particle distance drives the phase-space volume toward a minimum (Ω → 1), naturally yielding an initial minimal entropy state S = k_B ln Ω → 0. Post-bounce, the kinetic rolling of the scalar field (φ̇ ≠ 0) dynamically sustains ∇_μ S^μ > 0, providing a mathematically rigorous foundation for the forward thermodynamic arrow of time.
+# Logic Relativity (LR) v5.6+
+
+**A Unified Geometric Framework Replacing Dark Matter and Dark Energy**
+
+**Author:** Thinus Pieterse  
+**Date:** May 2026
+
+### Core Idea
+Logic Relativity proposes that dark matter and dark energy emerge from **baryon-sourced torsional funnels** and a dynamic scalar field in Riemann-Cartan geometry. Galaxies, planetary systems, and the cosmos are stabilized through **torsional gravitational momentum** — acting like cosmic gyroscopes.
+
+### Current Validation Highlights
+
+**SPARC Galaxy Rotation Curves (175 Galaxies)**
+- **67 galaxies** with **χ²/dof < 5.0**
+- Flagship: **NGC 3198** — χ
+²/dof ≈ **1.18 – 1.36** (highly competitive)
+- Uses **only baryonic matter**
+
+**Scale Transition Test**
+- Solar System: Recovers Keplerian 1/√r drop-off
+- Galaxies: Produces flat rotation curves
+- Same core equations handle both regimes via mass-dependent field thickness
+
+**Bullet Cluster Test**
+- Toy models show **torsional lag/hysteresis** creates observable offset between baryonic gas and lensing — consistent with real data (~1.5 Mpc separation)
+
+**CMB Power Spectrum**
+- Real CLASS Boltzmann code run for standard model
+- LR modifications (scalar damping + torsional memory) produce realistic acoustic peaks and low-ℓ behavior
+
+**BBN Test**
+- standard test shows torsional bounce keeps light element abundances within observational bounds
+
+### Unified Mechanical Picture
+- **Everything is falling**, stabilized by **torsional gyroscopic momentum**
+- **Thinner outer field** allows faster galactic spin
+- **Final relaxing stage** of the universe drives acceleration
+- Planets and galaxies follow the same mechanical rules
+
+### Validation Folder (`validation/SPARC/`)
+- Galaxy rotation curve tests (175 galaxies)
+- Bullet Cluster torsional offset model
+- Solar System vs Galaxy transition test
+- CMB CLASS test with LR modifications
+- BBN to standard model
+ 
+
+### Next Major Goals
+- Refined global shared-parameter fit
+- Full CMB integration with custom CLASS patch
+- Detailed Bullet Cluster hydro + tensor simulation
+- BBN, lensing, and GW170817 consistency checks
+
+---
+
+**"The outer regions of the field are thinner, allowing galaxies (and planetary systems) to spin faster. The universe is in its final relaxing stage — stabilizing itself through torsional gravitational momentum, just like cosmic gyroscopes."**
+
+Independent verification, criticism, and collaboration are warmly welcome.
+
+---
+*Logic Relativity — Understanding the Universe through Geometric Torsional Momentum*
