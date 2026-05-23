@@ -1192,3 +1192,78 @@ These predictions are characteristic tendencies governed by the galaxy’s evolu
 This secretion-disc framework transforms Logic Relativity into a concrete mechanical blueprint: galaxies operate as dynamic thermodynamic engines that route geometry, secreting virtual mass radially (dark matter effect) and vacuum pressure globally (dark energy). The model is simulation-ready, thermodynamically consistent, and offers a minimalistic, unified alternative to \(\Lambda\)CDM while maintaining strict causality and General Relativistic limits.
 
 We welcome rigorous scrutiny, collaboration, and computational exploration of this evolving theory.
+### v5.6 Update: Derivation of the Thermodynamic Arrow of Time from the LR Action Principle
+
+**Logic Relativity (Geometric Memory Cosmology) v5.6**  
+**Author:** Thinus Pieterse  
+**Date:** May 2026
+
+#### 1. Motivation
+Version 5.6 proposes a derivation of the thermodynamic arrow of time as a robust mathematical consequence of the Einstein-Cartan action of Logic Relativity, minimizing the need for additional thermodynamic assumptions. In this framework, the forward arrow (∇_μ S^μ > 0) emerges naturally from the non-conservation of the matter energy-momentum tensor induced by spacetime torsion.
+
+#### 2. Pre-Bounce Compression Phase
+The model describes a universe beginning in a prolonged contracting phase where the scale factor a(t) decreases and the scalar field φ evolves. Baryonic and radiation densities ρ increase, while an effective negative pressure accumulates in the scalar-torsion sector through the interplay of the quartic potential and matter-sourced torsional funnels. As the density approaches a critical theoretical threshold ρ_crit, the scalar field dynamics suggest a transition into a macroscopic ground state, analogous to a Bose-Einstein Condensate (BEC). Near this threshold, the accumulated geometric stress reverses the effective pressure polarity, driving a smooth, non-singular Torsional Bounce at a = a_min. Within this geometry, this event folds spacetime into a closed topological structure (the “Pearl”), offering a viable alternative to traversable wormholes connecting distant cosmological regions.
+
+#### 3. First-Principles Action: Conformal Geometry and Poincaré Gauge Theory
+To motivate the scalar field φ and its exponential coupling from deeper geometric principles, Logic Relativity begins in a scale-invariant “Jordan Frame.” Here, gravity is governed by a dimensionless scaling factor Φ, and spacetime geometry is defined by Poincaré Gauge Theory. We adopt the metric signature (−, +, +, +).
+
+The foundational action is
+
+$$ S = \int d^4x \sqrt{-\tilde{g}} \left[ \Phi \tilde{R}(\tilde{g}, \tilde{\Gamma}) + \mathcal{L}_{\rm m} \right]. $$
+
+To map this into the observable universe (the “Einstein Frame”), we perform a conformal transformation:
+
+$$ g_{\mu\nu} = \Phi \, \tilde{g}_{\mu\nu}. $$
+
+This mapping transforms Φ into a propagating scalar field φ. Consequently, the conformal calculus requires all matter terms ℒ_m to couple exponentially. Setting Φ = exp(α φ / M_pl), the action takes the form
+
+$$ S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm pl}^2}{2} R - \frac{1}{2} g^{\mu\nu} \partial_\mu \varphi \partial_\nu \varphi - V(\varphi) + \exp\left( -\frac{\alpha \varphi}{M_{\rm pl}} \right) \mathcal{L}_{\rm m} \right]. $$
+
+Thus, the scalar field and its coupling f(φ) = exp(−α φ / M_pl) arise as mathematical artifacts of breaking the initial conformal scale invariance.
+
+In this Riemann-Cartan geometry, the covariant conservation law for the matter energy-momentum tensor Θ^{μν} is modified by the contortion tensor K^λ_{μν}:
+
+$$ \nabla_\mu \Theta^{\mu\nu} = K^\nu_{\alpha\beta} \Theta^{\alpha\beta}. $$
+
+This non-vanishing divergence indicates that energy is continuously transferred between the matter/scalar sector and the torsional degrees of freedom, providing a geometric mechanism for dissipation.
+
+#### 4. Algebraic Integration of Torsion and Derivation of Geometric Friction
+Because torsion is non-propagating in the Einstein-Cartan formulation, it can be integrated out algebraically. Variation with respect to the contortion tensor yields the Cartan constraint, linking the torsion trace vector T_μ to the scalar field gradient and matter density:
+
+$$ T_\mu \propto \frac{\alpha}{M_{\rm pl}^4} \rho \, \partial_\mu \varphi. $$
+
+Substituting this constraint back into the scalar field equation of motion introduces a dissipative term to the standard Klein-Gordon equation:
+
+$$ \ddot{\varphi} + 3H\dot{\varphi} + \frac{\partial V_{\rm eff}}{\partial \varphi} = -\Gamma \dot{\varphi}, $$
+
+where the geometric friction coefficient is given by
+
+$$ \Gamma(\varphi, \rho) = \mathcal{C} \, \alpha^2 \, \exp\left(-\frac{\alpha \varphi}{M_{\rm pl}}\right) \frac{\rho^2}{M_{\rm pl}^7}. $$
+
+(ℂ is an O(1) dimensionless constant). The friction term Γ is a direct mathematical consequence of integrating out the torsional degrees of freedom.
+
+#### 5. Effective Friedmann Dynamics and the Pearl Topology
+The Cartan constraint also modifies the canonical Friedmann equations. The effective energy density acquires a negative quadratic term driven by torsional repulsion:
+
+$$ 3 M_{\rm pl}^2 H^2 = \rho_{\rm tot} - \frac{\rho_m^2}{2 \rho_{\rm Pearl}}, $$
+
+where ρ_tot = ρ_m + (1/2) φ̇² + V(φ), and the critical density limit is ρ_Pearl ≡ 3 M_pl² / κ (with κ = 4πG α² / 3).
+
+The corresponding modified Raychaudhuri equation is:
+
+$$ \dot{H} = -\frac{1}{2M_{\rm pl}^2} (\rho_m + P_m + \dot{\varphi}^2) + \frac{\rho_m^2}{2 M_{\rm pl}^2 \rho_{\rm Pearl}}. $$
+
+During the pre-bounce compression phase, as ρ_tot approaches ρ_Pearl, the geometric term asymptotically balances the standard energy density. At this threshold, the model predicts H → 0 while maintaining Ḣ > 0, driving a non-singular bounce.
+
+Because the scalar kinetic term remains canonically positive, this phantom-like behaviour (w_eff < −1) acts as a geometric artifact of the contortion tensor without requiring exotic ghost fluids. Topologically, this mechanism precludes the formation of an open wormhole, instead folding spacetime into a closed torsional boundary at a_min.
+
+#### 6. Derivation of the Entropy Current and the Arrow of Time
+With the bounce dynamics established, the covariant continuity equation dictates an energy exchange governed by the geometric friction:
+
+$$ \dot{\rho}_m + 3H(\rho_m + P_m) = -\Gamma \dot{\varphi}^2. $$
+
+Applying the Israel-Stewart formulation for relativistic thermodynamics, the covariant entropy current S^μ satisfies:
+
+$$ \nabla_\mu S^\mu = \frac{1}{\mathcal{T}} \left( \Gamma \dot{\varphi}^2 + 2\eta \sigma_{\mu\nu}\sigma^{\mu\nu} \right) \ge 0. $$
+
+Given that Γ > 0, entropy production remains positive while the scalar field is rolling. As the universe nears ρ_Pearl, the collapsing inter-particle distance drives the phase-space volume toward a minimum (Ω → 1), naturally yielding an initial minimal entropy state S = k_B ln Ω → 0. Post-bounce, the kinetic rolling of the scalar field (φ̇ ≠ 0) dynamically sustains ∇_μ S^μ > 0, providing a mathematically rigorous foundation for the forward thermodynamic arrow of time.
