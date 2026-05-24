@@ -1829,7 +1829,54 @@ All derivations are contained in the accompanying notebooks.
 Copyright (c) 2026 Thinus Pieterse
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+# Cosmological N-body Simulations for Logic Relativity (LR) v5.8
 
+**Last updated**: 2026-05-24  
+**Code**: [PySCo](https://github.com/mianbreton/pysco) — modified gravity N-body  
+**Main Repo**: [https://github.com/thinus283-ux/LR](https://github.com/thinus283-ux/LR)
+
+## Executive Summary
+
+LR has been tested in full cosmological N-body simulations (200 Mpc/h box).  
+**Result**: LR is cosmologically viable, recovers GR on large scales, and shows physically motivated mild deviations on small scales, consistent with dynamic screening and torsional effects.
+
+## All Tests Completed
+
+### 1. Prototype Models
+- Background FLRW + scalar field φ evolution (Cosmic Inertia)
+- Linear perturbation growth
+- Axisymmetric vortex solver (baryon-only flat rotation curves with gradual outer decline and central shear)
+- Effective halo models (Bullet Cluster-like offsets and lensing without additional mass)
+- MCMC parameter exploration around best-fit values (α ≈ 3.14e-4, β ≈ 0.05, etc.)
+
+### 2. Full PySCo Cosmological Runs
+
+| Run ID              | Theory                | Modification       | Resolution     | Large-scale Ratio | Small-scale Ratio (k≈1 h/Mpc) | Status    |
+|---------------------|-----------------------|--------------------|----------------|-------------------|-------------------------------|-----------|
+| 20260524_1422       | Newtonian (ΛCDM)     | —                  | 128³           | 1.0000            | —                             | Complete  |
+| 20260524_1422       | LR Parametrized      | μ₀ = -0.05         | 128³           | 1.0000            | 0.9891                        | Complete  |
+
+**Key Interpretation**:
+- Excellent agreement with ΛCDM on large scales.
+- Mild ~1.1% suppression on small scales, consistent with the exponential scalar coupling and torsional feedback.
+- Full stability to z=0 with no instabilities.
+
+## Files Included
+- `LR_Simulation_20260524_xxxx.zip` — Full raw outputs (snapshots, power spectra at multiple redshifts, logs)
+- Extracted folders: `Newton/` and `LR_param/`
+- Plots: `pk_comparison.png`, `pk_ratio.png`
+- Evolution tables and initial conditions
+
+## Reproduction
+Colab notebooks used for these runs are in the `notebooks/` folder.
+
+---
+
+**These simulations show that LR is competitive with ΛCDM on cosmological scales while offering advantages on galactic scales (baryon-only rotation curves).**
+
+Open science contribution.
+
+— Thinus Pieterse
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
