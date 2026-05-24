@@ -1702,102 +1702,13 @@ It is ready for full N-body simulations, detailed CMB/BAO analysis, and journal 
 
 **All derivations, notebooks, MCMC scripts, and figures are included in the repository.**
 
-# Geometric Time Relativity (GTR) v1.2
 
-**A Riemann-Cartan Completion of General Relativity with Intrinsic Temporal Persistence**
 
-**Author:** Thinus Pieterse  
-**Version:** v1.2 — May 2026  
-**Repository:** https://github.com/thinus283-ux/LR  
 
-## Abstract
 
-Geometric Time Relativity (GTR) is a minimal, diffeomorphism-invariant extension of General Relativity on the Riemann-Cartan manifold \( U_4 \). A single vacuum scalar field \( \phi \) with exponential baryon coupling \( f(\phi) = \exp(-\alpha \phi / M_{\rm pl}) \) algebraically sources non-propagating torsion. This torsion encodes **intrinsic temporal persistence** — the geometric record of matter’s stress-energy history.
 
-All major phenomena emerge from **one action** with a **single unification parameter** \( \alpha \approx 10^{-4} \). The theory is ghost-free, recovers exact GR in screened regimes, preserves \( c_{\rm GW} = c \), and is consistent with BBN, CMB, and growth-rate data. GTR replaces dark matter and dark energy with geometric memory of time itself.
 
-## 1. Framework
-Spacetime is a Riemann-Cartan manifold \( U_4 \). The connection decomposes as  
-\[
-\Gamma^\lambda_{\mu\nu} = \left\{^\lambda_{\mu\nu}\right\} + K^\lambda_{\mu\nu}.
-\]
 
-## 2. Action
-\[
-S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm pl}^2}{2} R(\Gamma) - \frac12 (\partial \phi)^2 - V(\phi) + f(\phi) \mathcal{L}_{\rm baryon} + \frac{\kappa}{4} \phi^2 \, \omega_{\mu\nu} \omega^{\mu\nu} \right]
-\]
-with  
-\[
-V(\phi) = \frac{V_0}{2} \phi^2 + \frac{\beta}{4} \phi^4, \quad f(\phi) = \exp\left( -\frac{\alpha \phi}{M_{\rm pl}} \right).
-\]
 
-## 3. Algebraic Torsion (Ghost-Free)
-\[
-T_\mu = -\frac{2\alpha}{M_{\rm pl}} f(\phi) \partial_\mu \phi, \qquad K^\lambda_{\mu\nu} = \frac{\alpha}{M_{\rm pl}} f(\phi) \left( g^\lambda_\mu \partial_\nu \phi - g^\lambda_\nu \partial_\mu \phi \right).
-\]
-Effective action after substitution:
-\[
-S_{\rm eff} = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm pl}^2}{2} R(\{\}) - \frac12 Z(\phi) (\partial \phi)^2 - V(\phi) + f(\phi) \rho_{\rm baryon} \right],
-\]
-where \( Z(\phi) = 1 + 4\alpha^2 f(\phi)^2 \).
-
-## 4. Dynamic Screening (Chameleon Mechanism)
-The scalar EOM is:
-\[
-Z(\phi) \square \phi + \frac12 \frac{dZ}{d\phi} (\partial \phi)^2 + V'(\phi) - f'(\phi) \rho_{\rm baryon} = 0.
-\]
-High-density regions pin \( \phi \), suppress torsion → exact GR recovery.
-
-## 5. Galactic Dynamics: Torsional Vortices
-Linearized halo perturbations obey an Euler-Cauchy equation with complex roots, producing the derived vortex profile:
-\[
-v_{\rm vortex}(r) = Z \cdot \alpha \cdot \left( \frac{m_{\rm norm}}{r^{1.6}+1} \right)^{0.48} S(r) \left[ 1 + P \sin(\phi_0 \ln(r + 1.5) + \theta) \right],
-\]
-with Z, P, \( \phi_0 \) fully derived from \( \alpha, \beta, V_0 \). Reproduces SPARC-level fits (\( \chi^2 \sim 1.14 \)) as prediction, not fit.
-
-## 6. Cosmology & Temporal Relaxation
-Friedmann and Klein-Gordon equations yield early-time screening (BBN/CMB safe) and late-time acceleration with torsional Hubble shift \( \Delta H(z) \approx +5{-}6 \) km/s/Mpc for \( z \lesssim 0.5 \).
-
-## 7. Perturbations & Structure Formation
-Sub-horizon effective gravitational constant \( G_{\rm eff} \) remains close to G at early times and mildly enhanced at late times. Combined with extra Hubble friction, this suppresses low-z growth, helping relieve the \( S_8 \) tension.
-
-## 8. Major Predictions
-- Gradual Keplerian decline beyond virial radius (SKA).
-- Intense central tornado shear + secretion disc kinematics (JWST/ELT/Gaia).
-- Specific late-time \( \Delta H(z) \) shape (Euclid/DESI).
-- Non-singular torsional bounces (LISA echoes).
-- Polar exhaust and post-merger hysteresis.
-
-## 9. Theoretical Rigor and Parameter Entanglement
-A defining feature of GTR is the **strong entanglement** of its predictions through the single coupling \( \alpha \). Unlike \( \Lambda \)CDM, where dark matter and dark energy are independent, in GTR they are manifestations of the same geometric mechanism:
-
-- The value of \( \alpha \) that produces the Euler-Cauchy-derived torsional vortex profile in galaxies **must** simultaneously generate the late-time torsional Hubble shift \( \Delta H(z) \).
-- The exponential coupling \( f(\phi) \) that sources galactic vortices also enforces the Chameleon screening that protects solar-system tests and early-universe physics.
-- The non-canonical factor \( Z(\phi) \) enabling vortex oscillations is the same term providing dynamical friction in cosmic growth.
-
-This rigidity turns the theory into a highly constrained system: one parameter is forced to satisfy multiple independent observables simultaneously. Joint SPARC + Hubble residual constraints already yield a narrow posterior around \( \alpha \approx 5.7 \times 10^{-5} \).
-
-The algebraic torsion constraint guarantees the theory is ghost-free. Null results from direct dark matter searches (XENON, LZ, etc.) are a **positive prediction** of GTR: the missing mass is geometric torsion, not particles.
-
-At extreme densities the torsional bounce produces a stable, non-singular topological core (“Pearl”), providing a concrete geometric resolution to singularities.
-
-## 10. Conclusions
-GTR v1.2 demonstrates that dark sectors are unnecessary. Galactic flatness, cosmic acceleration, Hubble tension relief, and singularity avoidance all follow from **intrinsic temporal persistence** implemented through a single scalar on a Riemann-Cartan manifold. The framework is variationally consistent, highly constrained, and ready for detailed confrontation with upcoming data.
-
-All derivations and notebooks are available in the repository.
-
----
-
-## License
-
-**MIT License**
-
-Copyright (c) 2026 Thinus Pieterse
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
