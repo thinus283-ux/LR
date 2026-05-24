@@ -1815,7 +1815,33 @@ Mild late-time enhancement is compensated by extra Hubble friction, helping reli
 - **Persistent Null Results:** Absolute null results for all direct Dark Matter detection experiments (LZ, XENONnT etc.) as a required geometric consequence.  
 - **Parameter Entanglement and Parsimony:** Single parameter \(\alpha\) rigidly links SPARC fits to cosmological expansion. Failure on Euclid/DESI data falsifies the model.
 
-## 8. Conclusions
+8. Dust as an Active Sustainer of the Vacuum Field
+
+Interstellar and interplanetary dust undergoes continuous triboelectric charging through grain-grain collisions and releases gas atoms/molecules via thermal decomposition, chemical desorption, and photochemistry. These are standard astrophysical processes.
+
+To incorporate this at the level of the action we add a single minimal coupling between the scalar field and the charged/gas component of dust:
+
+\[
+S_{\rm dust} = \lambda \int d^4x \sqrt{-g} \, \phi \left( J^\mu_{\rm EM} u_\mu + \rho_{\rm gas} \right)
+\]
+
+where \(J^\mu_{\rm EM}\) is the electromagnetic 4-current from triboelectrically charged dust, \(\rho_{\rm gas}\) is the energy density of atoms and molecules released from dust, and \(\lambda\) is a single small dimensionless coupling constant (\(|\lambda| \ll 1\)).
+
+This term is the direct generalization of the existing baryon coupling \(f(\phi)\mathcal{L}_{\rm baryon}\). The full action remains minimal with only one additional parameter.
+
+The Klein-Gordon equation gains the source term
+
+\[
+Z(\phi) \square \phi + \frac12 \frac{dZ}{d\phi} (\partial \phi)^2 + V'(\phi) - f'(\phi) \rho_{\rm baryon} - \lambda (J^\mu_{\rm EM} u_\mu + \rho_{\rm gas}) = 0
+\]
+
+and the algebraic torsion receives a corresponding contribution from the dust current and gas density.
+
+Because dust is ubiquitous in the interstellar medium and galactic disks, these terms provide a persistent, low-level source that continuously feeds the rolling of \(\phi\) and the torsional substrate. Dust collisions and gas release enhance torsion, which strengthens geometric shear and inertial flow, which in turn promotes further dust processing — forming a natural self-sustaining feedback loop for the vacuum Field.
+
+In high-density regions the exponential screening \(f(\phi)\) suppresses the dust contribution, ensuring exact recovery of General Relativity. The mechanism operates efficiently at moderate densities and keeps the Field dynamically alive across cosmic time without a cosmological constant or new fundamental fields.
+
+## 9. Conclusions
 GTR derives galactic dynamics, cosmic acceleration, Hubble tension relief, and singularity avoidance from one unifying principle — intrinsic temporal persistence in spacetime geometry. By utilizing a single scalar field and one parameter \(\alpha\), GTR eliminates the ad hoc Dark Sector. The framework is fully variational, ghost-free, highly rigid, and ready for CMB/BAO confrontation.
 
 All derivations are contained in the accompanying notebooks.
