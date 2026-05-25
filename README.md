@@ -1841,7 +1841,50 @@ Because dust is ubiquitous in the interstellar medium and galactic disks, these 
 
 In high-density regions the exponential screening \(f(\phi)\) suppresses the dust contribution, ensuring exact recovery of General Relativity. The mechanism operates efficiently at moderate densities and keeps the Field dynamically alive across cosmic time without a cosmological constant or new fundamental fields.
 
-## 9. Conclusions
+**9. Vacuum Pressure, Null-Geodesic Confinement, and the Torsional Condensate Core (The Pearl)**
+
+To map the macro-physical state of the emergent bound state verified in our numerical relativity simulations (Sec.~\ref{sec:simulations}), we analyze the static, high-density limit of the GTR effective action \(S_{\rm eff}\). When infalling baryonic matter drives the local density beyond the critical threshold \(\rho \ge \rho_{\rm crit} \equiv V_0/\alpha\), the effective potential  
+\[
+V_{\rm eff}(\phi;\rho) = V(\phi) - f(\phi)\rho_{\rm baryon}
+\]  
+forces the scalar field to track a steep, density-dependent local minimum. At these extreme scales the field pins at a large vacuum expectation value \(\phi_c \gg M_{\rm pl}/\alpha\), driving the baryonic coupling function exponentially to zero: \(\lim_{\rho\to\rho_{\rm crit}} f(\phi)\to 0\).
+
+#### Hydrostatic Vacuum Stability & SEC Violation
+Because the screening function dynamically decouples the baryonic matter (\(f(\phi_c)\to 0\)), the source terms in the local stress-energy tensor shift entirely to the scalar field sector. In the static core limit (\(\partial_\mu\phi\to 0\)), the scalar field's energy-momentum tensor reduces exactly to  
+\[
+T_{\mu\nu}^\phi = -g_{\mu\nu}V_{\rm eff}(\phi_c;\rho_{\rm crit}).
+\]  
+The interior core thus transitions into a localized, self-sustained torsional condensate characterized by a perfectly isotropic negative pressure  
+\[
+p_\phi = -V_{\rm eff}(\phi_c;\rho_{\rm crit}) = -V(\phi_c) < -\frac{\rho_\phi}{3}.
+\]  
+This configuration maximally violates the strong energy condition (SEC), since \(\rho_\phi + 3p_\phi = -2V(\phi_c) < 0\). The resulting negative pressure supplies a powerful geometric counter-force that halts further gravitational collapse. This stabilizes the phase-separated boundary \(\partial\Omega\) at a finite, non-zero physical radius \(r_p\), completely preventing the formation of a central singularity or an event horizon.
+
+#### The Non-Canonical Junction Conditions
+The transition from the exterior unscreened universe (\(\phi\approx 0\)) to the interior core (\(\phi=\phi_c\)) occurs across a highly localized spatial boundary layer \(\partial\Omega\). To ensure geometric matching without introducing unphysical singular shells, we apply the Israel junction conditions modified for Riemann-Cartan geometry. The matching requires continuity of the induced metric \(h_{ab}\) and the modified extrinsic curvature \(K_{ab}\) across \(\partial\Omega\):  
+\[
+[h_{ab}]=0, \qquad [K_{ab}] = -8\pi G S_{ab}^{(\phi)},
+\]  
+where \(S_{ab}^{(\phi)}\) is the surface stress-energy tensor of the domain wall, derived by integrating the non-canonical kinetic modifier across the interface:  
+\[
+\sigma = \int_{\partial\Omega} \left[\frac12 Z(\phi)(\nabla\phi)^2 + \Delta V_{\rm eff}\right] \, dA.
+\]  
+Because GTR mandates \(Z(\phi)=1+4\alpha^2 f(\phi)^2>1\), the effective surface tension \(\sigma\) is dynamically amplified by the algebraic contorsion back-reaction. This kinetic enhancement locks the boundary layer, suppressing the standard Rayleigh-Taylor and breathing-mode instabilities that typically plague fluid-shell alternative compact objects.
+
+#### Torsional Frame-Dragging and Geometric Photon Capturing
+While the algebraic contorsion tensor \(K^\lambda_{\mu\nu}\) preserves local electromagnetic gauge invariance by remaining decoupled from the Maxwell tensor, it radically alters the vacuum spacetime metric near \(r_p\) through the modified field equations. For a stationary, axisymmetrically rotating core, the sharp radial scalar gradient \(\partial_r\phi\) couples directly to the angular momentum flux, generating a severe localized spike in the frame-dragging frequency \(\omega(r,\theta)\equiv -g_{t\phi}/g_{\phi\phi}\).
+
+For an incoming or outgoing null ray with conserved energy \(E\) and axial angular momentum \(L_z\), the null-geodesic equation (\(ds^2=0\)) dictates the radial wave-vector momentum profile  
+\[
+k_r^2 = E^2 g^{rr} - \frac{L_z^2}{g_{\phi\phi}} - 2 E L_z g^{t\phi} + \cdots.
+\]  
+As an outgoing ray approaches \(r\to r_p^+\) from the boundary layer, the torsional amplification of \(\omega(r,\theta)\) forces the bracketed term to zero, creating an absolute geometric turning point:  
+\[
+k_r \to 0 \qquad \text{at } r=r_p.
+\]  
+Consequently, radial null paths attempting to escape the core are topologically excluded. Photons reaching \(r_p\) are captured and forced into highly stable, tangential closed orbits. This forms a macroscopic, intensely luminous, infinitely circulating **photon accretion shell** that cloaks the regular interior.
+
+## 10. Conclusions
 GTR derives galactic dynamics, cosmic acceleration, Hubble tension relief, and singularity avoidance from one unifying principle — intrinsic temporal persistence in spacetime geometry. By utilizing a single scalar field and one parameter \(\alpha\), GTR eliminates the ad hoc Dark Sector. The framework is fully variational, ghost-free, highly rigid, and ready for CMB/BAO confrontation.
 
 All derivations are contained in the accompanying notebooks.
@@ -1859,7 +1902,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 **Last updated**: 2026-05-24  
 **Code**: [PySCo](https://github.com/mianbreton/pysco) — modified gravity N-body  
-**Main Repo**: [https://github.com/thinus283-ux/LR](https://github.com/thinus283-ux/LR)
+**Main Repo**: [https://github.com/thinus283-ux/LR]
 
 ## Executive Summary
 
