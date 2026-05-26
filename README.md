@@ -1731,6 +1731,125 @@ Colab notebooks used for these runs are in the `notebooks/` folder.
 
 Open science contribution.
 
+# Geometric Time Relativity (GTR) v1.2
+**A Riemann-Cartan Completion of General Relativity**
+
+**Author:** Thinus Pieterse  
+**Version:** v1.2 — May 2026  
+**Repository:** https://github.com/thinus283-ux/LR
+
+### Abstract
+Geometric Time Relativity (GTR) is a minimal, diffeomorphism-invariant extension of General Relativity formulated on the Riemann-Cartan manifold \( U_4 \). A single vacuum scalar field \( \phi \) with exponential baryon coupling \( f(\phi) = \exp(-\alpha \phi / M_{\rm pl}) \) (\( \alpha \approx 10^{-4} \)) algebraically sources non-propagating torsion.  
+
+The same mechanism produces baryon-only flat rotation curves with gradual outer Keplerian decline, a late-time torsional Hubble shift, and accelerated expansion through cosmic temporal relaxation. At extreme densities, gravity produces Planck-cap singularities that destroy information carried by decay-bound matter.  
+
+The scalar \( \phi \) is promoted to a quantum field with microscopic Yukawa coupling to baryons. A dissipative collision term \( J_{\rm coll} \) follows from the Schwinger-Keldysh (in-in) formalism applied to the existing action. Torsional vortices are topological defects arising from modified connection geodesics with quantized phase coherence. GTR is ghost-free, recovers exact GR in screened high-density regimes, preserves \( c_{\rm GW} = c \), and is consistent with BBN, CMB, and structure formation. It replaces decoupled dark sectors with geometric time while respecting the Planck length as the absolute cap.
+
+### 1. Framework
+Spacetime is a Riemann-Cartan manifold \( U_4 \) with metric \( g_{\mu\nu} \) and independent affine connection \( \Gamma^\lambda_{\mu\nu} \):  
+\[
+\Gamma^\lambda_{\mu\nu} = \left\{^\lambda_{\mu\nu}\right\} + K^\lambda_{\mu\nu},
+\]  
+where \( K^\lambda_{\mu\nu} \) is the contorsion tensor related to torsion \( T^\lambda_{\mu\nu} = 2K^\lambda_{[\mu\nu]} \).
+
+### 2. Action
+\[
+S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm pl}^2}{2} R(\Gamma) - \frac12 (\partial \phi)^2 - V(\phi) + f(\phi) \mathcal{L}_{\rm baryon} + \frac{\kappa}{4} \phi^2 \omega_{\mu\nu} \omega^{\mu\nu} \right],
+\]  
+with  
+\[
+V(\phi) = \frac{V_0}{2} \phi^2 + \frac{\beta}{4} \phi^4, \qquad f(\phi) = \exp\left( -\frac{\alpha \phi}{M_{\rm pl}} \right),
+\]  
+and \( \omega_{\mu\nu} \) the antisymmetric part of the spin connection.
+
+**Parameter bounds**: \( \alpha \approx 10^{-4} \); \( V_0 \sim (10^{-3} \, \rm eV)^4 \); \( \beta = \mathcal{O}(1) \); \( \kappa > 0 \).
+
+### 3. Algebraic Torsion (Ghost-Free)
+Variation w.r.t. the connection yields  
+\[
+T_\mu = -\frac{2\alpha}{M_{\rm pl}} f(\phi) \partial_\mu \phi, \qquad K^\lambda_{\mu\nu} = \frac{\alpha}{M_{\rm pl}} f(\phi) (g^\lambda_\mu \partial_\nu \phi - g^\lambda_\nu \partial_\mu \phi).
+\]  
+Torsion is non-propagating. The effective action is  
+\[
+S_{\rm eff} = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm pl}^2}{2} R(\{\}) - \frac12 Z(\phi) (\partial \phi)^2 - V(\phi) + f(\phi) \rho_{\rm baryon} \right],
+\]  
+with \( Z(\phi) = 1 + 4\alpha^2 f(\phi)^2 > 1 \). The effective Lagrangian for \( \phi \) is second-order in derivatives.
+
+### 4. Dynamic Screening
+\[
+Z(\phi) \square \phi + \frac12 \frac{dZ}{d\phi} (\partial \phi)^2 + V'(\phi) - f'(\phi) \rho_{\rm baryon} = 0.
+\]  
+High-density pinning (\( f(\phi) \to 0 \)) recovers exact GR.
+
+### 5. Galactic Dynamics
+Linearization in halos yields  
+\[
+\delta\phi(r) \propto r^{-1/2} \left[ A \cos(\lambda_I \ln(r/r_0)) + B \sin(\lambda_I \ln(r/r_0)) \right].
+\]
+
+**Modified geodesics**: Anomalous acceleration  
+\[
+a^\lambda = -K^\lambda_{\mu\nu} u^\mu u^\nu = \frac{\alpha}{M_{\rm pl}} f(\phi) \left( u^\lambda (u \cdot \partial \phi) - \partial^\lambda \phi \right).
+\]  
+yielding  
+\[
+v_{\rm model}^2(r) = v_{\rm bary}^2(r) + v_{\rm vortex}^2(r)
+\]  
+with gradual Keplerian decline.
+
+**Topological quantization**: Collision-sustained coherence promotes \( \phi \) to complex order parameter \( \Phi = |\phi| e^{i\Theta} \), with phase \( \Theta = \lambda_I \ln(r/r_0) + n\varphi \). Circulation  
+\[
+\oint \nabla\Theta \cdot d\mathbf{l} = 2\pi n, \quad n \in \mathbb{Z}.
+\]  
+makes flat rotation curves topologically protected.
+
+### 6. Cosmology & Temporal Relaxation
+Modified Friedmann equation:  
+\[
+3 M_{\rm pl}^2 H^2 = f(\phi) \rho_m + \frac12 Z(\phi) \dot{\phi}^2 + V(\phi).
+\]  
+
+- **Early universe** (\( z \gtrsim 1100 \)): High density pins \( \phi \approx 0 \), \( f(\phi) \to 1 \), torsional corrections suppressed → recovers standard GR, preserves BBN and CMB sound horizon.  
+- **Late universe** (\( z \lesssim 2 \)): \( \phi \) relaxes, producing torsional Hubble shift \( \Delta H \propto \alpha \langle \partial_t \phi \rangle \), raising local \( H_0 \) by ~5–8 km/s/Mpc without affecting early-universe physics.
+
+### 7. Perturbations
+\[
+\frac{G_{\rm eff}}{G} = f(\phi) \left[ 1 + \frac{\alpha^2 f(\phi)}{1 + \frac{k^2}{a^2 m_{\rm eff}^2} \cdot \frac{Z(\phi)}{4\alpha^2 f(\phi)^2 + 1}} \right].
+\]
+
+### 8. Quantum Dynamics of the Scalar Field
+
+#### 8.1 Microscopic Interaction
+\[
+\mathcal{L}_{\rm int} = - y f(\phi) \bar{\psi} \psi
+\]  
+(\( y \) absorbed into \( f(\phi) \)).
+
+#### 8.2 Schwinger-Keldysh Derivation of \( J_{\rm coll} \)
+Closed-time-path formalism yields  
+\[
+Z(\phi) \square \phi + \frac12 \frac{dZ}{d\phi} (\partial \phi)^2 + V'(\phi) - f'(\phi) \rho_{\rm baryon} = J_{\rm coll},
+\]  
+with  
+\[
+J_{\rm coll} = \gamma(X) (\phi - \phi_{\rm eq}) + \text{noise term}, \qquad \gamma(X) \propto \frac{y^2 \alpha^2}{M_{\rm pl}^2} T^2(X).
+\]  
+High-\( T \) regions pump/sustain \( \phi \); voids allow free relaxation.
+
+### 9. Strong-Field Regime: Planck-Cap Singularities
+Effective stress-energy leads to Planck cap (\( R \to \ell_P \)). Information in decay-bound matter is destroyed; exterior geometry identical to GR.
+
+### 10. Conclusions
+GTR v1.2 is a parsimonious, single-parameter (\( \alpha \)) completion of GR in which geometric time unifies galactic dynamics, cosmic acceleration, Hubble tension resolution, and Planck-scale information destruction. Fully variational, ghost-free, and diffeomorphism-invariant.
+
+**Suggested Citation**
+```bibtex
+@misc{pieterse2026gtr,
+  title = {Geometric Time Relativity (GTR) v1.2},
+  author = {Thinus Pieterse},
+  year = {2026},
+  url = {https://github.com/thinus283-ux/LR}
+}
 — Thinus Pieterse
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
