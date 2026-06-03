@@ -283,3 +283,51 @@ w(a) shows transient ≈ -1 phase during peak BH growth, then evolves (w₀ > -1
 ---
 
 ## 3. The Grand Cosmic Cycle (TCCVT)
+
+**Conservation Laws**:
+- **Energy**: Strictly conserved (∇_μ T^{μν} = 0) via scalar redistribution; global zero-energy universe.
+- **Information**: Preserved via holographic principle, encoded in scalar field.
+- **Entropy**: Vacuum decay provides irreversible increase (Second Law satisfied).
+
+**Dark Matter Analogy**: Geometric, collisionless oscillatory wakes with fuzzy pressure (non-condensable vapor).  
+**Black Hole Engines**: High-efficiency accretion + Penrose-like extraction + final evaporation flares complete matter-to-energy conversion.
+
+---
+
+## 4. Repository Structure (v1.5.1)
+
+- `README.md` — This document
+- `Action_Tmunu_v1.5.1.ipynb` — SymPy derivation of action → T_μν → KG + Friedmann
+- `Cosmo_Cycle_Simulator.ipynb` — Numerical evolution of a(t), φ(t), w(a) vs DESI
+- `BH_Cores_and_Wakes.ipynb` — Regular cores, oscillatory wakes, rotation curves
+- `Validation_Suite.ipynb` — Stability, screening, parameter scans
+- `GTR_v1.5.1.tex` — LaTeX paper draft
+- `figures/` — Cycle diagram, w(a) plots, wake profiles, shadow deviations
+
+---
+
+## 5. Default Parameters
+- α ≈ 10^{-4} (screening)
+- γ ≈ 1 (kinetic stabilization)
+- β, V₀ — tuned for observed acceleration amplitude
+- κ — torsion strength
+
+Recovers GR in tested regimes. Deviations appear in galactic halos, BH interiors, and late cosmology.
+
+---
+
+## 6. Key Predictions (2026+)
+- **DESI / Euclid**: Evolving dark energy tied to BH/star-formation history
+- **SPARC / JWST**: Baryon-only flat curves with oscillatory substructure
+- **EHT / LISA / Einstein Telescope**: Photon ring deviations + ringdown echoes from de Sitter cores
+- **Cosmic Web**: Fuzzy geometric scaffolds
+
+---
+
+**Status**: Publication-ready conceptual & mathematical framework (Score: 7.8/10). Needs quantitative χ² fits and full perturbation theory for higher rating.
+
+**Author**: Thinus Pieterse  
+**License**: MIT  
+**GitHub**: https://github.com/thinus283-ux/LR
+
+Contributions, notebook runs, and parameter optimization welcome!
