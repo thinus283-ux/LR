@@ -183,7 +183,37 @@ This is the complete Master Theory of the Universe.Citationbibtex
 
 LicenseThis work is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 ```
+## GTR v1.5 — Refined Scalar Kinetics & Oscillatory Wake Dynamics
 
+**Version:** v1.5  
+**Status:** Preview / Complementary Upgrade to v1.4
 
+### Key Improvements over v1.4
 
+v1.5 refines the scalar sector while fully preserving the v1.4 framework:
 
+- **Non-minimal kinetic term**:
+  $$
+  \frac{Z(\phi)}{2} (\partial_\mu \phi \partial^\mu \phi), \qquad Z(\phi) = 1 + \gamma \phi^2 \quad (\gamma > 0)
+  $$
+
+- **Additional interaction term**:
+  $$
+  -\frac{\phi \alpha f(\phi)}{M_{\rm Pl}} (\partial \phi)^2
+  $$
+
+- **Oscillatory regime** in low-density regions (m$_{\rm eff} r \gg 1$): linearized scalar solution $\delta\phi \propto \sqrt{M(<r)} / \sqrt{r} \times [\cos(\lambda \ln r) + \sin(\lambda \ln r)]$.
+
+- **Time + ensemble averaging** over baryonic distributions produces a coherent effective 1/r torsional acceleration.
+
+- **Improved stability and screening**: Z(φ) ensures positive definite kinetic term and stronger hybrid screening.
+
+### Benefits
+
+- Cleaner derivation of flat rotation curves with natural Tully-Fisher relation.
+- Better scalar control across regimes while maintaining all v1.4 successes.
+
+**Full v1.5 Action**:
+$$
+S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R(\Gamma) + \frac{Z(\phi)}{2} (\partial_\mu \phi \partial^\mu \phi) - V(\phi) + f(\phi) \mathcal{L}_b - \frac{\phi \alpha f(\phi)}{M_{\rm Pl}} (\partial \phi)^2 \right]
+$$
