@@ -217,3 +217,69 @@ v1.5 refines the scalar sector while fully preserving the v1.4 framework:
 $$
 S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R(\Gamma) + \frac{Z(\phi)}{2} (\partial_\mu \phi \partial^\mu \phi) - V(\phi) + f(\phi) \mathcal{L}_b - \frac{\phi \alpha f(\phi)}{M_{\rm Pl}} (\partial \phi)^2 \right]
 $$
+# Geometric Time Relativity (GTR) v1.5.1  
+**Thermodynamic Condensation and Cyclic Vacuum Theory (TCCVT)**
+
+**Full Release** – Ready for GitHub (https://github.com/thinus283-ux/LR)
+
+A minimal extension of General Relativity on a Riemann-Cartan (U₄) manifold using **a single scalar field φ**. It unifies:
+- Baryonic matter condensation
+- Geometric dark-matter-like wakes
+- Regular black hole engines that convert matter into vacuum energy
+- Cosmologically coupled dark energy
+- A complete thermodynamic cosmic cycle with quantum reset
+
+**No new particles. No singularities. No ad-hoc Λ or CDM.** All effects emerge dynamically from one action. High-density regimes recover exact GR; low-density regimes produce the condensation cycle.
+
+---
+
+## 1. Complete Action Principle
+$$
+S = \int d^4x \sqrt{-g} \left[ 
+\frac{M_{\rm Pl}^2}{2} R(\Gamma) 
+- \frac{Z(\phi)}{2} (\partial_\mu \phi \partial^\mu \phi) 
+- V(\phi) 
++ f(\phi) \mathcal{L}_{\rm baryon} 
++ \frac{\kappa}{4} \phi^2 \omega_{\mu\nu} \omega^{\mu\nu} 
++ \frac{\phi}{M_{\rm Pl}} T^\mu{}_\mu 
+- \frac{\phi \alpha f(\phi)}{M_{\rm Pl}} (\partial \phi)^2 
+\right]
+$$
+
+**Components**:
+- **R(Γ)**: Curvature scalar on Riemann-Cartan connection (Γ = Levi-Civita + contorsion from algebraic torsion).
+- **Z(φ) = 1 + γ φ²** (non-minimal kinetic, γ ∼ O(1)).
+- **V(φ) = (V₀/2) φ² + (β/4) φ⁴** (screening + vacuum energy).
+- **f(φ) = exp(-α φ / M_Pl)**, α ≈ 10^{-4} (exponential baryon coupling).
+- Torsion is algebraic and non-propagating.
+
+**Stability**: Z(φ) > 0 (no ghosts), m_eff² > 0 (no tachyons). High-ρ screening recovers exact GR in Solar System and strong fields.
+
+---
+
+## 2. Core Derived Equations
+
+**Effective Stress-Energy Tensor**  
+T_{\mu\nu}^{\rm eff} = T_{\mu\nu}^{\rm baryon} + T_{\mu\nu}^\phi + T_{\mu\nu}^{\rm torsion}
+
+**Low-Density Oscillatory Displacement Wakes** (Geometric "Dark Matter")
+$$
+\delta\phi(r) \approx \frac{\alpha M_{\rm baryon}(<r)}{4\pi M_{\rm Pl} r} \left[ \cos(\lambda \ln r) + \sin(\lambda \ln r) \right]
+$$
+(λ from effective mass m_eff). Ensemble average produces 1/r torsional acceleration → flat rotation curves ∝ √M_baryon (baryon-only, fuzzy pressure, non-condensable).
+
+**Regular Black Hole Cores**  
+de Sitter interior with r_cap ∼ ℓ_P (M / M_Pl)^{1/3}, matched via Israel junction conditions. No singularities. High-φ vacuum energy core.
+
+**Cosmological Coupling** (emergent)  
+Background φ relaxes with scale factor a(t) → M_BH,eff ∝ a^k. Energy sourced from scalar gradients/potential.
+
+**Modified Friedmann Equation**  
+$$
+3H^2 = \rho_{\rm baryon} + \rho_\phi + \rho_{\rm torsion} + \rho_{\rm coupled\ cores}
+$$
+w(a) shows transient ≈ -1 phase during peak BH growth, then evolves (w₀ > -1, w_a < 0), aligning with DESI DR2 hints.
+
+---
+
+## 3. The Grand Cosmic Cycle (TCCVT)
