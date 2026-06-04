@@ -679,6 +679,116 @@ Current Results (from my run):Suppression at k=0.1 h/Mpc: -13.9%
 Suppression at k=0.5 h/Mpc: -22.4%
 Max deviation: 23.5%
 
+## Geometric Time Relativity (GTR) v1.7 — Consolidated Formulation
+**Author:** Thinus Pieterse  
+**Version:** 1.7  
+**Date:** 4 June 2026  
+**Repository:** https://github.com/thinus283-ux/LR
 
+### Abstract
+Geometric Time Relativity (GTR) is a minimal Riemann-Cartan extension of General Relativity on a four-dimensional manifold \(U_4\) that accounts for galactic rotation curves, late-time cosmic acceleration, and regular black hole interiors via algebraic torsion and a screened scalar substrate \(\phi\) coupled to baryonic matter and ambient dust-gas processes. The theory introduces no new propagating degrees of freedom beyond the metric and \(\phi\), preserves \(c_{\rm GW} = c\), local weak-field GR limits, and ghost-free perturbations, while resolving key cosmological tensions through geometric screening and torsional wakes.
+
+### 1. Geometric & Variational Framework
+
+#### 1.1 Manifold and Connection
+Spacetime is a Riemann-Cartan manifold with metric \(g_{\mu\nu}\) (signature \((-,+,+,+)\)) and affine connection
+\[
+\Gamma^\lambda_{\mu\nu} = \left\{^\lambda_{\mu\nu}\right\} + K^\lambda_{\mu\nu},
+\]
+where \(\left\{^\lambda_{\mu\nu}\right\}\) denotes the Levi-Civita connection and the contortion tensor \(K^\lambda_{\mu\nu}\) (antisymmetric in the last two indices) defines the totally antisymmetric torsion tensor
+\[
+T^\lambda_{\ \mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu} = 2K^\lambda_{[\mu\nu]}.
+\]
+The curvature scalar \(R\) computed with the full connection includes quadratic torsion contributions:
+\[
+R = R_{\rm LC} - 4\nabla_\lambda K^\lambda_{\ \mu}{}^\mu + \text{quadratic terms in } K.
+\]
+
+#### 1.2 Total Action
+The variational principle is
+\[
+S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R[g,\Gamma] + \frac{1}{2} Z(\phi) g^{\mu\nu} \partial_\mu\phi \partial_\nu\phi - V(\phi) + \lambda \phi (J^\mu_{\rm EM} u_\mu + \rho_{\rm gas}) \right] + S_{\rm baryon}[g_{\mu\nu},\phi],
+\]
+where \(M_{\rm Pl}^2 = 1/(8\pi G)\), \(Z(\phi)\) is a non-minimal kinetic function (\(Z(\phi_0) \approx 1\)), \(V(\phi)\) a potential, \(\lambda \ll 1\) the dust coupling, and \(S_{\rm baryon}\) encodes screened baryonic matter via \(f(\phi)\rho_{\rm baryon}\).
+
+#### 1.3 Scalar Field Equation
+Variation with respect to \(\phi\) yields
+\[
+Z(\phi) \square \phi + \frac{1}{2} Z'(\phi) (\partial\phi)^2 + V'(\phi) - f'(\phi) \rho_{\rm baryon} - \lambda (J^\mu_{\rm EM} u_\mu + \rho_{\rm gas}) = 0,
+\]
+where \(\square\) is the d'Alembertian with respect to the full torsionful connection and primes denote \(d/d\phi\).
+
+#### 1.4 Algebraic Torsion and Weak-Field Limit
+Torsion is non-propagating and algebraically sourced:
+\[
+T^\lambda_{\ \mu\nu} = \frac{\alpha}{M_{\rm Pl}} \left( \delta^\lambda_\mu \partial_\nu \phi - \delta^\lambda_\nu \partial_\mu \phi \right) + \mathcal{O}(\lambda).
+\]
+In the weak-field, quasi-static limit (\(|\Phi| \ll 1\), \(v \ll c\)), the geodesic equation and Einstein-Cartan equations with torsion linearize around a screened scalar background \(\phi = \phi_0 + \delta\phi(r)\). The effective Poisson equation becomes
+\[
+\nabla^2 \Phi_{\rm eff} = 4\pi G \rho_{\rm baryon} + \frac{\alpha^2}{M_{\rm Pl}^2} \left( |\nabla\phi|^2 + \text{torsion quadratic terms} \right),
+\]
+where the scalar profile satisfies a screened Helmholtz-type equation. Matching to asymptotic flatness and integrating the torsional energy density under power-law halo profiles yields the additive circular-velocity correction
+\[
+v_{\rm vortex}^2(r) = \alpha Z \left( \frac{m_{\rm norm}}{(r/r_0)^{1.6} + 1} \right)^{0.48} S(r) \left[1 + P \sin(\phi_0 \ln(r/r_c + 1))\right],
+\]
+with the exponent 0.48 arising from the balance between quadratic torsion repulsion and scalar-gradient energy in the integrated constraint equations.
+
+### 2. Astrophysical Kinematics
+
+#### 2.1 Constants and Regularization
+Local gravitational constant: \(G = 4.30091 \times 10^{-6}\) (km/s)\(^2\) kpc \(M_\odot^{-1}\).  
+Regularized baryonic velocity (ensures finite central density and numerical stability):
+\[
+v_{\rm bary}(r) = \sqrt{ \frac{G M(r)}{r + r_c} }, \quad r_c = 0.1 \, \rm kpc.
+\]
+
+#### 2.2 Integrated Velocity Profile
+\[
+v_{\rm model}(r)^2 = v_{\rm bary}(r)^2 + v_{\rm vortex}(r)^2.
+\]
+
+### 3. Saturated Torsional Vortex Engine
+\[
+v_{\rm vortex}(r) = Z \alpha \left( \frac{m_{\rm norm}}{(r/r_0)^{1.6} + 1} \right)^{0.48} S(r) \left(1 + P \sin(\phi_0 \ln(r/r_c + 1))\right),
+\]
+where \(m_{\rm norm} = M_{\rm total}/10^{10} M_\odot\), \(r_0 = 1\) kpc. This form produces asymptotically flat rotation curves for typical spiral masses and a baryonic Tully-Fisher relation slope \(\approx 3.9\).
+
+**Chameleon Screening:**
+\[
+S(r) = \left[1 + \exp\left( \frac{r - \lambda_{\rm scalar} m_{\rm norm}^\beta}{r_s} \right)\right]^{-1}, \quad r_s \approx 2 \, \rm kpc.
+\]
+High baryonic density yields \(S \to 0\) (full GR recovery); low-density regimes yield \(S \to 1\) (maximal torsional effect).
+
+**Parameter Roles**  
+- \(\alpha\): dimensionless torsional coupling strength.  
+- \(Z\): core-to-asymptotic horizon matching factor.  
+- \(P \ll 1\): geometric shear oscillation amplitude.  
+- \(\lambda_{\rm scalar}, \beta\): screening threshold and mass scaling.
+
+### 4. Cosmological Evolution
+The linear growth factor incorporating late-time torsional acceleration is
+\[
+D(z) = (1+z)^{-0.55} \left[ 1 + \frac{\alpha}{180} \exp\left(-\frac{z}{4.8}\right) \left(1 - \frac{0.5}{(1+z)^{2.6}}\right) \right].
+\]
+This produces a mildly evolving effective \(w(a)\) compatible with DESI data and suppresses small-scale power via screening, alleviating the \(S_8\) tension.
+
+### 5. Non-Singular Black Hole Interiors
+High-density screening (\(f(\phi) \to 0\)) combined with quadratic torsion repulsion regularizes the interior. The metric component takes the form
+\[
+f(r) = 1 - \frac{2 G M(t) r^2}{r^3 + 2 G M(t) L^2},
+\]
+where \(L\) is the fundamental compression scale. Global conservation is enforced by the drain vector \(Q^\mu\):
+\[
+\nabla_\nu T^{\mu\nu}_{\rm core} = Q^\mu, \quad \nabla_\nu T^{\mu\nu}_{(\phi)} = -Q^\mu.
+\]
+This yields finite central curvature, no singularities, and a dynamical evaporation mechanism into the global vacuum substrate.
+
+---
+
+### License
+This work is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.  
+You are free to share and adapt this document as long as you give appropriate credit to the author (Thinus Pieterse) and provide a link to the original repository.
+
+https://creativecommons.org/licenses/by/4.0/
 
 
