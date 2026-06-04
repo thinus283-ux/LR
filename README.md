@@ -707,7 +707,7 @@ R = R_{\rm LC} - 4\nabla_\lambda K^\lambda_{\ \mu}{}^\mu + \text{quadratic terms
 #### 1.2 Total Action
 The variational principle is
 \[
-S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R[g,\Gamma] + \frac{1}{2} Z(\phi) g^{\mu\nu} \partial_\mu\phi \partial_\nu\phi - V(\phi) + \lambda \phi (J^\mu_{\rm EM} u_\mu + \rho_{\rm gas}) \right] + S_{\rm baryon}[g_{\mu\nu},\phi],
+S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R[g,\Gamma] - \frac{1}{2} Z(\phi) g^{\mu\nu} \partial_\mu\phi \partial_\nu\phi - V(\phi) + \lambda \phi (J^\mu_{\rm EM} u_\mu + \rho_{\rm gas}) \right] + S_{\rm baryon}[g_{\mu\nu},\phi],
 \]
 where \(M_{\rm Pl}^2 = 1/(8\pi G)\), \(Z(\phi)\) is a non-minimal kinetic function (\(Z(\phi_0) \approx 1\)), \(V(\phi)\) a potential, \(\lambda \ll 1\) the dust coupling, and \(S_{\rm baryon}\) encodes screened baryonic matter via \(f(\phi)\rho_{\rm baryon}\).
 
@@ -790,5 +790,6 @@ This work is licensed under the **Creative Commons Attribution 4.0 International
 You are free to share and adapt this document as long as you give appropriate credit to the author (Thinus Pieterse) and provide a link to the original repository.
 
 https://creativecommons.org/licenses/by/4.0/
+
 
 
