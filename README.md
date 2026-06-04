@@ -773,15 +773,23 @@ D(z) = (1+z)^{-0.55} \left[ 1 + \frac{\alpha}{180} \exp\left(-\frac{z}{4.8}\righ
 This produces a mildly evolving effective \(w(a)\) compatible with DESI data and suppresses small-scale power via screening, alleviating the \(S_8\) tension.
 
 ### 5. Non-Singular Black Hole Interiors
-High-density screening (\(f(\phi) \to 0\)) combined with quadratic torsion repulsion regularizes the interior. The metric component takes the form
+In high-density regimes, the screening function \(f(\phi) \to 0\) suppresses the attractive gravitational channel while quadratic torsion terms provide geometric repulsion. The metric lapse function regularizes to a bounded de Sitter core:
 \[
 f(r) = 1 - \frac{2 G M(t) r^2}{r^3 + 2 G M(t) L^2},
 \]
-where \(L\) is the fundamental compression scale. Global conservation is enforced by the drain vector \(Q^\mu\):
+where \(L\) is the fundamental compression scale set by the balance between torsional repulsion and scalar vacuum energy.
+
+Global energy-momentum conservation is maintained via a dynamically screened drain vector
 \[
-\nabla_\nu T^{\mu\nu}_{\rm core} = Q^\mu, \quad \nabla_\nu T^{\mu\nu}_{(\phi)} = -Q^\mu.
+Q^\mu = \beta(\phi) \, \xi^\mu, \quad \beta(\phi) = \frac{1}{1 + \exp\left( \frac{\phi - \phi_{\rm thresh}}{\Delta\phi} \right)},
 \]
-This yields finite central curvature, no singularities, and a dynamical evaporation mechanism into the global vacuum substrate.
+where \(\beta(\phi)\) is unity deep inside the high-density core and exponentially vanishes outside the horizon (\(r \gtrsim r_h\)). This ensures
+\[
+\nabla_\nu T^{\mu\nu}_{\rm core} = Q^\mu, \quad \nabla_\nu T^{\mu\nu}_{(\phi)} = -Q^\mu
+\]
+only in the deeply screened interior. Outside the horizon, \(\beta(\phi) \to 0\), recovering exact local conservation and full compliance with the strong equivalence principle and solar-system tests.
+
+This construction yields finite central curvature, eliminates singularities, and provides a dynamical evaporation channel that slowly returns trapped energy to the global vacuum substrate.
 
 ---
 
@@ -790,6 +798,9 @@ This work is licensed under the **Creative Commons Attribution 4.0 International
 You are free to share and adapt this document as long as you give appropriate credit to the author (Thinus Pieterse) and provide a link to the original repository.
 
 https://creativecommons.org/licenses/by/4.0/
+
+
+
 
 
 
