@@ -971,3 +971,23 @@ Consistent with main acoustic peaks while offering a dark-sector alternative
 Files:GTR_full_spectra.npz (spectra data)
 Plots: TT_EE_TE_Pk_comparison.png
 
+## Matter Displaces the Field — The Field Reshapes Geometry
+
+In Geometric Time Relativity, spacetime is not a passive stage on which matter acts. It is dynamically co-created through a continuous feedback loop between baryonic matter and the scalar field \(\phi\).
+
+### The Core Feedback Loop
+
+1. **Matter displaces the field**  
+   Baryonic mass couples to \(\phi\) via the exponential coupling \(f(\phi) = e^{-\alpha \phi}\). Motion and clustering of matter shift \(\phi\) away from its vacuum value.
+
+2. **The displaced field reshapes geometry**  
+   Variations in \(\phi\) modify the effective metric through the non-minimal kinetic term \(Z(\phi)\) and generate algebraic torsion. This produces persistent **torsional wakes** — locally customized spacetime structure.
+
+3. **The reshaped geometry guides matter**  
+   The modified geometry feeds back on the motion of the same baryonic matter, supplying the additional gravitational support needed for flat rotation curves, regular black hole cores, and enhanced late-time structure growth — without requiring dark matter particles.
+
+### A Self-Regulating Universe
+
+When a galaxy rotates, its baryonic content continuously displaces the scalar field at large radii. The resulting torsional wakes act as geometric scaffolding: they are screened in high-density regions (recovering GR) while providing the precise extra force required at galactic outskirts.
+
+Geometric Time Relativity is therefore a fully baryonic theory in which the universe operates through **responsive, living geometry** — geometry that remembers, reacts to, and guides the matter within it.
