@@ -679,125 +679,82 @@ Current Results (from my run):Suppression at k=0.1 h/Mpc: -13.9%
 Suppression at k=0.5 h/Mpc: -22.4%
 Max deviation: 23.5%
 
-## Geometric Time Relativity (GTR) v1.7 — Consolidated Formulation
-**Author:** Thinus Pieterse  
-**Version:** 1.7  
-**Date:** 4 June 2026  
-**Repository:** https://github.com/thinus283-ux/LR
+Geometric Time Relativity (GTR) v1.7
+A Minimal Riemann-Cartan Extension of General Relativity with Torsional Vacuum Recycling  Author: Thinus Pieterse
+Version: v1.7 (June 2026)
+Repository: https://github.com/thinus283-ux/LR
+Status: Preprint-ready for peer review  AbstractWe present a minimal extension of Einstein’s General Relativity on the Riemann-Cartan manifold U4U_4U_4
+. A single scalar field ϕ\phi\phi
+ with exponential baryon coupling f(ϕ)=exp⁡(−αϕ/MPl)f(\phi) = \exp(-\alpha \phi / M_{\rm Pl})f(\phi) = \exp(-\alpha \phi / M_{\rm Pl})
+ (α∼10−5\alpha \sim 10^{-5}\alpha \sim 10^{-5}
+) algebraically sources non-propagating torsion. High-density screening recovers the Einstein equations exactly. Low-density torsional wakes produce purely geometric effects that explain baryon-only galactic dynamics, including flat rotation curves and the Baryonic Tully-Fisher Relation.v1.7 advancement: Black-hole horizon transmutation at regular de Sitter cores converts baryonic matter into Planck-scale vacuum fluctuations. This injects energy into the scalar substrate ϕ\phi\phi
+, dynamically sourcing late-time acceleration and closing the Thermodynamic Condensation and Cyclic Vacuum Theory (TCCVT) loop: condensation → BH engines → vacuum injection → vaporization → quantum genesis. The model remains ghost-free, preserves cGW=cc_{\rm GW} = cc_{\rm GW} = c
+, matches linear CMB observables (with 3rd-peak enhancement), and addresses the coincidence problem via astrophysical timing without fine-tuning.1. Core Framework (Recap from v1.4–v1.5)Spacetime: Riemann-Cartan U4U_4U_4
+ with connection
+Γμνλ={μνλ}+Kμνλ.\Gamma^\lambda_{\mu\nu} = \{^\lambda_{\mu\nu}\} + K^\lambda_{\mu\nu}.\Gamma^\lambda_{\mu\nu} = \{^\lambda_{\mu\nu}\} + K^\lambda_{\mu\nu}.
+Action:
+S=∫d4x−g[MPl22R(Γ)−Z(ϕ)2(∂μϕ∂μϕ)−V(ϕ)+f(ϕ)Lbaryon+κ4ϕ2ωμνωμν+ϕMPlTμμ−ϕαf(ϕ)MPl(∂ϕ)2]S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R(\Gamma) - \frac{Z(\phi)}{2} (\partial_\mu \phi \partial^\mu \phi) - V(\phi) + f(\phi) \mathcal{L}_{\rm baryon} + \frac{\kappa}{4} \phi^2 \omega_{\mu\nu} \omega^{\mu\nu} + \frac{\phi}{M_{\rm Pl}} T^\mu{}_\mu - \frac{\phi \alpha f(\phi)}{M_{\rm Pl}} (\partial \phi)^2 \right]S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R(\Gamma) - \frac{Z(\phi)}{2} (\partial_\mu \phi \partial^\mu \phi) - V(\phi) + f(\phi) \mathcal{L}_{\rm baryon} + \frac{\kappa}{4} \phi^2 \omega_{\mu\nu} \omega^{\mu\nu} + \frac{\phi}{M_{\rm Pl}} T^\mu{}_\mu - \frac{\phi \alpha f(\phi)}{M_{\rm Pl}} (\partial \phi)^2 \right]
 
-### Abstract
-Geometric Time Relativity (GTR) is a minimal Riemann-Cartan extension of General Relativity on a four-dimensional manifold \(U_4\) that accounts for galactic rotation curves, late-time cosmic acceleration, and regular black hole interiors via algebraic torsion and a screened scalar substrate \(\phi\) coupled to baryonic matter and ambient dust-gas processes. The theory introduces no new propagating degrees of freedom beyond the metric and \(\phi\), preserves \(c_{\rm GW} = c\), local weak-field GR limits, and ghost-free perturbations, while resolving key cosmological tensions through geometric screening and torsional wakes.
+where Z(ϕ)=1+γϕ2Z(\phi) = 1 + \gamma \phi^2Z(\phi) = 1 + \gamma \phi^2
+ (γ∼O(1)\gamma \sim \mathcal{O}(1)\gamma \sim \mathcal{O}(1)
+), V(ϕ)=V02ϕ2+β4ϕ4V(\phi) = \frac{V_0}{2} \phi^2 + \frac{\beta}{4} \phi^4V(\phi) = \frac{V_0}{2} \phi^2 + \frac{\beta}{4} \phi^4
+.Algebraic Torsion:
+Tμ=−2αMPlf(ϕ)∂μϕ,Kλμν=αMPlf(ϕ)(gμλ∂νϕ−gνλ∂μϕ).T_\mu = -\frac{2\alpha}{M_{\rm Pl}} f(\phi) \partial_\mu \phi, \quad K^\lambda{}_{\mu\nu} = \frac{\alpha}{M_{\rm Pl}} f(\phi) (g^\lambda_\mu \partial_\nu \phi - g^\lambda_\nu \partial_\mu \phi).T_\mu = -\frac{2\alpha}{M_{\rm Pl}} f(\phi) \partial_\mu \phi, \quad K^\lambda{}_{\mu\nu} = \frac{\alpha}{M_{\rm Pl}} f(\phi) (g^\lambda_\mu \partial_\nu \phi - g^\lambda_\nu \partial_\mu \phi).
+Effective Scalar Equation (v1.7 update below):
+Z(ϕ)□ϕ+12dZdϕ(∂ϕ)2+V′(ϕ)−f′(ϕ)ρbaryon−1MPl⟨Tμμ⟩+βinjQe−αϕ/MPl=0.Z(\phi) \Box \phi + \frac{1}{2} \frac{dZ}{d\phi} (\partial \phi)^2 + V'(\phi) - f'(\phi) \rho_{\rm baryon} - \frac{1}{M_{\rm Pl}} \langle T^\mu{}_\mu \rangle + \beta_{\rm inj} Q e^{-\alpha \phi / M_{\rm Pl}} = 0.Z(\phi) \Box \phi + \frac{1}{2} \frac{dZ}{d\phi} (\partial \phi)^2 + V'(\phi) - f'(\phi) \rho_{\rm baryon} - \frac{1}{M_{\rm Pl}} \langle T^\mu{}_\mu \rangle + \beta_{\rm inj} Q e^{-\alpha \phi / M_{\rm Pl}} = 0.
+Galactic Dynamics: Oscillatory torsional wakes
+δϕ(r)≈αMbaryon(<r)4πMPlr[cos⁡(λln⁡r)+sin⁡(λln⁡r)],\delta\phi(r) \approx \frac{\alpha M_{\rm baryon}(<r)}{4\pi M_{\rm Pl} r} \left[ \cos(\lambda \ln r) + \sin(\lambda \ln r) \right],\delta\phi(r) \approx \frac{\alpha M_{\rm baryon}(<r)}{4\pi M_{\rm Pl} r} \left[ \cos(\lambda \ln r) + \sin(\lambda \ln r) \right],
 
-### 1. Geometric & Variational Framework
+yielding effective acceleration matching SPARC data and BTFR slope ≈3.93\approx 3.93\approx 3.93
+.Regular Black Holes: de Sitter cores at high density, matched via Israel junction conditions (no singularities).2. v1.7: Torsional Vacuum Injection MechanismBlack holes act as macroscopic-to-microscopic transmuters. Extreme torsional shear at the de Sitter core converts captured baryons into Planck-scale spacetime fluctuations (virtual particles).Covariant Source Term:
+∇μTmatterμν=−Qν=−ξρBHτBHuν,\nabla_\mu T^{\mu\nu}_{\rm matter} = -Q^\nu = -\frac{\xi \rho_{\rm BH}}{\tau_{\rm BH}} u^\nu,\nabla_\mu T^{\mu\nu}_{\rm matter} = -Q^\nu = -\frac{\xi \rho_{\rm BH}}{\tau_{\rm BH}} u^\nu,
 
-#### 1.1 Manifold and Connection
-Spacetime is a Riemann-Cartan manifold with metric \(g_{\mu\nu}\) (signature \((-,+,+,+)\)) and affine connection
-\[
-\Gamma^\lambda_{\mu\nu} = \left\{^\lambda_{\mu\nu}\right\} + K^\lambda_{\mu\nu},
-\]
-where \(\left\{^\lambda_{\mu\nu}\right\}\) denotes the Levi-Civita connection and the contortion tensor \(K^\lambda_{\mu\nu}\) (antisymmetric in the last two indices) defines the totally antisymmetric torsion tensor
-\[
-T^\lambda_{\ \mu\nu} = \Gamma^\lambda_{\mu\nu} - \Gamma^\lambda_{\nu\mu} = 2K^\lambda_{[\mu\nu]}.
-\]
-The curvature scalar \(R\) computed with the full connection includes quadratic torsion contributions:
-\[
-R = R_{\rm LC} - 4\nabla_\lambda K^\lambda_{\ \mu}{}^\mu + \text{quadratic terms in } K.
-\]
+where ξ\xi\xi
+ is quantum efficiency, τBH\tau_{\rm BH}\tau_{\rm BH}
+ is the effective horizon dissolution timescale (linked to core density), and ρBH=fBHρm\rho_{\rm BH} = f_{\rm BH} \rho_m\rho_{\rm BH} = f_{\rm BH} \rho_m
+ with fBH∼0.05f_{\rm BH} \sim 0.05f_{\rm BH} \sim 0.05
+ (evolving with star-formation history).Injected Source in Scalar Equation:
+□ϕ+⋯+βinj Q e−αϕ/MPl=0.\Box \phi + \cdots + \beta_{\rm inj} \, Q \, e^{-\alpha \phi / M_{\rm Pl}} = 0.\Box \phi + \cdots + \beta_{\rm inj} \, Q \, e^{-\alpha \phi / M_{\rm Pl}} = 0.
 
-#### 1.2 Total Action
-The variational principle is
-\[
-S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R[g,\Gamma] - \frac{1}{2} Z(\phi) g^{\mu\nu} \partial_\mu\phi \partial_\nu\phi - V(\phi) + \lambda \phi (J^\mu_{\rm EM} u_\mu + \rho_{\rm gas}) \right] + S_{\rm baryon}[g_{\mu\nu},\phi],
-\]
-where \(M_{\rm Pl}^2 = 1/(8\pi G)\), \(Z(\phi)\) is a non-minimal kinetic function (\(Z(\phi_0) \approx 1\)), \(V(\phi)\) a potential, \(\lambda \ll 1\) the dust coupling, and \(S_{\rm baryon}\) encodes screened baryonic matter via \(f(\phi)\rho_{\rm baryon}\).
+Exponential screening e−αϕ/MPle^{-\alpha \phi / M_{\rm Pl}}e^{-\alpha \phi / M_{\rm Pl}}
+ protects against vacuum-energy runaway.Modified Continuity Equations (derived from action + torsion):
+dρmdN=−3ρm−QH,dρvacdN=3ρvac+βinjQH(w≈−1).\frac{d\rho_m}{dN} = -3\rho_m - \frac{Q}{H}, \quad \frac{d\rho_{\rm vac}}{dN} = 3\rho_{\rm vac} + \beta_{\rm inj} \frac{Q}{H} \quad (w \approx -1).\frac{d\rho_m}{dN} = -3\rho_m - \frac{Q}{H}, \quad \frac{d\rho_{\rm vac}}{dN} = 3\rho_{\rm vac} + \beta_{\rm inj} \frac{Q}{H} \quad (w \approx -1).
+This produces evolving (w(a)) with a transient ≈−1\approx -1\approx -1
+ phase (DESI-compatible) and Ωϕ\Omega_\phi\Omega_\phi
+ growth after cosmic dawn.3. Background Cosmology (v1.7 Solver)The full SymPy-derived background solver (Background_Cosmo_v1.7.py) now includes the injection term. Key diagnostics from tuned runs:Stable evolution with Ωtotal≈1\Omega_{\rm total} \approx 1\Omega_{\rm total} \approx 1
+.
+Ωϕ(rec)∼0.11\Omega_\phi(\rm rec) \sim 0.11\Omega_\phi(\rm rec) \sim 0.11
+–0.28 (contributes to 3rd CMB peak enhancement).
+Late-time acceleration triggered by BH injection timing.
+(w(a)) evolution matching DESI hints without fine-tuning.
 
-#### 1.3 Scalar Field Equation
-Variation with respect to \(\phi\) yields
-\[
-Z(\phi) \square \phi + \frac{1}{2} Z'(\phi) (\partial\phi)^2 + V'(\phi) - f'(\phi) \rho_{\rm baryon} - \lambda (J^\mu_{\rm EM} u_\mu + \rho_{\rm gas}) = 0,
-\]
-where \(\square\) is the d'Alembertian with respect to the full torsionful connection and primes denote \(d/d\phi\).
+4. Theoretical ConsistencyGhost-free and stable (non-propagating torsion + screening).
+Energy conditions satisfied outside cores; integrated conservation holds on U4U_4U_4
+.
+No violation of solar-system or GW constraints.
 
-#### 1.4 Algebraic Torsion and Weak-Field Limit
-Torsion is non-propagating and algebraically sourced:
-\[
-T^\lambda_{\ \mu\nu} = \frac{\alpha}{M_{\rm Pl}} \left( \delta^\lambda_\mu \partial_\nu \phi - \delta^\lambda_\nu \partial_\mu \phi \right) + \mathcal{O}(\lambda).
-\]
-In the weak-field, quasi-static limit (\(|\Phi| \ll 1\), \(v \ll c\)), the geodesic equation and Einstein-Cartan equations with torsion linearize around a screened scalar background \(\phi = \phi_0 + \delta\phi(r)\). The effective Poisson equation becomes
-\[
-\nabla^2 \Phi_{\rm eff} = 4\pi G \rho_{\rm baryon} + \frac{\alpha^2}{M_{\rm Pl}^2} \left( |\nabla\phi|^2 + \text{torsion quadratic terms} \right),
-\]
-where the scalar profile satisfies a screened Helmholtz-type equation. Matching to asymptotic flatness and integrating the torsional energy density under power-law halo profiles yields the additive circular-velocity correction
-\[
-v_{\rm vortex}^2(r) = \alpha Z \left( \frac{m_{\rm norm}}{(r/r_0)^{1.6} + 1} \right)^{0.48} S(r) \left[1 + P \sin(\phi_0 \ln(r/r_c + 1))\right],
-\]
-with the exponent 0.48 arising from the balance between quadratic torsion repulsion and scalar-gradient energy in the integrated constraint equations.
+5. Observational Predictions & TestsGalactic: BTFR, rotation curves (unchanged from v1.5).
+Cosmological: Evolving (w(a)), S8_8_8
+ relief via effective early cold component.
+Black Holes: Regular de Sitter cores; possible LISA echoes from core oscillations.
+Future: Euclid, JWST high-(z), DESI full dataset, CMB-S4.
 
-### 2. Astrophysical Kinematics
+6. Closed TCCVT Cycle (v1.7)Primordial plasma → condensation on torsional wakes → black-hole engines → Planck-scale vacuum injection → cosmic vaporization → true vacuum → quantum genesis (cyclic). Dark energy emerges naturally as recycled baryonic output.Validation Suite (included in repository):  Notebooks: Action_Tmunu_v1.7.ipynb, BH_Transmutation_Cores.ipynb, Background_Cosmo_v1.7.py, Validation_Suite_v1.7.ipynb.  
+GitHub Action: Automated convergence tests on Ω\Omega\Omega
+ conservation, stability, and (w(a)).
 
-#### 2.1 Constants and Regularization
-Local gravitational constant: \(G = 4.30091 \times 10^{-6}\) (km/s)\(^2\) kpc \(M_\odot^{-1}\).  
-Regularized baryonic velocity (ensures finite central density and numerical stability):
-\[
-v_{\rm bary}(r) = \sqrt{ \frac{G M(r)}{r + r_c} }, \quad r_c = 0.1 \, \rm kpc.
-\]
+Citation:bibtex
 
-#### 2.2 Integrated Velocity Profile
-\[
-v_{\rm model}(r)^2 = v_{\rm bary}(r)^2 + v_{\rm vortex}(r)^2.
-\]
+@misc{pieterse2026gtrv17,
+  title   = {Geometric Time Relativity (GTR) v1.7},
+  author  = {Thinus Pieterse},
+  year    = {2026},
+  url     = {https://github.com/thinus283-ux/LR}
+}
 
-### 3. Saturated Torsional Vortex Engine
-\[
-v_{\rm vortex}(r) = Z \alpha \left( \frac{m_{\rm norm}}{(r/r_0)^{1.6} + 1} \right)^{0.48} S(r) \left(1 + P \sin(\phi_0 \ln(r/r_c + 1))\right),
-\]
-where \(m_{\rm norm} = M_{\rm total}/10^{10} M_\odot\), \(r_0 = 1\) kpc. This form produces asymptotically flat rotation curves for typical spiral masses and a baryonic Tully-Fisher relation slope \(\approx 3.9\).
+License: CC BY 4.0  Full derivations, SymPy notebooks, and numerical validation code are available in the repository.
 
-**Chameleon Screening:**
-\[
-S(r) = \left[1 + \exp\left( \frac{r - \lambda_{\rm scalar} m_{\rm norm}^\beta}{r_s} \right)\right]^{-1}, \quad r_s \approx 2 \, \rm kpc.
-\]
-High baryonic density yields \(S \to 0\) (full GR recovery); low-density regimes yield \(S \to 1\) (maximal torsional effect).
 
-**Parameter Roles**  
-- \(\alpha\): dimensionless torsional coupling strength.  
-- \(Z\): core-to-asymptotic horizon matching factor.  
-- \(P \ll 1\): geometric shear oscillation amplitude.  
-- \(\lambda_{\rm scalar}, \beta\): screening threshold and mass scaling.
-
-### 4. Cosmological Evolution
-The linear growth factor incorporating late-time torsional acceleration is
-\[
-D(z) = (1+z)^{-0.55} \left[ 1 + \frac{\alpha}{180} \exp\left(-\frac{z}{4.8}\right) \left(1 - \frac{0.5}{(1+z)^{2.6}}\right) \right].
-\]
-This produces a mildly evolving effective \(w(a)\) compatible with DESI data and suppresses small-scale power via screening, alleviating the \(S_8\) tension.
-
-### 5. Non-Singular Black Hole Interiors
-In high-density regimes, the screening function \(f(\phi) \to 0\) suppresses the attractive gravitational channel while quadratic torsion terms provide geometric repulsion. The metric lapse function regularizes to a bounded de Sitter core:
-\[
-f(r) = 1 - \frac{2 G M(t) r^2}{r^3 + 2 G M(t) L^2},
-\]
-where \(L\) is the fundamental compression scale set by the balance between torsional repulsion and scalar vacuum energy.
-
-Global energy-momentum conservation is maintained via a dynamically screened drain vector
-\[
-Q^\mu = \beta(\phi) \, \xi^\mu, \quad \beta(\phi) = \frac{1}{1 + \exp\left( \frac{\phi - \phi_{\rm thresh}}{\Delta\phi} \right)},
-\]
-where \(\beta(\phi)\) is unity deep inside the high-density core and exponentially vanishes outside the horizon (\(r \gtrsim r_h\)). This ensures
-\[
-\nabla_\nu T^{\mu\nu}_{\rm core} = Q^\mu, \quad \nabla_\nu T^{\mu\nu}_{(\phi)} = -Q^\mu
-\]
-only in the deeply screened interior. Outside the horizon, \(\beta(\phi) \to 0\), recovering exact local conservation and full compliance with the strong equivalence principle and solar-system tests.
-
-This construction yields finite central curvature, eliminates singularities, and provides a dynamical evaporation channel that slowly returns trapped energy to the global vacuum substrate.
-
----
-
-### License
-This work is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.  
-You are free to share and adapt this document as long as you give appropriate credit to the author (Thinus Pieterse) and provide a link to the original repository.
-
-https://creativecommons.org/licenses/by/4.0/
 
 
 
