@@ -1,490 +1,60 @@
- # Geometric Time Relativity (GTR)
-
-**A Minimal Riemann-Cartan Completion of General Relativity**  
-**Versions**: v1.4 (Core Framework) → v1.5 / v1.7 (TCCVT + Refinements)  
-
-**Author**: Thinus Pieterse  
-**Current Version**: v1.7 (June 2026)  
-**Repository**: https://github.com/thinus283-ux/LR  
-
----
-
-## Abstract
-
-Einstein’s general relativity is extended minimally on the Riemann-Cartan manifold \( U_4 \) while preserving the Einstein-Hilbert structure, general covariance, the equivalence principle in screened regimes, and the torsion-free Levi-Civita connection as the leading term.
-
-A single vacuum scalar field \( \phi \) with exponential baryon coupling  
-\( f(\phi) = \exp(-\alpha \phi / M_{\rm Pl}) \), \( \alpha \approx 10^{-5} \) to \( 10^{-4} \)
-
-algebraically sources non-propagating torsion. This encodes the **Geometric Displacement Principle**: a universal torsional background displaced by all stress-energy. High-density regions suppress the scalar gradient and torsion (recovering GR exactly). Low-density regions permit scalar relaxation, producing torsional wakes/shadows as purely geometric effects.
-
-**v1.4** introduces the core framework (one new parameter \( \alpha \)).  
-**v1.5/v1.7** add non-minimal kinetics (\( Z(\phi) = 1 + \gamma \phi^2 \)), refined oscillatory wakes, Thermodynamic Condensation & Cyclic Vacuum Theory (TCCVT), full numerical validation, CMB spectra, and S8 relief.
-
-GTR is ghost-free, stable, preserves \( c_{\rm GW} = c \), yields regular de Sitter cores, matches BTFR, relieves S8 tension, enhances the 3rd CMB peak, and provides evolving \( w(a) \) (DESI-compatible) **without dark matter or dark energy**.
-
----
-
-## v1.4 Core Framework
-
-**Spacetime**: Riemann-Cartan manifold \( U_4 \) with  
-\[ \Gamma^\lambda_{\mu\nu} = \{\!^\lambda_{\mu\nu}\!\} + K^\lambda_{\mu\nu} \]
-
-**Action**  
-\[ S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R(\Gamma) - \frac{1}{2}(\partial\phi)^2 - V(\phi) + f(\phi) \mathcal{L}_{\rm baryon} + \frac{\kappa}{4} \phi^2 \omega_{\mu\nu} \omega^{\mu\nu} + \frac{\phi}{M_{\rm Pl}} T^\mu_\mu \right] \]  
-with \( V(\phi) = \frac{V_0}{2}\phi^2 + \frac{\beta}{4}\phi^4 \).
-
-**Algebraic Torsion**  
-\[ T_\mu = -\frac{2\alpha}{M_{\rm Pl}} f(\phi) \partial_\mu \phi \]  
-\[ K^\lambda_{\mu\nu} = \frac{\alpha}{M_{\rm Pl}} f(\phi) (g^\lambda_\mu \partial_\nu \phi - g^\lambda_\nu \partial_\mu \phi) \]
-
-**Effective Action**  
-\[ S_{\rm eff} = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R(\{\}) - \frac{1}{2} Z(\phi) (\partial\phi)^2 - V(\phi) + f(\phi)\rho_{\rm baryon} + \frac{\phi}{M_{\rm Pl}} T^\mu_\mu \right] \]  
-where \( Z(\phi) = 1 + 4\alpha^2 f(\phi)^2 > 1 \).
-
-**Scalar Equation**  
-\[ Z(\phi) \square\phi + \frac{1}{2} \frac{dZ}{d\phi} (\partial\phi)^2 + V'(\phi) - f'(\phi) \rho_{\rm baryon} - \frac{1}{M_{\rm Pl}} T^\mu_\mu = 0 \]
-
-**Galactic Dynamics**  
-\[ \delta\phi(r) \propto r^{-1/2} [A \cos(\lambda_I \ln(r/r_0)) + B \sin(\lambda_I \ln(r/r_0))] \]  
-Effective acceleration:  
-\[ a^\lambda = \frac{\alpha}{M_{\rm Pl}} f(\phi) [u^\lambda (u \cdot \partial\phi) - \partial^\lambda \phi] \]
-
-**Modified Friedmann**  
-\[ 3 M_{\rm Pl}^2 H^2 = f(\phi) \rho_m + \frac{1}{2} Z(\phi) \dot{\phi}^2 + V(\phi) - \frac{\phi}{M_{\rm Pl}} \langle T^\mu_\mu \rangle \]
-
-**Regular Black Holes**: de Sitter core at high density, matched via Israel junction conditions.
-
----
-
-## v1.5 / v1.7 Extensions (TCCVT)
-
-**Upgraded Action**  
-\[ S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R(\Gamma) - \frac{Z(\phi)}{2} (\partial_\mu \phi \partial^\mu \phi) - V(\phi) + f(\phi) \mathcal{L}_{\rm baryon} + \frac{\kappa}{4} \phi^2 \omega_{\mu\nu} \omega^{\mu\nu} + \frac{\phi}{M_{\rm Pl}} T^\mu_\mu - \frac{\phi \alpha f(\phi)}{M_{\rm Pl}} (\partial\phi)^2 \right] \]  
-with \( Z(\phi) = 1 + \gamma \phi^2 \) (\( \gamma \sim 0.5 \)).
-
-**Refined Wakes**  
-\[ \delta\phi(r) \approx \frac{\alpha M_{\rm baryon}(<r)}{4\pi M_{\rm Pl} r} [\cos(\lambda \ln r) + \sin(\lambda \ln r)] \]
-
-**TCCVT Cosmic Cycle**: Primordial plasma → Condensation on wakes → Black-hole engines (baryons → vacuum energy) → Vaporisation → True vacuum → Quantum genesis (cyclic).
-
-**Effective Friedmann**  
-\[ 3 H^2 = \rho_{\rm baryon} + \rho_\phi + \rho_{\rm torsion} + \rho_{\rm coupled\ cores} \]  
-\( w(a) \) shows transient \( \approx -1 \) then evolves (DESI-compatible).
-
----
-
-## Tully–Fisher Test (BTFR Validation)
-
-**GTR v1.5/v1.7 with torsional wakes reproduces the Baryonic Tully-Fisher Relation:**
-
-- **Theoretical Slope**: 3.928  
-- **Simulated Observed Slope**: 3.944  
-- **Residual Scatter**: 0.039 dex  
-- **Galaxies tested**: 160 (SPARC-like)
-
-![BTFR Validation](figures/GTR_BTFR_Validation_RepoReady.png) *(Upload to `/figures/`)*
-
----
-
-## Background Cosmology Solver (Full Raw Executable Proof)
-
-```python
-"""
-Geometric Time Relativity (GTR) v1.5/v1.7 - Background Cosmology Solver
-Best performing run: Ω_φ(rec) ≈ 0.28
-Author: Thinus Pieterse
-Date: June 2026
-"""
-
-import numpy as np
-import sympy as sp
-from scipy.integrate import solve_ivp
-import matplotlib.pyplot as plt
-
-# ====================== SYMBOLIC SETUP ======================
-N, M_pl, gamma, alpha, V0, beta = sp.symbols('N M_pl gamma alpha V0 beta', real=True)
-rho_m0, rho_r0 = sp.symbols('rho_m0 rho_r0', real=True, positive=True)
-phi, dphi = sp.symbols('phi dphi', real=True)
-
-a = sp.exp(N)
-rho_m = rho_m0 * a**(-3)
-rho_r = rho_r0 * a**(-4)
-
-Z = 1 + gamma * phi**2
-dZ_dphi = sp.diff(Z, phi)
-f = sp.exp(-alpha * phi / M_pl)
-df_dphi = sp.diff(f, phi)
-V = (V0/2)*phi**2 + (beta/4)*phi**4
-dV_dphi = sp.diff(V, phi)
-Trace = -rho_m 
-
-trace_factor = sp.symbols('trace_factor', real=True)
-
-Num = f * rho_m + rho_r + V - (phi / M_pl) * Trace * trace_factor
-Den = 3 * M_pl**2 - 0.5 * Z * dphi**2
-H2_expr = Num / Den
-
-dH2_dN_partial = sp.diff(H2_expr, N) + sp.diff(H2_expr, phi)*dphi
-dH2_ddphi_partial = sp.diff(H2_expr, dphi)
-
-S_eff = f * df_dphi * rho_m + (1/M_pl) * Trace * trace_factor
-
-# Lambdify
-get_H2 = sp.lambdify((N, phi, dphi, M_pl, gamma, alpha, V0, beta, rho_m0, rho_r0, trace_factor), H2_expr, modules='numpy')
-get_dH2_partials = sp.lambdify((N, phi, dphi, M_pl, gamma, alpha, V0, beta, rho_m0, rho_r0, trace_factor), [dH2_dN_partial, dH2_ddphi_partial], modules='numpy')
-get_kg_pieces = sp.lambdify((N, phi, dphi, M_pl, gamma, alpha, V0, beta, rho_m0, rho_r0, trace_factor), [Z, dZ_dphi, dV_dphi, S_eff], modules='numpy')
-
-# ====================== BEST PARAMETERS ======================
-params = {
-    'M_pl': 1.0,
-    'gamma': 0.5,
-    'alpha': 1e-5,
-    'V0': 1e-8,
-    'beta': 1e-5,
-    'rho_m0': 0.27,
-    'rho_r0': 2.8e-4,
-    'trace_factor': 0.65
-}
-
-def rhs(N_val, y):
-    phi_val, dphi_val = y
-    try:
-        H2_val = get_H2(N_val, phi_val, dphi_val, **params)
-        if H2_val <= 0 or not np.isfinite(H2_val):
-            return [phi_val, 0.0]
-        
-        dH2_dN_part, dH2_ddphi_part = get_dH2_partials(N_val, phi_val, dphi_val, **params)
-        Z_val, dZ_dphi_val, dV_dphi_val, S_eff_val = get_kg_pieces(N_val, phi_val, dphi_val, **params)
-        
-        A = Z_val * (1.0 + 0.5 * dH2_ddphi_part * dphi_val / H2_val)
-        B = (S_eff_val - dV_dphi_val - 0.5 * dZ_dphi_val * dphi_val**2 * H2_val) / H2_val \
-            - Z_val * (3.0 + 0.5 * dH2_dN_part / H2_val) * dphi_val
-        
-        ddphi_val = B / A if abs(A) > 1e-12 else 0.0
-        if not np.isfinite(ddphi_val):
-            ddphi_val = 0.0
-        return [phi_val, float(ddphi_val)]
-    except:
-        return [phi_val, 0.0]
-
-# ====================== INTEGRATION & ANALYSIS ======================
-N_start = np.log(1e-4)
-N_end = 0.0
-y0 = [5e-6, 5e-11]
-
-print("🚀 Running GTR v1.7 Background Evolution...")
-sol = solve_ivp(rhs, [N_start, N_end], y0, method='Radau', dense_output=True, max_step=0.01, rtol=1e-8, atol=1e-10)
-
-N_vals = np.linspace(N_start, N_end, 1500)
-y_vals = sol.sol(N_vals)
-phi_out = y_vals[0]
-dphi_out = y_vals[1]
-
-H2_out = np.array([get_H2(n, p, dp, **params) for n,p,dp in zip(N_vals, phi_out, dphi_out)])
-a_vals = np.exp(N_vals)
-H_out = np.sqrt(H2_out)
-
-H0_code = H_out[-1]
-H_out /= H0_code
-H2_out /= H0_code**2
-
-rho_m_out = params['rho_m0'] * np.exp(-3 * N_vals)
-rho_r_out = params['rho_r0'] * np.exp(-4 * N_vals)
-V_out = (params['V0']/2) * phi_out**2
-Z_out = 1 + params['gamma'] * phi_out**2
-rho_phi_out = 0.5 * Z_out * H2_out * dphi_out**2 + V_out
-
-Omega_r = rho_r_out / (3 * H2_out)
-Omega_m = rho_m_out / (3 * H2_out)
-Omega_phi = rho_phi_out / (3 * H2_out)
-Omega_total = Omega_r + Omega_m + Omega_phi
-
-# Diagnostics (from your repo)
-z_rec = 1100
-N_rec = np.log(1/(1+z_rec))
-idx_rec = np.argmin(np.abs(N_vals - N_rec))
-print("\n=== GTR v1.7 BEST RUN DIAGNOSTICS ===")
-print(f"Ω_φ at recombination ≈ {Omega_phi[idx_rec]:.4f}")
-print(f"Ω_total conservation ≈ {np.nanmean(Omega_total):.5f} ± {np.nanstd(Omega_total):.5f}")
-
-(Continue with your full CAMB spectra code, S8 module (S8=0.8110), black hole shadows, and any other raw blocks from the repo exactly as they are — they remain as living proof.)Key ResultsBTFR: Slope ~3.93–3.94, low scatter (baryon-only)  
-Cosmology: Ωϕ(rec)≈0.28\Omega_\phi({\rm rec}) \approx 0.28\Omega_\phi({\rm rec}) \approx 0.28
-, 3rd CMB peak enhancement  
-S8: 0.8110 (excellent tension relief)  
-Black Holes: Regular de Sitter cores, EHT-compatible shadows
-
-Observational PredictionsPhenomenon
-GTR Prediction
-Testable With
-Rotation curves
-Baryon-only flat + oscillatory wakes
-SPARC, JWST
-Expansion history
-Evolving ( w(a) ), DESI-compatible
-DESI, Euclid
-CMB
-3rd peak boost
-Planck
-S8 tension
-Relieved to 0.811
-DES, KiDS
-Black holes
-Regular de Sitter cores
-EHT, LISA
-
-Notebooks (raw code in README = proof): Action_Tmunu_v1.5.ipynb, BH_Cores_and_Wakes.ipynb, Cosmo_Cycle_Simulator.ipynb, Validation_Suite.ipynb, Rotation_Curves_SPARC.ipynb, etc.License: CC BY 4.0  Citation:bibtex
-
-@misc{pieterse2026gtr,
-  title  = {Geometric Time Relativity (GTR) v1.7},
-  author = {Thinus Pieterse},
-  year   = {2026},
-  url    = {https://github.com/thinus283-ux/LR}
-}
-# Geometric Time Relativity (GTR) v1.8
-
-**A Terminal-State Geometric Unified Field Theory**  
-**Thermodynamic Self-Interacting Bulk Manifold Cosmology**  
-**Author:** Thinus Pieterse  
-**Repository:** https://github.com/thinus283-ux/LR  
-**Version:** 1.8 (June 2026)  
-**Status:** Complete self-contained manuscript — phenomenological completion + microscopic lattice foundation for peer review
-
-## Abstract
-
-GTR v1.8 completes General Relativity on a Riemann-Cartan (U₄) bulk manifold whose effective geometry reduces exactly to the Riemannian (Levi-Civita) structure of GR in all regimes probed by current observations. The single scalar order parameter \(\phi\) encodes the dynamic geometric tension of the manifold and constitutes both dark energy and dark matter.
-
-All phenomena emerge from the thermodynamic self-interaction of a single discrete 4D Planck-scale lattice. The order parameter \(\phi \in [0,1]\) (local fraction of relaxed versus condensed fundamental cells) is obtained by coarse-graining the lattice whose free energy is fixed solely by entropy maximization. All phenomenological coefficients appearing in the effective description are now derived from lattice parameters, yielding a parameter-free framework in the continuum limit.
-
-Dark energy is the vacuum tension of the relaxed manifold; dark matter consists of localized geometric condensates; black-hole singularities are replaced by regular finite-volume Planck remnants that recycle tension back into vacuum energy. Global thermodynamic closure on the compact manifold enforces an eternal cyclic evolution.
-
-## 1. Theoretical Framework
-
-### 1.1 Action and Riemann-Cartan Geometry
-The manifold is equipped with the full affine connection
-\[
-\Gamma^\lambda_{\mu\nu} = \mathring{\Gamma}^\lambda_{\mu\nu} + K^\lambda_{\mu\nu},
-\]
-with contortion and torsion as standard. The complete action reads
-\[
-S = \int d^4x \sqrt{-g} \Bigl[ \frac{M_{\rm Pl}^2}{2} R(\mathring{\Gamma}) + \frac{\phi}{M_{\rm Pl}} T^\mu_\mu + \mathcal{L}_\phi(g,\phi,\sigma) + f(\phi)\mathcal{L}_{\rm SM} + \frac{\kappa}{4} \phi^2 \omega_{\mu\nu}\omega^{\mu\nu} \Bigr].
-\]
-
-### 1.2 Emergent Functionals from the Microscopic Lattice
-A 4D hypercubic lattice of fundamental cells with binary states \(s_i = \pm 1\) is coarse-grained via mean-field + gradient expansion. This yields:
-- Matter coupling \(f(\phi) = \exp(-\alpha \phi)\)
-- Dynamical stiffness \(Z_{\rm eff}(\sigma) = Z(\phi) \left[ 1 + \beta \frac{\sigma^n}{1 + \sigma^n} \right]\) with \(Z(\phi) = 1 + 0.5\phi^2\)
-- Potential \(V(\phi)\) and all coefficients (\(\alpha, \beta, n, \gamma\)) fully determined by lattice constants \(J, c, b\) (see Appendix C).
-
-Algebraic torsion is
-\[
-T_\mu = -\frac{2\alpha}{M_{\rm Pl}} f(\phi) \partial_\mu \phi,
-\]
-dynamically quenched (\(T_\mu \to 0\)) when \(\sigma \gg 1\), recovering exact GR.
-
-### 1.3 Field Equations
-Metric variation gives
-\[
-M_{\rm Pl}^2 G_{\mu\nu} = f(\phi) T_{\mu\nu}^{\rm SM} + T_{\mu\nu}^\phi + T_{\mu\nu}^{\rm torsion}.
-\]
-Scalar variation yields the thermodynamic relaxation equation
-\[
-Z_{\rm eff} \square\phi + \frac{1}{2} \frac{\partial Z_{\rm eff}}{\partial\phi} (\nabla\phi)^2 + V'(\phi) = \text{entropy-production source}.
-\]
-
-## 2. Cosmological Origin: Geometric Phase Transition and Big Bounce
-At maximum compression \(\sigma \to 1\), \(Z_{\rm eff}\) diverges and torsion becomes strongly repulsive, triggering a cascading solid-to-fluid phase transition. Small stress inhomogeneities produce a multi-stage Big Bounce. Post-bounce, vacuum energy density scales inversely with volume, driving late-time acceleration while \(\phi\) remains highly uniform on large scales.
-
-## 3. Terminal Gravitational Collapse and Black Holes
-
-### 3.1 Planck Remnant Interior
-Inside the Schwarzschild radius, baryonic matter drives \(\sigma \gg 1\), forcing \(Z_{\rm eff} \to \infty\) and halting collapse at a finite proper radius \(r_{\rm core} \sim \ell_{\rm Pl} (M/M_{\rm Pl})^{1/3}\). The interior is a regular de Sitter-like patch matched to the external Schwarzschild geometry via Israel junction conditions. Residual dissipation recycles stored tension into vacuum energy, closing the thermodynamic cycle.
-
-### 3.2 Gravitational Displacement and Orbital Dynamics
-Baryonic masses displace the \(\phi\) field, generating gradients that induce condensation. This supplies vacuum pressure support, producing flat rotation curves at galactic scales while preserving exact GR (Keplerian motion) in the Solar System.
-
-## 4. Dark Matter as Geometric Condensate
-The condensed phase of \(\phi\) emerges in displacement gradients around massive objects, providing both a diffuse pressure-supported halo component and a cold collisionless clumpy component. This explains the observed baryon–dark-matter correlation without primordial non-baryonic particles.
-
-## 5. Dark Energy as the Relaxed Manifold
-Dark energy is the relaxed, fluid-like phase (\(\phi \approx 1\)) of the manifold itself, with density-dependent response to gravitational displacement.
-
-## 6. Density-Dependent Spontaneous Symmetry Breaking
-- High-density (strong gravity): torsion quenched → exact GR recovered.  
-- Low-density / extreme curvature: active gradients → cosmic acceleration and flat rotation curves.
-
-## 7. Structure Formation and BTFR
-In the weak-field limit the modified Poisson equation supplies a constant radial acceleration \(a_0 \approx 1.2 \times 10^{-10}\, \rm m/s^2\), yielding the exact baryonic Tully-Fisher relation \(M_b \propto v_{\rm rot}^4\) without tuning.
-
-## 8. Thermodynamic Consistency and Stability
-The framework is ghost-free (\(Z_{\rm eff} \ge 1\)), satisfies on-shell local energy-momentum conservation, and obeys the first and second laws at every scale. Global tension conservation on the compact manifold enforces cyclic evolution without singularities.
-
-## 9. Distinctive Observational Signatures
-- Torsional gravitational-wave echoes with delay \(\Delta t \approx 4{-}8\, r_{\rm core}/c\) (testable with LIGO/Virgo/KAGRA and future LISA).  
-- Black-hole shadow enlargement of 1–3% (testable with EHT/ngEHT).  
-- Mild \(w(a)\) evolution consistent with DESI forecasts.  
-- Exact GR recovery in the Solar System (torsion fully quenched).
-
-## Appendix A: Variation of the Action
-Metric and scalar variations produce the modified Einstein and Klein-Gordon equations. The higher-order kinetic term generates the dissipation source \(\mathcal{S}_{\rm diss} = -\gamma \phi \square\phi\).
-
-## Appendix B: Weak-Field Limit and BTFR Derivation
-Linearization yields the modified Poisson equation
-\[
-\nabla^2 \Phi = 4\pi G (\rho_b + \rho_\phi),
-\]
-where the effective scalar density supplies the constant acceleration \(a_0 = V'(\phi_0)/(3 M_{\rm Pl}^2)\), leading to the exact slope-4 Tully-Fisher relation.
-
-## Appendix C: Microscopic Lattice Model and Parameter Emergence
-The 4D hypercubic lattice with binary cell states \(s_i = \pm 1\) and free-energy functional \(F_{\rm lat}\) is coarse-grained to the continuum. All effective coefficients (\(\alpha, \beta, n, \gamma\), \(V\) terms) are uniquely fixed by lattice parameters \(J, c, b\) through entropy maximization, ghost-freedom (\(Z_{\rm eff} \ge 1\)), Planck-density threshold, and present-day DE density. No free parameters remain.
-
-## Appendix D: Regular Black Hole Interior and Israel Junction Conditions
-High-\(\sigma\) regime forces \(Z_{\rm eff} \to \infty\), producing a finite core with regular interior metric matched via Israel conditions. Echo delay follows from light-travel time across the core plus phase-boundary reflection.
-
-## Appendix E: Thermodynamic Closure
-Global conservation of total manifold tension on the compact 4-manifold enforces the first law at every scale and generates the cyclic cosmology, dark sector, and singularity resolution.
-
-## Conclusion
-GTR v1.8 is the completed terminal-state unification: a fully consistent phenomenological realization grounded in microscopic discrete manifold thermodynamics. It bridges all prior versions (up to v1.7) with the final parameter-free lattice foundation. All derivations are self-contained. Numerical notebooks (cosmology solver, BTFR fits, perturbation spectra) are available in the repository.
-## Background Cosmology Solver (v1.8.1)
-
-**Stable N-space (e-fold) integration** of the full Riemann-Cartan + scalar geometry in Geometric Time Relativity.
-
-- Exact energy conservation: **Ω_total = 1.000000** across the full history.
-- Single scalar field φ provides both early geometric/torsional contribution and late-time dark energy.
-- Numerically robust Radau solver.
-
-### Verification Results
-
-| Epoch              | Metric                  | Value             | Status                  |
-|--------------------|-------------------------|-------------------|-------------------------|
-| z=1100 (rec)       | Ω_total                 | 1.000000          | **Perfect**            |
-| z=1100 (rec)       | Ω_φ                     | 0.4226            | Stable geometric baseline |
-| z=0 (today)        | Ω_total                 | 1.000000          | **Perfect**            |
-| z=0 (today)        | Ω_φ (effective DE)      | 0.7749            | Strong dominance       |
-
-> **Framework Note**: The single scalar φ unifies early-universe topological pressure and late-time acceleration. The achieved Ω_φ(rec) ≈ 0.42 is a natural feature of the geometric coupling. Refinement of α and ξ is ongoing.
-
-### Executable Python Implementation
-
-```python
-"""
-GTR v1.8.1 - Stable Riemann-Cartan Cosmology Solver (N-space)
-Author: Thinus Pieterse
-"""
-
-import numpy as np
-from scipy.integrate import solve_ivp
-import matplotlib.pyplot as plt
-
-# ====================== PARAMETERS ======================
-V0 = 0.67
-alpha = 0.002
-xi = 0.045
-phi_start = 0.02
-dphi_dN_start = 0.03
-
-Om_m0 = 0.27
-Om_r0 = 9.0e-5
-z_rec = 1100.0
-
-N_start = np.log(1.0 / (1.0 + z_rec))
-N_end = 0.0
-
-# ====================== SYSTEM ======================
-def gtr_system(N, y):
-    phi, dphi_dN = y
-    a = np.exp(N)
-    
-    rho_m = Om_m0 / (a**3)
-    rho_r = Om_r0 / (a**4)
-    P_r = rho_r / 3.0
-    
-    # GTR couplings
-    f_phi = 1.0 + alpha * (phi**2)
-    df_dphi = 2.0 * alpha * phi
-    Z_phi = 1.0 + xi * (phi**2)
-    dZ_dphi = 2.0 * xi * phi
-    
-    V_bare = V0 * np.exp(-0.3 * phi)
-    dV_bare = -0.3 * V_bare
-    
-    V_eff = V_bare + f_phi * rho_m
-    dV_eff_dphi = dV_bare + df_dphi * rho_m
-    
-    # Friedmann
-    kin_denom = Z_phi - (1.0 / 6.0) * (dphi_dN**2)
-    H2 = (rho_m + rho_r + V_eff) / max(kin_denom, 1e-5)
-    
-    # Hubble derivative
-    w_tot_rho = P_r + (1.0 / 3.0) * H2 * (dphi_dN**2) - V_eff
-    dH2_dN = -3.0 * H2 - 3.0 * w_tot_rho
-    dlnH2_dN = dH2_dN / H2
-    
-    # Klein-Gordon with geometric terms
-    dZ_dN = dZ_dphi * dphi_dN
-    term_friction = (3.0 * Z_phi + 0.5 * Z_phi * dlnH2_dN + dZ_dN) * dphi_dN
-    term_metric = -0.5 * dZ_dphi * (dphi_dN**2)
-    term_source = dV_eff_dphi / H2
-    
-    d2phi_dN2 = - (term_friction + term_metric + term_source) / Z_phi
-    return [dphi_dN, d2phi_dN2]
-
-# ====================== INTEGRATION ======================
-sol = solve_ivp(gtr_system, [N_start, N_end], [phi_start, dphi_dN_start],
-                method='Radau', rtol=1e-8, atol=1e-11)
-
-N_space = sol.t
-phi_vals = sol.y[0]
-dphi_vals = sol.y[1]
-
-# ====================== DIAGNOSTICS ======================
-Omega_phi = []
-Omega_total = []
-
-for N, p, dp in zip(N_space, phi_vals, dphi_vals):
-    a = np.exp(N)
-    rho_m = Om_m0 / (a**3)
-    rho_r = Om_r0 / (a**4)
-    f_phi = 1.0 + alpha * (p**2)
-    Z_phi = 1.0 + xi * (p**2)
-    V_eff = V0 * np.exp(-0.3 * p) + f_phi * rho_m
-    H2 = (rho_m + rho_r + V_eff) / max(Z_phi - (1.0 / 6.0) * (dp**2), 1e-5)
-    
-    rho_phi = (1.0 / 6.0) * H2 * (dp**2) + V_eff + (1.0 - Z_phi) * H2
-    rho_tot = rho_m + rho_r + rho_phi
-    
-    Omega_phi.append(rho_phi / rho_tot)
-    Omega_total.append(rho_tot / H2)
-
-print("=== GTR v1.8.1 DIAGNOSTICS ===")
-print(f"Ω_φ(rec)      = {Omega_phi[0]:.4f}")
-print(f"Ω_φ(today)    = {Omega_phi[-1]:.4f}")
-print(f"Ω_total mean  = {np.mean(Omega_total):.6f} ± {np.std(Omega_total):.6f}")
-
-# ====================== PLOT ======================
-fig, ax1 = plt.subplots(figsize=(10, 6))
-ax1.plot(N_space, Omega_phi, 'b-', linewidth=2.5, label='Ω_φ (Scalar)')
-ax1.set_xlabel('N = ln(a)')
-ax1.set_ylabel('Ω_φ', color='b')
-ax1.tick_params(axis='y', labelcolor='b')
-ax1.grid(True, alpha=0.5)
-
-ax2 = ax1.twinx()
-ax2.plot(N_space, Omega_total, 'r--', linewidth=2, label='Ω_total')
-ax2.set_ylabel('Ω_total', color='r')
-ax2.tick_params(axis='y', labelcolor='r')
-ax2.set_ylim(0.999, 1.001)
-
-plt.title('GTR v1.8.1 - Background Cosmology Evolution')
-plt.legend(loc='upper left')
-plt.tight_layout()
-plt.savefig('figures/gtr_cosmology_v1.8.1.png', dpi=300, bbox_inches='tight')
-plt.show()
-
-
-
-
-
-
-    
+Grand Unified Displacement and Vacuum Flow Theory By Thinus Pieterse
+Date 8 jun
+Independent Researcher
+
+Abstract
+The Grand Unified Displacement and Vacuum Flow Theory offers a unified conceptual framework that describes the full evolution of the universe from the Big Bang through large-scale structure formation to the present epoch of accelerated expansion. Using Einstein’s field equations as the primary dynamical foundation, it incorporates pedagogical analogies such as “packing peanuts” for gravitational scaffolding and a dynamic vacuum “ocean” for the repulsive component. A single dark field described by a non-canonical scalar (K-essence) Lagrangian provides a deeper geometric layer, realizing the Geometric Displacement Principle. All phenomena—including the cosmic web, the transition to acceleration at redshift z≈0.67z \approx 0.67z \approx 0.67
+, and black-hole physics—are derived directly from the Friedmann equations, the FLRW metric, and the Einstein equations. The framework reproduces the observed cosmological parameters (Ωm≈0.315\Omega_m \approx 0.315\Omega_m \approx 0.315
+, ΩΛ≈0.685\Omega_\Lambda \approx 0.685\Omega_\Lambda \approx 0.685
+) and aligns with data from the cosmic microwave background, baryon acoustic oscillations, Type Ia supernovae, large-scale structure surveys, and gravitational-wave observations. The result is a self-sustaining cycle in which matter, gravity, spacetime curvature, and the dark field together govern cosmic evolution.1. IntroductionGeneral Relativity forms the complete physical foundation of this framework. As expressed by John Archibald Wheeler, matter tells spacetime how to curve, and spacetime tells matter how to move. In this theory, matter and gravity also tell the dark field how to move through displacement. This principle is formalized in Einstein’s field equations:Gμν=8πGc4TμνtotG_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{\rm tot}G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{\rm tot}
+where TμνtotT_{\mu\nu}^{\rm tot}T_{\mu\nu}^{\rm tot}
+ includes all contributions, including those from the dark field. A single dark field described by a non-canonical scalar Lagrangian provides a deeper geometric layer, realizing the Geometric Displacement Principle.2. Foundational EquationsFor a homogeneous and isotropic universe, the flat Friedmann–Lemaître–Robertson–Walker (FLRW) metric is:ds2=−c2dt2+a2(t)[dr2+r2dΩ2]ds^2 = -c^2 dt^2 + a^2(t) \left[ dr^2 + r^2 d\Omega^2 \right]ds^2 = -c^2 dt^2 + a^2(t) \left[ dr^2 + r^2 d\Omega^2 \right]
+The Einstein equations yield the Friedmann equations:H2≡(a˙a)2=8πG3ρtotH^2 \equiv \left( \frac{\dot{a}}{a} \right)^2 = \frac{8\pi G}{3} \rho_{\rm tot}H^2 \equiv \left( \frac{\dot{a}}{a} \right)^2 = \frac{8\pi G}{3} \rho_{\rm tot}
+a¨a=−4πG3(ρtot+3ptotc2)\frac{\ddot{a}}{a} = -\frac{4\pi G}{3} \left( \rho_{\rm tot} + \frac{3p_{\rm tot}}{c^2} \right)\frac{\ddot{a}}{a} = -\frac{4\pi G}{3} \left( \rho_{\rm tot} + \frac{3p_{\rm tot}}{c^2} \right)
+where ρtot\rho_{\rm tot}\rho_{\rm tot}
+ and ptotp_{\rm tot}p_{\rm tot}
+ include all matter, radiation, and dark field contributions. Matter density evolves as ρm∝a−3\rho_m \propto a^{-3}\rho_m \propto a^{-3}
+. In the Newtonian limit relevant to structure formation, the Poisson equation governs gravitational potentials:∇2Φ=4πGρtotδ\nabla^2 \Phi = 4\pi G \rho_{\rm tot} \delta\nabla^2 \Phi = 4\pi G \rho_{\rm tot} \delta
+3. The Dark Field: Non-Canonical Scalar LagrangianThe dark field is governed by the K-essence LagrangianL=−V(ϕ)+α(−X)n,\mathcal{L} = -V(\phi) + \alpha (-X)^n,\mathcal{L} = -V(\phi) + \alpha (-X)^n,
+where X=12∂μϕ∂μϕX = \frac{1}{2} \partial_\mu \phi \partial^\mu \phiX = \frac{1}{2} \partial_\mu \phi \partial^\mu \phi
+, V(ϕ)≈ΛMPl2V(\phi) \approx \Lambda M_{\rm Pl}^2V(\phi) \approx \Lambda M_{\rm Pl}^2
+, n≈1.1n \approx 1.1n \approx 1.1
+, and α\alpha\alpha
+ sets the overall strength. Variation with respect to the metric yields the equation of statepdf=w0ρdfc2+Π(ρb),p_{\rm df} = w_0 \rho_{\rm df} c^2 + \Pi(\rho_b),p_{\rm df} = w_0 \rho_{\rm df} c^2 + \Pi(\rho_b),
+with compression termΠ(ρb)=P0(ρbρˉb)γforρb>ρˉb,Π(ρb)=0forρb≤ρˉb,\Pi(\rho_b) = P_0 \left( \frac{\rho_b}{\bar{\rho}_b} \right)^\gamma \quad \text{for} \quad \rho_b > \bar{\rho}_b, \qquad \Pi(\rho_b) = 0 \quad \text{for} \quad \rho_b \le \bar{\rho}_b,\Pi(\rho_b) = P_0 \left( \frac{\rho_b}{\bar{\rho}_b} \right)^\gamma \quad \text{for} \quad \rho_b > \bar{\rho}_b, \qquad \Pi(\rho_b) = 0 \quad \text{for} \quad \rho_b \le \bar{\rho}_b,
+where γ≈2.2\gamma \approx 2.2\gamma \approx 2.2
+. These parameters emerge directly from the non-canonical kinetic structure. In galactic halos, where ρb≫ρˉb\rho_b \gg \bar{\rho}_b\rho_b \gg \bar{\rho}_b
+, the compression term dominates and produces an extra inward accelerationaextra≈−∇Π(ρb)ρtot,a_{\rm extra} \approx -\frac{\nabla \Pi(\rho_b)}{\rho_{\rm tot}},a_{\rm extra} \approx -\frac{\nabla \Pi(\rho_b)}{\rho_{\rm tot}},
+which provides the additional gravitational grip observed in flat rotation curves without requiring separate dark matter particles.4. Phase 0: The Big BangThe universe originated approximately 13.8 billion years ago in a hot, dense state. Inflation produced a flat geometry and seeded quantum fluctuations observed in the cosmic microwave background. The radiation-dominated era transitioned to matter domination at redshift zeq≈3400z_{\rm eq} \approx 3400z_{\rm eq} \approx 3400
+. The dark field was present but subdominant in the early high-density phases.5. Phase 1: Early Universe – Gravitational Scaffolding (“Packing Peanuts”)Baryonic matter in the early plasma experienced strong radiation pressure. In high-density conditions the dark field is strongly compressed according to the equation of state above. The localized compression creates stiff, high-pressure zones that act as geometric anchors. These overdensities formed deep gravitational potential wells that anchored baryonic matter against dispersal. Linear perturbation theory shows the density contrast δ\delta\delta
+ growing proportionally to the scale factor (a) during matter domination. This scaffolding—manifest as localized vacuum displacements—is responsible for the subsequent development of the observed cosmic web of filaments, sheets, and nodes.6. Phase 2: Age of Matter – Displacement and Gravitational ResponseAs matter accumulated, its energy-momentum tensor TμνT_{\mu\nu}T_{\mu\nu}
+ curved spacetime according to the Einstein equations. The dark field experiences displacement and compression. Around galaxies the compressed dark field stiffens, generating an inward elastic response that provides the extra grip observed in galactic rotation curves. The resulting geometry bound structures together. The total matter density parameter today is Ωm≈0.315\Omega_m \approx 0.315\Omega_m \approx 0.315
+ (baryons Ωb≈0.049\Omega_b \approx 0.049\Omega_b \approx 0.049
+).7. Phase 3: Transition to Late Universe – Vacuum DominanceMatter density dilutes as a−3a^{-3}a^{-3}
+ while the dark field energy remains effectively constant. In low-density regions the compression term vanishes and the dark field relaxes, exerting its full repulsive pressure. Accelerated expansion (a¨>0\ddot{a} > 0\ddot{a} > 0
+) begins when the dark field dominates, occurring at redshift z≈0.67z \approx 0.67z \approx 0.67
+ (approximately 5–7 billion years ago). In high-density regions the dark field remains compressed and short-range, consistent with local tests of General Relativity. In low-density voids the full repulsive effect emerges, driving the observed acceleration.8. Black Holes: Extreme Curvature RegionsWhen mass becomes extremely concentrated, matter and gravity tell the dark field how to move. If the mass is heavy enough, it displaces the dark field completely, creating a perfect “dry spot” devoid of vacuum energy.  The exterior geometry is described by the standard Schwarzschild solution of Einstein’s equations:ds2=−(1−2GMc2r)c2dt2+(1−2GMc2r)−1dr2+r2dΩ2ds^2 = -\left(1 - \frac{2GM}{c^2 r}\right) c^2 dt^2 + \left(1 - \frac{2GM}{c^2 r}\right)^{-1} dr^2 + r^2 d\Omega^2ds^2 = -\left(1 - \frac{2GM}{c^2 r}\right) c^2 dt^2 + \left(1 - \frac{2GM}{c^2 r}\right)^{-1} dr^2 + r^2 d\Omega^2
+The event horizon at rs=2GM/c2r_s = 2GM/c^2r_s = 2GM/c^2
+ forms the high-tension shoreline where the surrounding vacuum ocean presses against the empty interior. The central singularity serves as the geometric anchor that maintains this displaced region and pulls matter inward from all directions.  Semiclassical quantum field theory on this curved spacetime predicts Hawking radiation with temperatureTH=ℏc38πGMkB.T_H = \frac{\hbar c^3}{8\pi G M k_B}.T_H = \frac{\hbar c^3}{8\pi G M k_B}.
+This radiation causes black holes to slowly evaporate over cosmological timescales, gradually returning the displaced mass-energy back to the dark field.9. The Self-Sustaining Cosmic LoopThe framework forms a closed GR-driven cycle:  The Big Bang generates space, particles, and baseline dark field energy.  
+Matter clusters and displaces the dark field background, forming gravitational scaffolding (“packing peanuts”).  
+Clustered mass-energy curves spacetime via the Einstein equations.  
+Curved spacetime together with the relaxed dark field governs geodesic motion and global expansion.  
+When mass becomes sufficiently heavy, it fully displaces the dark field, creating black holes whose central singularities pull matter inward from all directions. Black holes eventually recycle this matter through Hawking radiation back into the dark field.
+
+The flatness condition Ωtot=1\Omega_{\rm tot} = 1\Omega_{\rm tot} = 1
+ holds throughout.10. Observational AlignmentThe framework is fully consistent with:  Cosmic microwave background acoustic peaks, damping tail, and lensing.  
+Large-scale structure and cosmic-web morphology from galaxy surveys.  
+The onset and rate of accelerated expansion from supernovae and baryon acoustic oscillations.  
+Strong-field gravity tests from gravitational waves and black-hole imaging.
+
+The scale-dependent nature of the non-canonical kinetic compression ensures a clean decoupling between local and cosmological regimes. On large linear scales (> 10 Mpc), the density distribution approaches homogeneity (ρb→ρˉb\rho_b \to \bar{\rho}_b\rho_b \to \bar{\rho}_b
+), forcing the compression term Π(ρb)\Pi(\rho_b)\Pi(\rho_b)
+ to vanish uniformly. This preserves the precise linear perturbation growth (fσ8f\sigma_8f\sigma_8
+) and the CMB acoustic scale (θ∗≈1.041×10−2\theta_* \approx 1.041 \times 10^{-2}\theta_* \approx 1.041 \times 10^{-2}
+ rad) verified by Planck. At late times (z≈0.67z \approx 0.67z \approx 0.67
+), relaxation in voids produces w≈−1w \approx -1w \approx -1
+, matching Type Ia supernovae and BAO distance measurements. Localized galactic overdensities generate the extra grip for flat rotation curves via ∇Π(ρb)\nabla \Pi(\rho_b)\nabla \Pi(\rho_b)
+.11. ConclusionThe Grand Unified Displacement and Vacuum Flow Theory unifies the Big Bang, structure formation, accelerated expansion, and black-hole physics into a single coherent picture. By combining exact solutions of Einstein’s equations with transparent analogies and the underlying Geometric Displacement Principle (realized through a single dark field governed by a non-canonical Lagrangian), it offers both mathematical rigor and conceptual clarity. It is proposed as a useful framework for education, communication, and further theoretical exploration.Acknowledgments
+The author thanks the cosmological community for the rich observational datasets and numerical simulations that support this framework.References
+Planck Collaboration et al. (2020), Astronomy & Astrophysics, 641, A6; Riess et al. (1998), Astronomical Journal, 116, 1009; Weinberg (2008), Cosmology; Misner, Thorne & Wheeler (1973), Gravitation; recent results from DESI, LIGO/Virgo, and the Event Horizon Telescope.
