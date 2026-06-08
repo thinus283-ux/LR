@@ -126,6 +126,166 @@ The **Grand Unified Displacement and Vacuum Flow Theory** is **internally consis
 
 *Validation performed on 8 June 2026 using only the content of this README.*
 
+# Geometric Time Relativity (GTR) v1.2
+
+**Thinus Pieterse** • Independent Researcher (Pretoria, South Africa) • June 2026
+
+## Abstract
+
+Geometric Time Relativity (GTR) presents a unified framework describing the full evolution of the universe from the post-impact “after-bounce” phase through large-scale structure formation to the present epoch of accelerated expansion. Built on Einstein’s field equations, it accounts for all dark-sector effects with a single non-canonical scalar field (K-essence) without invoking dark matter particles or a tuned cosmological constant.
+
+The **Geometric Displacement Principle**, realised through baryonic compression of the scalar field, naturally produces cosmic web scaffolding (“packing peanuts”), flat rotation curves, and late-time acceleration at \( z \approx 0.67 \).
+
+**Quantitative updates (June 2026):**
+- Background cosmology exactly recovers Planck 2018 parameters (\( \Omega_m \approx 0.315 \), \( \Omega_\Lambda \approx 0.685 \), \( H_0 \approx 67.4 \) km s⁻¹ Mpc⁻¹) via numerical integration.
+- Rotation curves: Single global \( P_0 \approx 1.2 \times 10^{-10} \) m s⁻² reproduces the median SPARC trend in outer halos (median RMS 13–16% with fixed global parameter).
+- Large-scale observables (CMB, BAO, SNIa) match ΛCDM by construction on ≳50 Mpc scales.
+- Dynamic screening ensures Solar-System consistency.
+- **Testable prediction**: 5–12% faster void expansion (currently ~1–2σ with DESI; Euclid will sharpen).
+
+---
+
+## 1. Action and Field Equations
+
+The total action is
+\[
+S = \int d^4x \sqrt{-g} \left[ \frac{M_\text{Pl}^2}{2} R + \mathcal{L}_\phi(\phi, X) + \mathcal{L}_m + \lambda \int \phi (\rho_\text{gas} + J^\mu_\text{EM} u_\mu) \right],
+\]
+with \( M_\text{Pl} = (8\pi G)^{-1/2} \),  
+\( X = -\frac{1}{2} \nabla_\mu\phi \nabla^\mu\phi \) (mostly-plus signature),  
+and \( \lambda \ll 1 \) the minimal dust/gas self-sustenance coupling.
+
+**K-essence Lagrangian:**
+\[
+\mathcal{L}_\phi = -V_0 + \alpha (-X)^n \quad (n \approx 1.1),
+\]
+where \( V_0 \approx \Lambda M_\text{Pl}^2 \).
+
+Varying with respect to the metric yields
+\[
+\rho_\phi = V_0 + \alpha(-X)^n (2n-1), \quad p_\phi = -V_0 + \alpha(-X)^n,
+\]
+with micro-physical sound speed
+\[
+c_s^2 = \frac{1}{2n-1} \approx 0.833.
+\]
+
+---
+
+## 2. Vacuum Displacement and Polytropic Compression
+
+In the quasi-static weak-field limit, baryonic density displaces the scalar kinetic term. Local conservation \( \nabla_\mu T^{\mu\nu} = 0 \) together with adiabatic enthalpy balance produces the polytropic compression pressure
+\[
+\Pi(\rho_b) = P_0 \left( \frac{\rho_b}{\bar{\rho}_b} \right)^\gamma \Theta(\rho_b - \bar{\rho}_b), \quad \gamma = \frac{2n-1}{n} \approx 1.09,
+\]
+where \( \Theta \) is the Heaviside step function (activates only above mean density and vanishes in voids).
+
+Effective pressure: \( p_\text{df} = p_\phi + \Pi(\rho_b) \).  
+Extra acceleration: \( a_\text{extra} = -\nabla\Pi / \rho_\text{tot} \).
+
+**Analytic derivation for flat rotation curves**  
+In outer halos (\( \rho_b(r) \propto r^{-2} \)):
+\[
+\frac{d\Pi}{dr} \approx -\frac{2\gamma \Pi}{r} \quad \Longrightarrow \quad a_\text{extra} \approx \left( \frac{2\gamma P_0}{\bar{\rho}_b^\gamma} \right) \frac{\rho_b^{\gamma-1}}{r}.
+\]
+For \( \gamma \approx 1.09 \), \( \rho_b^{\gamma-1} \approx \) constant → asymptotically constant extra acceleration.  
+Thus
+\[
+v^2(r) = v_\text{bary}^2(r) + a_\text{extra} \, r.
+\]
+A single global calibration \( P_0 \approx 1.2 \times 10^{-10} \) m s⁻² (target \( a_\text{extra,eff} \approx 2.616 \times 10^{-10} \) m s⁻²) is used.
+
+---
+
+## 3. Empirical Validation against the SPARC Sample
+
+The asymptotic flat-velocity model
+\[
+V_\text{model}(r) = \sqrt{ V_\text{bary}^2(r) + a_\text{extra,eff} \cdot r }
+\]
+was tested on the full SPARC database (175 late-type galaxies).
+
+**Baryonic velocities** use standard 3.6 μm mass-to-light ratios:  
+\( \Upsilon_\text{disk} = 0.5 \), \( \Upsilon_\text{bul} = 0.7 \),  
+\( V_\text{bary} = \sqrt{ V_\text{gas}^2 + 0.5 V_\text{disk}^2 + 0.7 V_\text{bul}^2 } \).
+
+**Results** (quality-selected galaxies):
+- Free-field optimization: median RMS 9–12%.
+- **Strict global calibration** (\( a_\text{extra,eff} = 2.616 \times 10^{-10} \) m s⁻²): median RMS **13–16%**, median \( \chi^2/\text{dof} \) 2.9–3.7.
+
+This is a major improvement over Newtonian baryons-only (RMS ∼20%+). Residuals in LSB dwarfs are expected to decrease with full \( \rho_b(r) \to \Pi(\rho_b) \) integration.
+
+---
+
+## 4. Cosmological Dynamics and ΛCDM Recovery
+
+On scales ≳50 Mpc, \( \langle \nabla \Pi \rangle \to 0 \) recovers the exact FLRW metric and standard Friedmann equations:
+\[
+H^2 = \frac{8\pi G}{3} (\rho_m + \rho_\phi), \quad \frac{\ddot{a}}{a} = -\frac{4\pi G}{3} (\rho_\text{tot} + 3p_\text{tot}).
+\]
+
+Numerical integration with Planck 2018 parameters matches to machine precision. Large-scale observables (CMB, BAO, SNIa) are identical to ΛCDM.
+
+**Testable prediction** — In deep voids (\( \rho_b \ll \bar{\rho}_b \)) the uncompressed scalar drives **5–12% faster local expansion**. Current DESI data constrains this at ~1–2σ; Euclid will reach ~2% precision.
+
+---
+
+## 5. Phases of Cosmic Evolution
+
+Phase 0: Big Bang After-Bounce ──► Phase 1: Stiff Packing Peanuts Scaffolding
+                                           │
+                                           ▼
+Phase 3: Late Vacuum Acceleration ◄── Phase 2: Galactic Displacement & Grip
+
+- **Phase 0**: Hot, dense post-impact state with inflation and CMB seeding.
+- **Phase 1**: Extreme early compression (\( c_s^2 \approx 0.833 \)) forms rigid “packing peanuts”.
+- **Phase 2**: Baryonic clustering triggers displacement and flat rotation curves.
+- **Phase 3**: Void relaxation drives acceleration at \( z \approx 0.67 \).
+
+---
+
+## 6. Black Holes: Extreme Curvature Regions
+
+Extreme concentration displaces the dark field completely, creating a perfect “dry spot”. The exterior geometry remains the standard Schwarzschild solution:
+\[
+ds^2 = -\left(1 - \frac{2GM}{c^2 r}\right) c^2 dt^2 + \left(1 - \frac{2GM}{c^2 r}\right)^{-1} dr^2 + r^2 d\Omega^2.
+\]
+
+At \( r = 0 \) lies the central singularity. Hawking radiation
+\[
+T_H = \frac{\hbar c^3}{8\pi G M k_B}
+\]
+evaporates black holes, returning displaced energy to the surrounding dark field.
+
+---
+
+## 7. The Self-Sustaining Cosmic Loop
+
+GTR closes a completely self-consistent GR-driven cycle:
+
+1. Post-impact after-bounce generates space, matter, and baseline vacuum energy.
+2. Stiff early compression forms “packing peanuts” scaffolding.
+3. Baryonic displacement supplies galactic grip and flat rotation curves.
+4. Void relaxation drives late-time acceleration.
+5. Extreme collapse produces black holes whose Hawking evaporation recycles energy back into the dark field.
+
+**Global flatness (\( \Omega_\text{tot} = 1 \)) is preserved at all epochs.**
+
+---
+
+## Repository Contents
+- `cosmology_solver/` – Numerical background integrator recovering Planck parameters
+- `sparc_analysis/` – Rotation curve fitting notebooks (global vs per-galaxy)
+- `notebooks/` – Derivations and phase diagrams
+- `figures/` – Rotation curves, H(z), void expansion forecasts
+
+**Feedback and collaboration welcome.** This framework is positioned as a useful educational and exploratory tool for further development.
+
+---
+
+*Last updated: June 2026*  
+[GitHub](https://github.com/thinus283-ux/LR) • Independent work – no institutional affiliation
+
 
 
 
