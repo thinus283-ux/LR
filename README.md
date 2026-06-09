@@ -1,9 +1,3 @@
-# Geometric-Time-Relativity Repository - Complete Files
-
-# ====================== ROOT FILES ======================
-
-# README.md
-```markdown
 # Geometric Time Relativity (GTR)
 
 **A unified General Relativity framework for the cosmos**  
@@ -11,14 +5,14 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.XXXXX-b31b1b)](https://arxiv.org)
 
 ## Research Context
-This repository contains the numerical implementation of **Geometric Time Relativity (GTR)**, a single-field dark sector framework. Unlike standard models, GTR explains galactic rotation curves and late-time acceleration through the dynamics of a density-dependent viscoelastic K-essence field.
+This repository contains the complete numerical implementation of **Geometric Time Relativity (GTR)**, a single-field dark sector framework. Unlike standard ΛCDM, GTR explains both galactic rotation curves and late-time cosmic acceleration through the dynamics of a density-dependent viscoelastic K-essence field.
 
 **Associated Paper:** *Pieterse, T. (2026). "Geometric Time Relativity (GTR) v1.3: A Scale-Dependent Viscoelastic K-Essence Model." arXiv:2606.XXXXX.*
 
 ## Abstract
-
 Geometric Time Relativity realizes the **Geometric Displacement Principle** through a non-canonical scalar (K-essence) field coupled to baryonic matter. Localized compression creates “packing peanut” gravitational scaffolding in the early universe, produces extra inward acceleration in galaxies, and relaxes into repulsive vacuum dominance at late times. All dynamics follow directly from Einstein’s equations.
 
 **Key Results (June 2026)**:
@@ -27,10 +21,27 @@ Geometric Time Relativity realizes the **Geometric Displacement Principle** thro
 - Exact Schwarzschild exterior + Hawking evaporation closes the self-sustaining loop
 - Predicts 5–12% faster void expansion (testable with Euclid/DESI)
 
-[Read the Full Theory →](docs/theory.md) | [Interactive Notebooks →](notebooks/) | [Validation →](docs/validation.md) | [Data →](data/raw/)
+## Galaxy-Scale Dynamics: The Dark Field in Overdense Regions
+In a typical galaxy, the universe consists of **baryonic matter** (stars, gas, planets) embedded in the **Dark Field** — the same viscoelastic K-essence field responsible for cosmic acceleration on large scales.
+
+### Matter Tells Spacetime How to Curve
+Any object with mass warps the surrounding Dark Field and geometric time. This curvature manifests as the gravity we experience. The field responds to local mass density through compression, following the Geometric Displacement Principle. Planets behave like Gyrochops.
+
+### The Dark Field Tells Matter How to Move
+Celestial bodies, gas clouds, and light follow the shortest paths (geodesics) through this warped spacetime. On galactic scales, the compressed Dark Field produces additional inward acceleration, explaining flat rotation curves without separate cold dark matter.
+
+### Condensation: From Dark Energy to Dark Matter
+As baryonic matter clusters, it compresses the Dark Field. This compression triggers a **condensation process**: the field transitions locally from its relaxed, repulsive (dark-energy-like) state into a denser, attractive phase. We interpret this condensed phase as **effective dark matter**.
+
+The Dark Matter thus formed binds around celestial bodies like **packing peanuts** — creating a supportive scaffolding that holds galactic structures together. These condensed regions separate dynamically from the ambient Dark Field through their own self-gravity, providing the extra "grip" observed in galaxy dynamics while remaining fully derived from the single underlying K-essence field.
+
+This process is scale-dependent and reversible:
+- High local density → strong compression → attractive scaffolding (DM-like behavior)
+- Low density / voids → relaxation → repulsive vacuum (DE-like behavior)
+
+All effects emerge naturally from the density-dependent term in the field’s effective density (`P0 × √ρ_baryon / a³`) and remain fully consistent with Einstein’s equations.
 
 ## Quick Start
-
 ```bash
 git clone https://github.com/thinus283-ux/Geometric-Time-Relativity.git
 cd Geometric-Time-Relativity
@@ -42,11 +53,35 @@ from gtr.cosmology import GTRFriedmann
 from gtr.dark_field import DarkField
 
 model = GTRFriedmann(omega_m=0.315, P0=1.0)
-print(model.find_acceleration_onset())  # dynamically computed
+print(model.find_acceleration_onset())  # dynamically computed ≈ 0.67
 
-Core FeaturesScale-dependent dark field: compressed (extra grip) in overdensities → relaxed (repulsive) in voids
-Self-consistent cosmic cycle: Big Bang → scaffolding → clustering → black-hole recycling
-Fully GR-based, no ad-hoc modifications
+Visualization: Cosmic Expansion Historypython
+
+import matplotlib.pyplot as plt
+import numpy as np
+from gtr.cosmology import GTRFriedmann
+
+def generate_plots():
+    model = GTRFriedmann(omega_m=0.315, P0=1.0)
+    t = np.linspace(0, 2, 200)
+    a = np.array([model.scale_factor(1.0 / (1 + tt) - 1) if tt < 1 else 1.0 for tt in t])
+    plt.figure(figsize=(8, 5))
+    plt.plot(t, a, label='GTR Scale Factor $a(t)$', color='purple', lw=2)
+    plt.xlabel('Cosmic Time (arbitrary units)')
+    plt.ylabel('Scale Factor $a$')
+    plt.title('GTR Cosmic Expansion History')
+    plt.grid(True, linestyle='--')
+    plt.legend()
+    plt.savefig('docs/expansion_history.png')
+    print("Plot saved to docs/expansion_history.png")
+
+if __name__ == "__main__":
+    generate_plots()
+
+Core FeaturesScale-dependent dark field: compressed (extra grip) in overdensities → relaxed (repulsive) in voids  
+Self-consistent cosmic cycle: Big Bang → scaffolding → clustering → black-hole recycling  
+Fully GR-based: no ad-hoc modifications  
+Single global parameter P₀ for both cosmology and galaxy dynamics
 
 Validation SummaryObservable
 Alignment
@@ -64,87 +99,13 @@ Local GR tests
 Excellent
 Dynamic screening
 
-Star this repo if GTR resonates with you!
+Read the Full Theory → (docs/theory.md)
+Interactive Notebooks → (notebooks/)
+Validation Details → (docs/validation.md)
+Raw Data → (data/raw/)<details>
+<summary><strong> Full Source Code (click to expand)</strong></summary>
 
-# LICENSE
-
-MIT LicenseCopyright (c) 2026 Thinus PietersePermission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-# pyproject.toml
-```toml
-[project]
-name = "gtr-cosmology"
-version = "0.1.0"
-description = "Geometric Time Relativity - Unified GR framework"
-readme = "README.md"
-license = {text = "MIT"}
-requires-python = ">=3.10"
-dependencies = [
-    "numpy>=1.24",
-    "scipy>=1.10",
-    "matplotlib>=3.7",
-    "pandas>=2.0",
-    "astropy>=5.0",
-]
-
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["gtr*"]
-
-[tool.pytest.ini_options]
-pythonpath = ["src"]
-
-CITATION.cffyaml
-
-cff-version: 1.2.0
-message: "If you use this work, please cite it as below."
-title: "Geometric Time Relativity (GTR)"
-authors:
-  - family-names: "Pieterse"
-    given-names: "Thinus"
-date-released: "2026-06-09"
-version: "0.1.0"
-url: "https://github.com/thinus283-ux/Geometric-Time-Relativity"
-
-.gitignore
-
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-*.egg-info/
-.ipynb_checkpoints/
-data/raw/
-*.log
-*.aux
-*.pdf
-
-CONTRIBUTING.mdmarkdown
-
-# Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Make changes with tests
-4. Submit a Pull Request
-
-====================== SRC PACKAGE ======================src/gtr/init.pypython
+src/gtr/__init__.pypython
 
 """Geometric Time Relativity (GTR) Package
 
@@ -239,91 +200,8 @@ class DarkField:
         w = -1 + (2/3) * (rho_baryon_norm / (rho_baryon_norm + 1))
         return w * rho_dark
 
-====================== TESTS ======================tests/test_cosmology.pypython
+</details>
 
-import pytest
-import numpy as np
-from gtr.cosmology import GTRFriedmann
+LicenseMIT License
+Copyright (c) 2026 Thinus Pieterse  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-def test_acceleration_onset():
-    model = GTRFriedmann(omega_m=0.315, P0=1.0)
-    z_acc = model.find_acceleration_onset()
-    assert 0.5 < z_acc < 0.8, f"Expected z≈0.67, got {z_acc}"
-
-def test_hubble_large_scale():
-    model = GTRFriedmann(omega_m=0.315, P0=1.0)
-    # At large scales (low rho) should approximate ΛCDM
-    H_now = model.hubble(1.0, rho_baryon_norm=0.01)
-    assert np.isclose(H_now, model.H0, rtol=0.1)
-
-def test_hubble_a_zero_raises():
-    model = GTRFriedmann()
-    with pytest.raises(ValueError):
-        model.hubble(0.0)
-
-def test_negative_scale_factor_raises():
-    model = GTRFriedmann()
-    with pytest.raises(ValueError):
-        model.hubble(-0.1)
-    with pytest.raises(ValueError):
-        model.deceleration_parameter(-0.1)
-
-====================== DATA ======================data/raw/sparc_sample.csvcsv
-
-Galaxy,Radius_kpc,Vobs_km_s,Rho_baryon_norm
-NGC2403,2.0,100,1.2
-NGC2403,5.0,120,0.8
-NGC2403,10.0,130,0.4
-UGC1281,3.0,80,0.9
-UGC1281,8.0,95,0.5
-
-====================== DOCS ======================docs/theory.mdmarkdown
-
-# Geometric Time Relativity - Full Theory
-
-## Geometric Displacement Principle (Core Idea)
-Matter displaces geometric time. In overdense regions the vacuum field compresses like "packing peanuts," creating extra attractive scaffolding. In underdense regions the field relaxes, producing effective negative pressure that drives accelerated expansion.
-
-This single viscoelastic K-essence field replaces both dark matter and dark energy.
-
-## K-essence Lagrangian Mapping
-The polytropic compression term **ρ_baryon^{0.5} / a³** arises naturally from a non-canonical kinetic term in  
-**L = P(φ, X)** where X = ∂μφ∂^μφ.
-
-## Cosmic Evolution
-- Early universe: scaffolding builds cosmic web  
-- Galaxy scales: extra inward acceleration → flat rotation curves  
-- Late universe: field relaxation triggers acceleration at z ≈ 0.67  
-- Matches Planck 2018 parameters with one global parameter P₀
-
-Full mathematical derivations are in the `notebooks/` folder.
-
-docs/validation.mdmarkdown
-
-# Validation
-
-- Strong agreement with SPARC rotation curves using one global parameter
-- Reproduces standard cosmology on large scales
-- Self-consistent black hole recycling
-- Testable prediction: faster void expansion
-
-## Galaxy-Scale Dynamics: The Dark Field in Overdense Regions
-
-In a typical galaxy, the universe consists of **baryonic matter** (stars, gas, planets) embedded in the **Dark Field** — the same viscoelastic K-essence field responsible for cosmic acceleration on large scales.
-
-### Matter Tells Spacetime How to Curve
-Any object with mass warps the surrounding Dark Field and geometric time. This curvature manifests as the gravity we experience. The field responds to local mass density through compression, following the Geometric Displacement Principle. Planets behave like Gyrochops.
-
-### The Dark Field Tells Matter How to Move
-Celestial bodies, gas clouds, and light follow the shortest paths (geodesics) through this warped spacetime. On galactic scales, the compressed Dark Field produces additional inward acceleration, explaining flat rotation curves without separate cold dark matter.
-
-### Condensation: From Dark Energy to Dark Matter
-As baryonic matter clusters, it compresses the Dark Field. This compression triggers a **condensation process**: the field transitions locally from its relaxed, repulsive (dark-energy-like) state into a denser, attractive phase. We interpret this condensed phase as **effective dark matter**.
-
-The Dark Matter thus formed binds around celestial bodies like **packing peanuts** — creating a supportive scaffolding that holds galactic structures together. These condensed regions separate dynamically from the ambient Dark Field through their own self-gravity, providing the extra "grip" observed in galaxy dynamics while remaining fully derived from the single underlying K-essence field.
-
-This process is scale-dependent and reversible:
-- High local density → strong compression → attractive scaffolding (DM-like behavior)
-- Low density / voids → relaxation → repulsive vacuum (DE-like behavior)
-
-All effects emerge naturally from the density-dependent term in the field’s effective density (`P0 × √ρ_baryon / a³`) and remain fully consistent with Einstein’s equations.
