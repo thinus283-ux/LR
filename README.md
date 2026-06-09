@@ -312,7 +312,7 @@ docs/validation.mdmarkdown
 In a typical galaxy, the universe consists of **baryonic matter** (stars, gas, planets) embedded in the **Dark Field** — the same viscoelastic K-essence field responsible for cosmic acceleration on large scales.
 
 ### Matter Tells Spacetime How to Curve
-Any object with mass warps the surrounding Dark Field and geometric time. This curvature manifests as the gravity we experience. The field responds to local mass density through compression, following the Geometric Displacement Principle.
+Any object with mass warps the surrounding Dark Field and geometric time. This curvature manifests as the gravity we experience. The field responds to local mass density through compression, following the Geometric Displacement Principle. Planets behave like Gyrochops.
 
 ### The Dark Field Tells Matter How to Move
 Celestial bodies, gas clouds, and light follow the shortest paths (geodesics) through this warped spacetime. On galactic scales, the compressed Dark Field produces additional inward acceleration, explaining flat rotation curves without separate cold dark matter.
@@ -325,7 +325,5 @@ The Dark Matter thus formed binds around celestial bodies like **packing peanuts
 This process is scale-dependent and reversible:
 - High local density → strong compression → attractive scaffolding (DM-like behavior)
 - Low density / voids → relaxation → repulsive vacuum (DE-like behavior)
-
-And planets behave like gyrochops
 
 All effects emerge naturally from the density-dependent term in the field’s effective density (`P0 × √ρ_baryon / a³`) and remain fully consistent with Einstein’s equations.
