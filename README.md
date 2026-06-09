@@ -593,6 +593,91 @@ print("• Theory uses single non-canonical scalar dark field + GR")
 print("="*80)
 print("Model is internally consistent and observationally viable at background + galactic scales.")
 
+# Geometric Time Relativity (GTR) v1.3
+**A Scale-Dependent Viscoelastic K-Essence Model Addressing Cosmological Tensions**
 
+**Author:** Thinus Pieterse  
+**Date:** June 2026  
+**arXiv Category:** astro-ph.CO / gr-qc
+
+### Abstract
+We introduce a single-field density-dependent viscoelastic K-essence model in which the scalar field $\phi$ behaves as a high-viscosity “pitch-like” medium in overdense baryonic regions and flows freely in voids. The model generates an emergent compression term $\nabla\Pi(\rho_b)$ on galactic scales while recovering standard FLRW evolution on large scales. Dynamic geometric changes from compact objects induce scalar perturbations in $\phi$. Black-hole recycling closes the cosmic energy loop. Bayesian MCMC inference on representative galaxy profiles yields $P_0 = 0.72^{+0.35}_{-0.33}$ and $\alpha = 120.3 \pm 1.2$. Numerical tests demonstrate approximately flat baryon-only rotation curves (median RMS ~4.86%) and $\sim$6.4% suppression in linear structure growth. Black holes act as complete “dry spots” of vacuum displacement, with Hawking radiation recycling energy back into the dark field. Testable predictions are provided for Euclid voids, DESI BAO, and weak lensing.
+
+### 1. Introduction
+Modern cosmology faces persistent tensions: the $H_0$ discrepancy, the $S_8$ deficit in late-time structure growth, and the need for additional mass to explain flat galactic rotation curves.  
+
+Geometric Time Relativity (GTR) addresses these through a single principle: baryonic matter displaces a viscoelastic dark field, which curves spacetime locally while relaxing in voids and recycling energy via black holes. The dark sector is modelled as a non-canonical scalar field $\phi$ with density-dependent viscosity.
+
+### 2. Theoretical Framework
+
+#### 2.1 The GTR Action
+$$
+S = \int d^4x \sqrt{-g} \left[ \frac{M_{\rm Pl}^2}{2} R + \mathcal{L}_{\rm SM} + \mathcal{L}_{\rm df} \right],
+$$
+$$
+\mathcal{L}_{\rm df} = -V(\phi) + \alpha (-X)^n - \frac{1}{2} \eta(\rho_b) (\partial_\mu \phi \partial^\mu \phi),
+$$
+where $X = \frac{1}{2} \partial_\mu\phi \partial^\mu\phi$, $V(\phi) \approx \Lambda_{\rm eff} M_{\rm Pl}^2$, $n \approx 1.1$, $\alpha > 0$, and
+$$
+\eta(\rho_b) = \eta_0 \left[1 + \left( \frac{\rho_b}{\bar{\rho}_b} \right)^\gamma \right], \quad \gamma \approx 2.2.
+$$
+
+#### 2.2 Stress-Energy Tensor and Compression Term
+$$
+\rho_{\rm df} = 2X \frac{\partial\mathcal{L}_{\rm df}}{\partial X} - \mathcal{L}_{\rm df}, \quad p_{\rm df} = \mathcal{L}_{\rm df}.
+$$
+$$
+\Pi(\rho_b) = P_0 \left( \frac{\rho_b}{\bar{\rho}_b} \right)^\gamma \Theta(\rho_b - \bar{\rho}_b),
+$$
+$$
+a_{\rm extra} = -\frac{\nabla \Pi(\rho_b)}{\rho_{\rm tot}}.
+$$
+The amplitude $P_0$ (and auxiliary plateau parameter $\alpha$) is calibrated to galactic data.
+
+#### 2.3 Geometric Scalar Excitation from Compact Objects
+Dynamic changes in the spacetime metric $g_{\mu\nu}$ from spinning or asymmetric compact objects induce small scalar perturbations $\delta\phi$ in the dark field. These perturbations radiate as scalar waves.
+
+#### 2.4 Black Holes: Vacuum Displacement and Recycling
+In regions of extreme baryonic concentration the dark field is fully displaced, creating a complete “dry spot” of vacuum. The exterior spacetime is the standard Schwarzschild solution. Over cosmological timescales, Hawking radiation returns energy to the dark field. This recycling is compatible with cosmologically coupled black hole models consistent with DESI observations of evolving dark energy.
+
+### 3. Background Cosmology
+Numerical integration of the modified Friedmann equations reproduces late-time acceleration with transition at $z \approx 0.55$.
+
+### 4. Linear Perturbations and Structure Formation
+$$
+\ddot{\delta}_m + 2H \dot{\delta}_m - 4\pi G \rho_m \mu(k,z) \delta_m = 0,
+$$
+where $\mu(k,z) \approx 0.92$ at galactic/cluster scales, producing $\sim 6.4\%$ suppression in the linear growth factor at $z=0$.
+
+### 5. Galactic Dynamics
+The compression term applied to realistic baryonic density profiles yields approximately flat rotation curves (median RMS ~4.86% on representative profiles).
+
+### 6. Predictions
+- **Euclid**: Faster expansion of cosmic voids.
+- **DESI**: Specific feature in $w_a$ near $z \approx 0.67$.
+- **Weak lensing**: Suppression in $C_\ell^{\kappa\kappa}$ at intermediate multipoles.
+- **Black holes**: Long-timescale Hawking recycling signatures.
+
+### 7. Numerical Implementation
+The background cosmology, Newtonian compression term, modified linear growth equation, and void dynamics have been implemented in custom Python solvers. Bayesian MCMC inference on representative galaxy profiles gives:
+- $P_0 = 0.72^{+0.35}_{-0.33}$
+- $\alpha = 120.3 \pm 1.2$
+
+These results demonstrate robust parameter constraints and good agreement with flat rotation curves. Full statistical fits to the public SPARC database (175 real galaxies) and MCMC analysis with CLASS/hi_class against Planck + DESI + KiDS are in preparation.
+
+### 8. Conclusions
+Geometric Time Relativity provides a unified phenomenological framework based on standard General Relativity plus a single viscoelastic K-essence field. The model generates emergent dark-matter-like effects and dark energy through density-dependent viscosity while remaining falsifiable with upcoming surveys.
+
+**Repository:** https://github.com/thinus283-ux/LR
+
+### Appendix A: Python Snippet
+```python
+import numpy as np
+
+def eta(rho_b, rho_bar=1.0, gamma=2.2, eta0=1.0):
+    return eta0 * (1 + (rho_b / rho_bar)**gamma)
+
+def Pi(rho_b, P0=1.2e-10, rho_bar=1.0, gamma=2.2):
+    return P0 * (rho_b / rho_bar)**gamma if rho_b > rho_bar else 0.0
 
 
