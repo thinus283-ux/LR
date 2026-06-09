@@ -5,12 +5,9 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-2606.XXXXX-b31b1b)](https://arxiv.org)
 
 ## Research Context
 This repository contains the complete numerical implementation of **Geometric Time Relativity (GTR)**, a single-field dark sector framework. Unlike standard ΛCDM, GTR explains both galactic rotation curves and late-time cosmic acceleration through the dynamics of a density-dependent viscoelastic K-essence field.
-
-**Associated Paper:** *Pieterse, T. (2026). "Geometric Time Relativity (GTR) v1.3: A Scale-Dependent Viscoelastic K-Essence Model." arXiv:2606.XXXXX.*
 
 ## Abstract
 Geometric Time Relativity realizes the **Geometric Displacement Principle** through a non-canonical scalar (K-essence) field coupled to baryonic matter. Localized compression creates “packing peanut” gravitational scaffolding in the early universe, produces extra inward acceleration in galaxies, and relaxes into repulsive vacuum dominance at late times. All dynamics follow directly from Einstein’s equations.
@@ -55,7 +52,7 @@ from gtr.dark_field import DarkField
 model = GTRFriedmann(omega_m=0.315, P0=1.0)
 print(model.find_acceleration_onset())  # dynamically computed ≈ 0.67
 
-Visualization: Cosmic Expansion Historypython
+Visualization: Cosmic Expansion HistoryGTR Cosmic Expansion Historypython
 
 import matplotlib.pyplot as plt
 import numpy as np
