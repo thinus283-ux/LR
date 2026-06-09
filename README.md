@@ -12,14 +12,15 @@
 ---
 
 ### Why GTR Matters
-Standard cosmology needs two invisible ingredients: **dark matter** (to hold galaxies together) and **dark energy** (to accelerate the universe).  
+Standard cosmology needs **two** invisible ingredients: dark matter (to hold galaxies together) and dark energy (to accelerate the universe).  
 
 **GTR needs only one.**
 
 A single viscoelastic K-essence Dark Field does it all:
-- Compresses like packing peanuts → creates **effective dark matter** scaffolding around galaxies
+- Compresses like **packing peanuts** → creates **effective dark matter** scaffolding around galaxies
 - Relaxes in voids → produces **effective dark energy** repulsion
-- Everything emerges naturally from the density-dependent term `P₀ × √ρ_baryon / a³`
+
+Everything emerges naturally from the density-dependent term `P₀ × √ρ_baryon / a³`.
 
 **Result:** Flat rotation curves, late-time acceleration, cosmic web formation, and a self-consistent Big Bang → black-hole recycling loop — all from pure GR + one field.
 
@@ -28,6 +29,9 @@ A single viscoelastic K-essence Dark Field does it all:
 - Single global parameter P₀ fits SPARC rotation curves (median RMS 13–16%)
 - Predicts 5–12% faster void expansion (testable with Euclid & DESI)
 - Dynamic screening preserves local GR tests
+
+**Note on the Big Bang Singularity**  
+The model avoids the classical initial singularity through its self-consistent black-hole recycling loop. At early times, Hawking evaporation recycles matter back into the Dark Field, providing a physically and numerically stable transition through the high-density regime without divergence.
 
 ---
 
@@ -218,7 +222,7 @@ class DarkField:
 </details>
 
 LicenseMIT License
-Copyright (c) 2026 Thinus Pieterse  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction...(The full MIT text is in the LICENSE file.) Star this repo if a single-field unification of DM and DE resonates with you!
+Copyright (c) 2026 Thinus Pieterse  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Star this repo if a single-field unification of DM and DE resonates with you!
 Your feedback, issues, and contributions are warmly welcome.Made with passion for a cleaner cosmology.
-
+```
 
