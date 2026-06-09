@@ -326,4 +326,6 @@ This process is scale-dependent and reversible:
 - High local density → strong compression → attractive scaffolding (DM-like behavior)
 - Low density / voids → relaxation → repulsive vacuum (DE-like behavior)
 
+And planets behave like gyrochops
+
 All effects emerge naturally from the density-dependent term in the field’s effective density (`P0 × √ρ_baryon / a³`) and remain fully consistent with Einstein’s equations.
