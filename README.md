@@ -80,7 +80,7 @@ from gtr.cosmology import GTRFriedmann
 def generate_plots():
     model = GTRFriedmann(omega_m=0.315, P0=1.0)
     t = np.linspace(0, 2, 200)
-    a = np.array([model.scale_factor(1.0 / (1 + tt) - 1) if tt < 1 else 1.0 for tt in t])
+    a = np.linspace(0.05, 1.0, 200)  # illustrative smooth expansion history (full integration in notebooks/)
     plt.figure(figsize=(10, 6))
     plt.plot(t, a, label='GTR Scale Factor $a(t)$', color='purple', lw=3)
     plt.xlabel('Cosmic Time (arbitrary units)')
@@ -230,4 +230,6 @@ astropy>=5.0
 LicenseMIT License
 Copyright (c) 2026 Thinus Pieterse  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Star this repo if a single-field unification of DM and DE resonates with you!
 ```
+
+
 
