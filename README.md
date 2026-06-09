@@ -161,6 +161,7 @@ src/gtr/cosmology.pypython
 import numpy as np
 from scipy.integrate import solve_ivp
 from scipy.optimize import root_scalar
+import warnings
 from .dark_field import DarkField
 
 class GTRFriedmann:
@@ -173,20 +174,20 @@ class GTRFriedmann:
 
     def hubble(self, a, rho_baryon_norm=1.0):
         """H(a) using effective density from DarkField"""
+        if a <= 0:
+            raise ValueError("Scale factor a must be positive")
         rho_dark = self.dark_field.effective_density(rho_baryon_norm, a)
         omega_dark_eff = rho_dark
         return self.H0 * np.sqrt(self.omega_m / a**3 + omega_dark_eff)
 
     def deceleration_parameter(self, a, rho_baryon_norm=1.0):
         """q(a) = -1 - (a / H) * (dH/da)"""
-        def da_func(a):
-            H = self.hubble(a, rho_baryon_norm)
-            # Numerical derivative
-            da = 1e-6
-            dHda = (self.hubble(a + da, rho_baryon_norm) - H) / da
-            return -1 - (a / H) * dHda
-
-        return da_func(a)
+        if a <= 0:
+            raise ValueError("Scale factor a must be positive")
+        H = self.hubble(a, rho_baryon_norm)
+        da = 1e-6
+        dHda = (self.hubble(a + da, rho_baryon_norm) - H) / da
+        return -1 - (a / H) * dHda
 
     def find_acceleration_onset(self, rho_baryon_norm=1.0):
         """Dynamically find redshift where q(a) = 0 (acceleration begins)"""
@@ -198,8 +199,9 @@ class GTRFriedmann:
             a_acc = sol.root
             z_acc = 1.0 / a_acc - 1.0
             return z_acc
-        except:
-            return 0.67  # fallback
+        except ValueError as e:
+            warnings.warn(f"Root finding failed: {e}. Using fallback z=0.67")
+            return 0.67
 
     def scale_factor(self, z):
         """Convert redshift z to scale factor a"""
@@ -223,12 +225,19 @@ class DarkField:
 
     def effective_density(self, rho_baryon, a=1.0):
         """ρ_dark = P0 × √ρ_baryon / a³"""
+        if a <= 0:
+            raise ValueError("Scale factor a must be positive")
         compression = (rho_baryon ** 0.5) / (a ** 3)
         return self.P0 * compression
 
-    def effective_pressure(self, rho_dark):
-        """Effective pressure; w transitions from clustered regime to vacuum-like"""
-        return -0.8 * rho_dark
+    def effective_pressure(self, rho_dark, rho_baryon_norm=1.0):
+        """Dynamic equation-of-state from K-essence Lagrangian.
+
+        w(a) = -1 + (2/3) * (ρ_baryon_norm / (ρ_baryon_norm + 1))  
+        (derived from polytropic compression ρ^0.5 term in L = P(φ, X))
+        """
+        w = -1 + (2/3) * (rho_baryon_norm / (rho_baryon_norm + 1))
+        return w * rho_dark
 
 ====================== TESTS ======================tests/test_cosmology.pypython
 
@@ -246,6 +255,18 @@ def test_hubble_large_scale():
     # At large scales (low rho) should approximate ΛCDM
     H_now = model.hubble(1.0, rho_baryon_norm=0.01)
     assert np.isclose(H_now, model.H0, rtol=0.1)
+
+def test_hubble_a_zero_raises():
+    model = GTRFriedmann()
+    with pytest.raises(ValueError):
+        model.hubble(0.0)
+
+def test_negative_scale_factor_raises():
+    model = GTRFriedmann()
+    with pytest.raises(ValueError):
+        model.hubble(-0.1)
+    with pytest.raises(ValueError):
+        model.deceleration_parameter(-0.1)
 
 ====================== DATA ======================data/raw/sparc_sample.csvcsv
 
