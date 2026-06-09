@@ -307,3 +307,23 @@ docs/validation.mdmarkdown
 - Self-consistent black hole recycling
 - Testable prediction: faster void expansion
 
+## Galaxy-Scale Dynamics: The Dark Field in Overdense Regions
+
+In a typical galaxy, the universe consists of **baryonic matter** (stars, gas, planets) embedded in the **Dark Field** — the same viscoelastic K-essence field responsible for cosmic acceleration on large scales.
+
+### Matter Tells Spacetime How to Curve
+Any object with mass warps the surrounding Dark Field and geometric time. This curvature manifests as the gravity we experience. The field responds to local mass density through compression, following the Geometric Displacement Principle.
+
+### The Dark Field Tells Matter How to Move
+Celestial bodies, gas clouds, and light follow the shortest paths (geodesics) through this warped spacetime. On galactic scales, the compressed Dark Field produces additional inward acceleration, explaining flat rotation curves without separate cold dark matter.
+
+### Condensation: From Dark Energy to Dark Matter
+As baryonic matter clusters, it compresses the Dark Field. This compression triggers a **condensation process**: the field transitions locally from its relaxed, repulsive (dark-energy-like) state into a denser, attractive phase. We interpret this condensed phase as **effective dark matter**.
+
+The Dark Matter thus formed binds around celestial bodies like **packing peanuts** — creating a supportive scaffolding that holds galactic structures together. These condensed regions separate dynamically from the ambient Dark Field through their own self-gravity, providing the extra "grip" observed in galaxy dynamics while remaining fully derived from the single underlying K-essence field.
+
+This process is scale-dependent and reversible:
+- High local density → strong compression → attractive scaffolding (DM-like behavior)
+- Low density / voids → relaxation → repulsive vacuum (DE-like behavior)
+
+All effects emerge naturally from the density-dependent term in the field’s effective density (`P0 × √ρ_baryon / a³`) and remain fully consistent with Einstein’s equations.
