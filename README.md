@@ -7,12 +7,11 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/thinus283-ux/Geometric-Time-Relativity?style=flat-square)](https://github.com/thinus283-ux/Geometric-Time-Relativity)
-[![Last Commit](https://img.shields.io/github/last-commit/thinus283-ux/Geometric-Time-Relativity?style=flat-square)](https://github.com/thinus283-ux/Geometric-Time-Relativity)
 
 ---
 
 ### Why GTR Matters
-Standard cosmology needs **two** invisible ingredients: dark matter (to hold galaxies together) and dark energy (to accelerate the universe).  
+Standard cosmology needs two invisible ingredients: dark matter and dark energy.  
 
 **GTR needs only one.**
 
@@ -24,16 +23,13 @@ Everything emerges naturally from the density-dependent term `P₀ × √ρ_bary
 
 **Result:** Flat rotation curves (including the **Tully-Fisher Relation**), late-time acceleration, cosmic web formation, and a self-consistent Big Bang → black-hole recycling loop — all from pure GR + one field.
 
-This single-field approach offers natural solutions to the **Hubble Tension** and **S₈ Tension** by allowing scale-dependent behavior: stronger effective DM in galaxies and smoother large-scale expansion.
+This single-field approach offers natural solutions to the **Hubble Tension** and **S₈ Tension** through scale-dependent behavior.
 
 **Key Results (June 2026)**
 - Matches Planck 2018 (Ωₘ ≈ 0.315, H₀ ≈ 67.4 km/s/Mpc)
 - Single global parameter P₀ fits SPARC rotation curves and the **Tully-Fisher Relation** (median RMS 13–16%)
-- Predicts 5–12% faster void expansion (testable with Euclid & DESI)
-- Dynamic screening preserves local GR tests while addressing **Hubble Tension** and **S₈ Tension**
-
-**Note on the Big Bang Singularity**  
-The model avoids the classical initial singularity through its self-consistent black-hole recycling loop. At early times, Hawking evaporation recycles matter back into the Dark Field, providing a physically and numerically stable transition.
+- Predicts 5–12% faster void expansion (testable with Euclid/DESI)
+- Dynamic screening preserves local GR tests
 
 ---
 
@@ -42,10 +38,10 @@ The model avoids the classical initial singularity through its self-consistent b
 In a typical galaxy, the universe consists of **baryonic matter** (stars, gas, planets) embedded in the **Dark Field** — the same viscoelastic K-essence field responsible for cosmic acceleration on large scales.
 
 ### Matter Tells Spacetime How to Curve
-Any object with mass warps the surrounding Dark Field and geometric time. This curvature manifests as the gravity we experience. The field responds to local mass density through compression, following the Geometric Displacement Principle. **Planets behave like Gyrochops.**
+Any object with mass warps the surrounding Dark Field and geometric time. This curvature manifests as the gravity we experience. The field responds to local mass density through compression, following the Geometric Displacement Principle. Planets behave like Gyrochops.
 
 ### The Dark Field Tells Matter How to Move
-Celestial bodies, gas clouds, and light follow the shortest paths (geodesics) through this warped spacetime. On galactic scales, the compressed Dark Field produces additional inward acceleration, explaining flat rotation curves **without separate cold dark matter**.
+Celestial bodies, gas clouds, and light follow the shortest paths (geodesics) through this warped spacetime. On galactic scales, the compressed Dark Field produces additional inward acceleration, explaining flat rotation curves without separate cold dark matter.
 
 ### Condensation: From Dark Energy to Dark Matter
 As baryonic matter clusters, it compresses the Dark Field. This compression triggers a **condensation process**: the field transitions locally from its relaxed, repulsive (dark-energy-like) state into a denser, attractive phase. We interpret this condensed phase as **effective dark matter**.
@@ -53,10 +49,10 @@ As baryonic matter clusters, it compresses the Dark Field. This compression trig
 The Dark Matter thus formed binds around celestial bodies like **packing peanuts** — creating a supportive scaffolding that holds galactic structures together. These condensed regions separate dynamically from the ambient Dark Field through their own self-gravity, providing the extra "grip" observed in galaxy dynamics while remaining fully derived from the single underlying K-essence field.
 
 This process is scale-dependent and reversible:
-- **High local density** → strong compression → attractive scaffolding (DM-like behavior)
-- **Low density / voids** → relaxation → repulsive vacuum (DE-like behavior)
+- High local density → strong compression → attractive scaffolding (DM-like behavior)
+- Low density / voids → relaxation → repulsive vacuum (DE-like behavior)
 
-**All effects emerge naturally from the density-dependent term** in the field’s effective density (`P0 × √ρ_baryon / a³`) and remain fully consistent with Einstein’s equations.
+All effects emerge naturally from the density-dependent term in the field’s effective density (`P0 × √ρ_baryon / a³`) and remain fully consistent with Einstein’s equations.
 
 ---
 
@@ -99,7 +95,7 @@ if __name__ == "__main__":
     generate_plots()
 
 Core Features True unification — One field produces both effective DM (compressed scaffolding) and effective DE (relaxed repulsion)
- Scale-dependent — Extra grip in galaxies, vacuum push in voids — helps resolve Hubble Tension and S₈ Tension
+ Scale-dependent — Extra grip in galaxies, vacuum push in voids — helps address Hubble Tension and S₈ Tension
  Self-sustaining loop — Big Bang → packing-peanut scaffolding → clustering → Schwarzschild black holes + Hawking evaporation
  Fully GR compliant — No modified gravity, no extra particles
  Single parameter — Global P₀ works for cosmology, SPARC, and the Tully-Fisher Relation
@@ -232,6 +228,6 @@ pandas>=2.0
 astropy>=5.0
 
 LicenseMIT License
-Copyright (c) 2026 Thinus Pieterse  Full license text in `LICENSE` (LICENSE). Star this repo if a single-field unification of DM and DE resonates with you!
-Contributions, issues, and discussions are warmly welcome.Building a cleaner, more elegant cosmology.
+Copyright (c) 2026 Thinus Pieterse  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Star this repo if a single-field unification of DM and DE resonates with you!
+```
 
