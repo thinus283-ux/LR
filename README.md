@@ -22,16 +22,18 @@ A single viscoelastic K-essence Dark Field does it all:
 
 Everything emerges naturally from the density-dependent term `P₀ × √ρ_baryon / a³`.
 
-**Result:** Flat rotation curves, late-time acceleration, cosmic web formation, and a self-consistent Big Bang → black-hole recycling loop — all from pure GR + one field.
+**Result:** Flat rotation curves (including the **Tully-Fisher Relation**), late-time acceleration, cosmic web formation, and a self-consistent Big Bang → black-hole recycling loop — all from pure GR + one field.
+
+This single-field approach offers natural solutions to the **Hubble Tension** and **S₈ Tension** by allowing scale-dependent behavior: stronger effective DM in galaxies and smoother large-scale expansion.
 
 **Key Results (June 2026)**
 - Matches Planck 2018 (Ωₘ ≈ 0.315, H₀ ≈ 67.4 km/s/Mpc)
-- Single global parameter P₀ fits SPARC rotation curves (median RMS 13–16%)
+- Single global parameter P₀ fits SPARC rotation curves and the **Tully-Fisher Relation** (median RMS 13–16%)
 - Predicts 5–12% faster void expansion (testable with Euclid & DESI)
-- Dynamic screening preserves local GR tests
+- Dynamic screening preserves local GR tests while addressing **Hubble Tension** and **S₈ Tension**
 
 **Note on the Big Bang Singularity**  
-The model avoids the classical initial singularity through its self-consistent black-hole recycling loop. At early times, Hawking evaporation recycles matter back into the Dark Field, providing a physically and numerically stable transition through the high-density regime without divergence.
+The model avoids the classical initial singularity through its self-consistent black-hole recycling loop. At early times, Hawking evaporation recycles matter back into the Dark Field, providing a physically and numerically stable transition.
 
 ---
 
@@ -63,20 +65,17 @@ This process is scale-dependent and reversible:
 ```bash
 git clone https://github.com/thinus283-ux/Geometric-Time-Relativity.git
 cd Geometric-Time-Relativity
+pip install -r requirements.txt
 pip install -e .
 
 python
 
 from gtr.cosmology import GTRFriedmann
-from gtr.dark_field import DarkField
 
-# Create the model
 model = GTRFriedmann(omega_m=0.315, P0=1.0)
-
-# See when cosmic acceleration begins
 print(model.find_acceleration_onset())   # → ≈ 0.67
 
-Visualization: Cosmic Expansion HistoryGTR Cosmic Expansion HistoryRun the code below to regenerate the plot anytime.python
+Visualization: Cosmic Expansion HistoryGTR Cosmic Expansion HistoryRun the code below to regenerate the plot anytime (plot is already committed to the repo).python
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -100,10 +99,10 @@ if __name__ == "__main__":
     generate_plots()
 
 Core Features True unification — One field produces both effective DM (compressed scaffolding) and effective DE (relaxed repulsion)
- Scale-dependent — Extra grip in galaxies, vacuum push in voids
+ Scale-dependent — Extra grip in galaxies, vacuum push in voids — helps resolve Hubble Tension and S₈ Tension
  Self-sustaining loop — Big Bang → packing-peanut scaffolding → clustering → Schwarzschild black holes + Hawking evaporation
  Fully GR compliant — No modified gravity, no extra particles
- Single parameter — Global P₀ works for both cosmology and SPARC galaxies
+ Single parameter — Global P₀ works for cosmology, SPARC, and the Tully-Fisher Relation
 
 Validation SummaryObservable
 Alignment
@@ -111,7 +110,7 @@ Notes
 CMB + BAO + SNIa
 Excellent
 Recovers ΛCDM on ≳50 Mpc scales
-Rotation curves (SPARC)
+Rotation curves (SPARC) & Tully-Fisher
 Strong
 Global P₀ gives median RMS 13–16%
 Cosmic web morphology
@@ -120,6 +119,9 @@ Packing-peanuts scaffolding naturally forms
 Local GR tests
 Excellent
 Dynamic screening in high-density regions
+Hubble Tension & S₈ Tension
+Promising
+Scale-dependent field offers natural relief
 
  Read the Full Theory (docs/theory.md) |  Interactive Notebooks (notebooks/) |  Validation Details (docs/validation.md) |  Raw Data (data/raw/)<details>
 <summary><strong> Full Source Code (click to expand)</strong></summary>
@@ -221,8 +223,15 @@ class DarkField:
 
 </details>
 
+Dependencies (requirements.txt)txt
+
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+pandas>=2.0
+astropy>=5.0
+
 LicenseMIT License
-Copyright (c) 2026 Thinus Pieterse  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Star this repo if a single-field unification of DM and DE resonates with you!
-Your feedback, issues, and contributions are warmly welcome.Made with passion for a cleaner cosmology.
-```
+Copyright (c) 2026 Thinus Pieterse  Full license text in `LICENSE` (LICENSE). Star this repo if a single-field unification of DM and DE resonates with you!
+Contributions, issues, and discussions are warmly welcome.Building a cleaner, more elegant cosmology.
 
