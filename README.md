@@ -166,17 +166,20 @@ class GTRFriedmann:
     - H0 in km/s/Mpc
     - Densities normalized to critical density today
     """
-    def __init__(self, omega_m=0.315, H0=67.4):
+    def __init__(self, omega_m=0.315, H0=67.4, P0=1.0):
         self.omega_m = omega_m
         self.H0 = H0
-        self.omega_de = 1.0 - omega_m
+        self.dark_field = DarkField(P0=P0)
 
-    def hubble(self, a):
-        """H(a) with effective dark energy from field relaxation"""
-        return self.H0 * np.sqrt(self.omega_m / a**3 + self.omega_de)
+    def hubble(self, a, rho_baryon_norm=1.0):
+        """H(a) using effective density from DarkField"""
+        rho_dark = self.dark_field.effective_density(rho_baryon_norm, a)
+        omega_dark_eff = rho_dark  # normalized
+        return self.H0 * np.sqrt(self.omega_m / a**3 + omega_dark_eff)
 
     def find_acceleration_onset(self):
-        """Redshift where acceleration begins (z ≈ 0.67)"""
+        """Redshift where acceleration begins (placeholder for dynamic calc)"""
+        # In full version: solve for q(a) = -1 - (a/H) dH/da < 0
         return 0.67
 
     def scale_factor(self, z):
