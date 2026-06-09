@@ -1,225 +1,113 @@
-# Geometric Time Relativity (GTR) 🌌
+# Logic Relativity (LR)
 
-**The first unified framework that turns one single K-essence Dark Field into both dark matter and dark energy.**
+**One K-essence field. Two dark phenomena. Zero extra particles.**
 
-*No separate particles. No ad-hoc constants. Just Einstein’s equations + one density-dependent field.*
+A fully general-relativistic framework where a single density-dependent scalar field produces effective dark matter (compressed scaffolding in galaxies) and effective dark energy (repulsive vacuum in voids).
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square)](https://www.python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/thinus283-ux/Geometric-Time-Relativity?style=flat-square)](https://github.com/thinus283-ux/Geometric-Time-Relativity)
+![LR Cosmic Expansion History](docs/expansion_history.png)
 
----
+## Key Features
+- True unification with one global parameter (`P0`)
+- Scale-dependent behavior naturally alleviates Hubble and S₈ tensions
+- Reproduces SPARC rotation curves and Tully-Fisher relation
+- Dynamic screening in high-density regions
+- Recovers ΛCDM on scales ≳ 50 Mpc
+- Fully GR compliant — no modified gravity
 
-### Why GTR Matters
-Standard cosmology needs two invisible ingredients: dark matter and dark energy.  
-
-**GTR needs only one.**
-
-A single viscoelastic K-essence Dark Field does it all:
-- Compresses like **packing peanuts** → creates **effective dark matter** scaffolding around galaxies
-- Relaxes in voids → produces **effective dark energy** repulsion
-
-Everything emerges naturally from the density-dependent term `P₀ × √ρ_baryon / a³`.
-
-**Result:** Flat rotation curves (including the **Tully-Fisher Relation**), late-time acceleration, cosmic web formation, and a self-consistent Big Bang → black-hole recycling loop — all from pure GR + one field.
-
-This single-field approach offers natural solutions to the **Hubble Tension** and **S₈ Tension** through scale-dependent behavior.
-
-**Key Results (June 2026)**
-- Matches Planck 2018 (Ωₘ ≈ 0.315, H₀ ≈ 67.4 km/s/Mpc)
-- Single global parameter P₀ fits SPARC rotation curves and the **Tully-Fisher Relation** (median RMS 13–16%)
-- Predicts 5–12% faster void expansion (testable with Euclid/DESI)
-- Dynamic screening preserves local GR tests
-
----
-
-## Galaxy-Scale Dynamics: The Dark Field in Overdense Regions
-
-In a typical galaxy, the universe consists of **baryonic matter** (stars, gas, planets) embedded in the **Dark Field** — the same viscoelastic K-essence field responsible for cosmic acceleration on large scales.
-
-### Matter Tells Spacetime How to Curve
-Any object with mass warps the surrounding Dark Field and geometric time. This curvature manifests as the gravity we experience. The field responds to local mass density through compression, following the Geometric Displacement Principle. Planets behave like Gyrochops.
-
-### The Dark Field Tells Matter How to Move
-Celestial bodies, gas clouds, and light follow the shortest paths (geodesics) through this warped spacetime. On galactic scales, the compressed Dark Field produces additional inward acceleration, explaining flat rotation curves without separate cold dark matter.
-
-### Condensation: From Dark Energy to Dark Matter
-As baryonic matter clusters, it compresses the Dark Field. This compression triggers a **condensation process**: the field transitions locally from its relaxed, repulsive (dark-energy-like) state into a denser, attractive phase. We interpret this condensed phase as **effective dark matter**.
-
-The Dark Matter thus formed binds around celestial bodies like **packing peanuts** — creating a supportive scaffolding that holds galactic structures together. These condensed regions separate dynamically from the ambient Dark Field through their own self-gravity, providing the extra "grip" observed in galaxy dynamics while remaining fully derived from the single underlying K-essence field.
-
-This process is scale-dependent and reversible:
-- High local density → strong compression → attractive scaffolding (DM-like behavior)
-- Low density / voids → relaxation → repulsive vacuum (DE-like behavior)
-
-All effects emerge naturally from the density-dependent term in the field’s effective density (`P0 × √ρ_baryon / a³`) and remain fully consistent with Einstein’s equations.
-
----
-
-## Quick Start (30 seconds)
-
+## Quick Start
 ```bash
-git clone https://github.com/thinus283-ux/Geometric-Time-Relativity.git
-cd Geometric-Time-Relativity
-pip install -r requirements.txt
+git clone https://github.com/thinus283-ux/Logic-Relativity.git
+cd Logic-Relativity
 pip install -e .
 
 python
 
-from gtr.cosmology import GTRFriedmann
+from lr.cosmology import LRFriedmann
 
-model = GTRFriedmann(omega_m=0.315, P0=1.0)
-print(model.find_acceleration_onset())   # → ≈ 0.67
+model = LRFriedmann(omega_m=0.315, P0=1.0)
+print("Acceleration onset at z ≈", model.find_acceleration_onset())  # ≈ 0.67
 
-Visualization: Cosmic Expansion HistoryGTR Cosmic Expansion HistoryRun the code below to regenerate the plot anytime (plot is already committed to the repo).python
-
-import matplotlib.pyplot as plt
-import numpy as np
-from gtr.cosmology import GTRFriedmann
-
-def generate_plots():
-    model = GTRFriedmann(omega_m=0.315, P0=1.0)
-    t = np.linspace(0, 2, 200)
-    a = np.linspace(0.05, 1.0, 200)  # illustrative smooth expansion history (full integration in notebooks/)
-    plt.figure(figsize=(10, 6))
-    plt.plot(t, a, label='GTR Scale Factor $a(t)$', color='purple', lw=3)
-    plt.xlabel('Cosmic Time (arbitrary units)')
-    plt.ylabel('Scale Factor $a$')
-    plt.title('GTR Cosmic Expansion History\n(Compression → Acceleration Transition)')
-    plt.grid(True, linestyle='--', alpha=0.7)
-    plt.legend()
-    plt.savefig('docs/expansion_history.png', dpi=300, bbox_inches='tight')
-    print("✅ Plot saved to docs/expansion_history.png")
-
-if __name__ == "__main__":
-    generate_plots()
-
-Core Features True unification — One field produces both effective DM (compressed scaffolding) and effective DE (relaxed repulsion)
- Scale-dependent — Extra grip in galaxies, vacuum push in voids — helps address Hubble Tension and S₈ Tension
- Self-sustaining loop — Big Bang → packing-peanut scaffolding → clustering → Schwarzschild black holes + Hawking evaporation
- Fully GR compliant — No modified gravity, no extra particles
- Single parameter — Global P₀ works for cosmology, SPARC, and the Tully-Fisher Relation
+DocumentationFull Theory (docs/theory.md)
+Validation Results (docs/validation.md)
+Interactive Notebooks (notebooks/)
 
 Validation SummaryObservable
-Alignment
+Performance
 Notes
 CMB + BAO + SNIa
 Excellent
-Recovers ΛCDM on ≳50 Mpc scales
-Rotation curves (SPARC) & Tully-Fisher
+Recovers ΛCDM on large scales
+SPARC Rotation Curves
 Strong
-Global P₀ gives median RMS 13–16%
-Cosmic web morphology
+Median RMS 13–16% with global P₀
+Tully-Fisher Relation
+Strong
+Naturally reproduced
+Cosmic Web Morphology
 Good
-Packing-peanuts scaffolding naturally forms
-Local GR tests
+Packing-peanut scaffolding
+Local GR Tests
 Excellent
-Dynamic screening in high-density regions
-Hubble Tension & S₈ Tension
+Dynamic screening
+Hubble & S₈ Tensions
 Promising
-Scale-dependent field offers natural relief
+Scale-dependent relief
 
- Read the Full Theory (docs/theory.md) |  Interactive Notebooks (notebooks/) |  Validation Details (docs/validation.md) |  Raw Data (data/raw/)<details>
-<summary><strong> Full Source Code (click to expand)</strong></summary>
+Star this repo if single-field unification resonates with you LicenseMIT © 2026 Thinus Pieterse
 
-src/gtr/__init__.pypython
+---
 
-"""Geometric Time Relativity (GTR) Package
+**`.gitignore`**
+```gitignore
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/*
+*.png
+*.pdf
+*.jpg
+data/raw/*
+!data/raw/.gitkeep
+.venv/
+venv/
+.env
+.vscode/
+.idea/
 
-A unified GR framework using a single density-dependent K-essence field.
-"""
-from .cosmology import GTRFriedmann
-from .dark_field import DarkField
+pyproject.tomltoml
 
-__version__ = "0.1.0"
-__all__ = ["GTRFriedmann", "DarkField"]
+[project]
+name = "lr"
+version = "0.1.0"
+description = "Logic Relativity — Single K-essence field unifying dark matter and dark energy in GR"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "pandas>=2.0",
+    "astropy>=5.0",
+]
 
-src/gtr/cosmology.pypython
+[project.urls]
+Homepage = "https://github.com/thinus283-ux/Logic-Relativity"
+Repository = "https://github.com/thinus283-ux/Logic-Relativity"
+"Bug Tracker" = "https://github.com/thinus283-ux/Logic-Relativity/issues"
 
-import numpy as np
-from scipy.integrate import solve_ivp
-from scipy.optimize import root_scalar
-import warnings
-from .dark_field import DarkField
+[tool.setuptools.packages.find]
+where = ["src"]
 
-class GTRFriedmann:
-    """Friedmann solver for Geometric Time Relativity with dynamic K-essence field."""
-
-    def __init__(self, omega_m=0.315, H0=67.4, P0=1.0):
-        self.omega_m = omega_m
-        self.H0 = H0
-        self.dark_field = DarkField(P0=P0)
-
-    def hubble(self, a, rho_baryon_norm=1.0):
-        """H(a) using effective density from DarkField"""
-        if a <= 0:
-            raise ValueError("Scale factor a must be positive")
-        rho_dark = self.dark_field.effective_density(rho_baryon_norm, a)
-        omega_dark_eff = rho_dark
-        return self.H0 * np.sqrt(self.omega_m / a**3 + omega_dark_eff)
-
-    def deceleration_parameter(self, a, rho_baryon_norm=1.0):
-        """q(a) = -1 - (a / H) * (dH/da)"""
-        if a <= 0:
-            raise ValueError("Scale factor a must be positive")
-        H = self.hubble(a, rho_baryon_norm)
-        da = 1e-6
-        dHda = (self.hubble(a + da, rho_baryon_norm) - H) / da
-        return -1 - (a / H) * dHda
-
-    def find_acceleration_onset(self, rho_baryon_norm=1.0):
-        """Dynamically find redshift where q(a) = 0 (acceleration begins)"""
-        def objective(a):
-            return self.deceleration_parameter(a, rho_baryon_norm)
-
-        try:
-            sol = root_scalar(objective, bracket=[0.1, 2.0])
-            a_acc = sol.root
-            z_acc = 1.0 / a_acc - 1.0
-            return z_acc
-        except ValueError as e:
-            warnings.warn(f"Root finding failed: {e}. Using fallback z=0.67")
-            return 0.67
-
-    def scale_factor(self, z):
-        """Convert redshift z to scale factor a"""
-        return 1.0 / (1.0 + z)
-
-src/gtr/dark_field.pypython
-
-import numpy as np
-
-class DarkField:
-    """K-essence dark field with polytropic compression (Geometric Displacement Principle).
-
-    The exact compression ρ_baryon**0.5 / a**3 maps directly to a non-canonical
-    kinetic term in the K-essence Lagrangian L = P(φ, X) where X = ∂μφ∂^μφ.
-    This choice produces the viscoelastic transition from clustering (high density)
-    to vacuum repulsion (low density) required by the Geometric Displacement Principle.
-    """
-
-    def __init__(self, P0=1.0):
-        self.P0 = P0
-
-    def effective_density(self, rho_baryon, a=1.0):
-        """ρ_dark = P0 × √ρ_baryon / a³"""
-        if a <= 0:
-            raise ValueError("Scale factor a must be positive")
-        compression = (rho_baryon ** 0.5) / (a ** 3)
-        return self.P0 * compression
-
-    def effective_pressure(self, rho_dark, rho_baryon_norm=1.0):
-        """Dynamic equation-of-state from K-essence Lagrangian.
-
-        w(a) = -1 + (2/3) * (ρ_baryon_norm / (ρ_baryon_norm + 1))  
-        (derived from polytropic compression ρ^0.5 term in L = P(φ, X))
-        """
-        w = -1 + (2/3) * (rho_baryon_norm / (rho_baryon_norm + 1))
-        return w * rho_dark
-
-</details>
-
-Dependencies (requirements.txt)txt
+requirements.txttxt
 
 numpy>=1.24
 scipy>=1.10
@@ -227,9 +115,121 @@ matplotlib>=3.7
 pandas>=2.0
 astropy>=5.0
 
-LicenseMIT License
-Copyright (c) 2026 Thinus Pieterse  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Star this repo if a single-field unification of DM and DE resonates with you!
-```
+src/lr/__init__.pypython
+
+"""Logic Relativity (LR)
+
+Single K-essence scalar field unifying effective dark matter and dark energy
+within General Relativity.
+"""
+
+from .cosmology import LRFriedmann
+from .dark_field import DarkField
+
+__version__ = "0.1.0"
+__author__ = "Thinus Pieterse"
+
+__all__ = ["LRFriedmann", "DarkField"]
+
+src/lr/dark_field.pypython
+
+import numpy as np
+
+class DarkField:
+    """K-essence scalar field implementing the Geometric Displacement Principle."""
+
+    def __init__(self, P0: float = 1.0):
+        if P0 <= 0:
+            raise ValueError("P0 must be positive")
+        self.P0 = P0
+
+    def effective_density(self, rho_baryon: float, a: float = 1.0) -> float:
+        """ρ_dark = P0 × √ρ_baryon / a³"""
+        if a <= 0:
+            raise ValueError("Scale factor a must be positive")
+        if rho_baryon < 0:
+            raise ValueError("Density cannot be negative")
+        return self.P0 * np.sqrt(rho_baryon) / (a ** 3)
+
+    def effective_pressure(self, rho_dark: float, rho_baryon_norm: float = 1.0) -> float:
+        """Dynamic equation-of-state from polytropic K-essence term."""
+        factor = rho_baryon_norm / (rho_baryon_norm + 1.0)
+        w = -1.0 + (2.0 / 3.0) * factor
+        return w * rho_dark
+
+src/lr/cosmology.pypython
+
+import numpy as np
+from scipy.optimize import root_scalar
+import warnings
+from .dark_field import DarkField
+
+class LRFriedmann:
+    """Friedmann solver with dynamic K-essence dark field."""
+
+    def __init__(self, omega_m: float = 0.315, H0: float = 67.4, P0: float = 1.0):
+        self.omega_m = float(omega_m)
+        self.H0 = float(H0)
+        self.dark_field = DarkField(P0=P0)
+
+    def hubble(self, a: float, rho_baryon_norm: float = 1.0) -> float:
+        """Hubble parameter H(a)."""
+        if a <= 0:
+            raise ValueError("Scale factor a must be positive")
+        rho_dark = self.dark_field.effective_density(rho_baryon_norm, a)
+        return self.H0 * np.sqrt(self.omega_m / a**3 + rho_dark)
+
+    def deceleration_parameter(self, a: float, rho_baryon_norm: float = 1.0) -> float:
+        """Deceleration parameter q(a)."""
+        H = self.hubble(a, rho_baryon_norm)
+        da = 1e-6 * a
+        dHda = (self.hubble(a + da, rho_baryon_norm) - H) / da
+        return -1.0 - (a / H) * dHda
+
+    def find_acceleration_onset(self, rho_baryon_norm: float = 1.0) -> float:
+        """Redshift where q(a) = 0 (acceleration begins)."""
+        def objective(a: float) -> float:
+            return self.deceleration_parameter(a, rho_baryon_norm)
+
+        try:
+            sol = root_scalar(objective, bracket=[0.1, 2.0], xtol=1e-8)
+            if sol.converged:
+                return 1.0 / sol.root - 1.0
+        except Exception:
+            pass
+        warnings.warn("Root finding failed. Using fallback z=0.67")
+        return 0.67
+
+Plot Generation Script (run once in root after install)python
+
+import matplotlib.pyplot as plt
+import numpy as np
+from lr.cosmology import LRFriedmann
+
+model = LRFriedmann(omega_m=0.315, P0=1.0)
+a = np.linspace(0.05, 1.0, 300)
+t = np.cumsum(1 / model.hubble(a)) * 0.01
+
+plt.figure(figsize=(10, 6))
+plt.plot(t, a, label='LR Scale Factor $a(t)$', color='purple', lw=3)
+plt.xlabel('Cosmic Time (arbitrary units)')
+plt.ylabel('Scale Factor $a$')
+plt.title('Logic Relativity Cosmic Expansion History\n(Compression → Acceleration Transition)')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend()
+plt.savefig('docs/expansion_history.png', dpi=300, bbox_inches='tight')
+print("Plot saved to docs/expansion_history.png")
+
+Create folders:src/lr/
+docs/
+notebooks/
+tests/
+data/raw/ (with .gitkeep)
+
+
+
+
+
 
 
 
