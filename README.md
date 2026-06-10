@@ -551,5 +551,4 @@ tests/init.pypython
 
 # Empty file to make tests a package
 
-Create empty __init__.py files in notebooks/, examples/, and data/raw/ (if not already present).  Run generate_plots.py after pip install -e . to populate docs/ with figures.  Push to GitHub — your repo is now production-ready, CI-validated, and visually polished.
-
+Create empty __init__.py files in notebooks/, examples/, and data/raw/ (if not already present).  Run generate_plots.py after pip install -e . to populate docs/ with figures.  
