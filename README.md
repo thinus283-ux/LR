@@ -87,6 +87,15 @@ P(X) = \beta^2 \log\left(1 + \frac{X}{\beta^2}\right).
 \]
 This ensures \(\partial P / \partial \rho > 0\) at all densities, guaranteeing stable, non-singular cores.
 
+### Nature of the Diamond QGP Core
+
+The central **Diamond QGP Core** can be interpreted in two compatible ways within the framework:
+
+- **Solid-like interpretation**: A rigid, faceted ultra-dense nodal structure that acts as a near-perfect reflector for gravitational waves, producing clean echo signatures.
+- **Fluid-like interpretation**: A dynamic, non-solid ultra-dense quark-gluon plasma with internal turbulence, possible rotation, and rich thermodynamic behavior. In this view, the core still provides strong (frequency-dependent) reflection while allowing internal QCD dynamics and energy exchange with the surrounding wobbling stress-energy framework.
+
+Both descriptions are consistent with the current action and the layered echo-cavity structure. The fluid interpretation opens natural pathways for future thermodynamic and particle physics refinements while preserving the key observational predictions (stable non-singular cores and damped gravitational wave echoes).
+
 #### Modified Einstein Equations (from Metric Variation)
 Varying the full action with respect to \(g^{\mu\nu}\) yields
 \[
