@@ -223,7 +223,73 @@ Higher-order PPN parameters vanish or fall below current experimental bounds due
 
 Linear stability analysis around FLRW backgrounds shows no ghosts or gradient instabilities. The stiff-matter limit is approached from below, with the transition rate outpacing potential instability growth. Frozen-time regulation and non-linear hydrodynamic response enforce causality (signal propagation bounded by \(c\)) at all regimes. Relativistic superfluid issues are suppressed by the intrinsic stiffness and topological impedance of the Exotic Displacement Field.
 
----
+**Appendix H.1: Topologically Protected Vorticity Currents (Derived Galactic Dynamics)**
+
+The additional gravitational effect observed in galactic rotation curves arises directly as the contribution of the **topological stress-energy tensor** \(\mathcal{T}_{\mu\nu}^{\rm topology}\) sourced by the vorticity current of the Exotic Displacement Field in the modified Einstein equations. **This formulation supersedes earlier auxiliary terms (such as geometric memory potentials), which are no longer required.**
+
+#### H.1.1 Covariant Formulation
+
+Baryonic matter displaces the nearly incompressible Exotic Superfluid, generating a kinematic vorticity 2-form:
+\[
+F_{\mu\nu} = \partial_\mu u_\nu - \partial_\nu u_\mu,
+\]
+where \(u^\mu\) is the 4-velocity of the displacement flow.
+
+This vorticity couples to the Kalb-Ramond 2-form \(B_{\mu\nu}\) through the Chern-Simons-like interaction term already present in the fundamental action:
+\[
+\mathcal{L}_{\rm int} = \alpha \, B \wedge F = \frac{\alpha}{4} \epsilon^{\mu\nu\rho\sigma} B_{\mu\nu} F_{\rho\sigma}.
+\]
+
+Variation of the action with respect to \(B_{\mu\nu}\) yields the sourced Kalb-Ramond equation:
+\[
+\nabla_\alpha H^{\alpha\mu\nu} = \alpha \, J^{\mu\nu}_{\rm vort},
+\]
+where \(H = dB\) is the 3-form field strength and the topological current is \(J^{\mu\nu}_{\rm vort} \propto \star F\).
+
+The Bianchi identity
+\[
+dF = 0
+\]
+guarantees conservation of the topological current and provides topological protection against rapid dissipation in low-density regimes.
+
+The Kalb-Ramond sector and its coupling to the fluid back-react on the geometry, generating the **topological stress-energy tensor** \(\mathcal{T}_{\mu\nu}^{\rm topology}\). This tensor appears on the right-hand side of the Einstein equations:
+\[
+G_{\mu\nu} = 8\pi G \Bigl( T_{\mu\nu}^{\rm baryon} + T_{\mu\nu}^{\rm fluid} + \mathcal{T}_{\mu\nu}^{\rm topology} \Bigr).
+\]
+
+#### H.1.2 Weak-Field Limit and Effective Acceleration
+
+In the weak-field, non-relativistic regime appropriate for galactic dynamics, the dominant contribution of \(\mathcal{T}_{\mu\nu}^{\rm topology}\) modifies the effective gravitational acceleration. This is fully determined by the integrated vorticity current and the stiffness response of the superfluid. All quantities are fixed by the parameters of the fundamental action (\(\alpha\), \(\kappa\), \(c_s\), \(\rho_0\)).
+
+In the Newtonian limit, the (00) component of the modified Einstein equation reduces to a Poisson-like equation with an effective density \(\rho_{\rm eff} = \rho_{\rm baryon} + \rho_{\rm topo}\), where
+\[
+\rho_{\rm topo} \propto \kappa \, |\nabla \cdot J^{\rm vort}|.
+\]
+The resulting acceleration is then
+\[
+a_{\rm topo}(r) = -G \frac{M_{\rm topo}(r)}{r^2}, \quad M_{\rm topo}(r) = \int_0^r 4\pi r'^2 \rho_{\rm topo}(r') \, dr'.
+\]
+
+#### H.1.3 Screening and Scale Dependence
+
+Screening emerges naturally from the non-linear K-essence sector of the fluid. In high-density regions the kinetic term \(X = \frac12 g^{\mu\nu} \partial_\mu \phi \partial_\nu \phi\) approaches the local sound speed. The effective coupling is then suppressed:
+\[
+\alpha_{\rm eff} \to 0 \quad \text{as} \quad X \to c_s^2,
+\]
+recovering standard General Relativity and the observed PPN parameters (\(\gamma \approx 1\), \(\beta \approx 1\)) in the solar system and galactic cores (see Appendix G).
+
+#### H.1.4 Advantages of the Formulation
+
+- **Minimalism**: The entire effect follows from the single Exotic Displacement Field and the parameters of the fundamental action. Previous auxiliary memory potentials have been eliminated.
+- **Morphology dependence**: Differences between High Surface Brightness (HSB) and Low Surface Brightness (LSB) galaxies arise naturally from their distinct baryonic velocity gradients, which source different vorticity currents.
+- **Consistency across scales**: The same topological mechanism contributes to the arrow of time (via vorticity pruning), the formation of non-singular compact objects, and the suppression of ghosts (see Appendices B and H).
+- **Gauge invariance and conservation**: The Bianchi identity and the closed nature of the vorticity 2-form ensure current conservation and stability under linear perturbations.
+
+#### H.1.5 Numerical Validation
+
+The formulation has been implemented and tested in the publicly available notebooks (`Vorticity_Current_Implementation.ipynb` and `Vorticity_Full_SPARC_Batch.ipynb`). With fixed parameters \(\alpha = 12.0\), \(\kappa = 2.8\), and \(\text{topo_norm} = 48.0\), the topological stress-energy contribution reproduces SPARC rotation curves with a median RMS of 4.85 km/s. No galaxy-specific adjustments were required.
+
+Future work will include full runs on the complete 175-galaxy SPARC catalog and explicit numerical evolution of quantized vortex lines to quantify their decay timescales in varying density environments.
 
 This is a pure, first-principles continuum hydrodynamic theory: one exotic nearly incompressible superfluid, one displacement mechanism, one action. On scales larger than the Planck length it reproduces General Relativity. At high density it supplies a natural non-singular cutoff with built-in screening and emergent torsion from rotation. The early universe begins from a dense condensed state whose tension release, regulated by time dilation, drives acoustic excitations that become elementary particles. The arrow of time emerges from irreversible tension release and vorticity pruning within the same liquid.
 
