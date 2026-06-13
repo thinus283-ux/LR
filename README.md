@@ -4,7 +4,7 @@
 > “Spacetime tells matter how to move; matter tells spacetime how to curve.”  
 > — John Archibald Wheeler
 
-Baryonic matter does not merely occupy spacetime — it *excavates* it. The **Exotic Displacement Field** is the single fundamental fabric of spacetime: a nearly incompressible relativistic superfluid. All geometry, curvature, dynamics, particles, and the arrow of time emerge from its displacement, thinning, vorticity, and non-linear hydrodynamic behavior. The theory is strictly minimal: one field, one action, no extra fundamental scalars or particles.
+Baryonic matter does not merely occupy spacetime — it *displaces* it. The **Exotic Displacement Field** is the single fundamental fabric of spacetime: a nearly incompressible relativistic superfluid. All geometry, curvature, dynamics, particles, and the arrow of time emerge from its displacement, thinning, vorticity, and non-linear hydrodynamic behavior. The theory is strictly minimal: one field, one action, no extra fundamental scalars or particles.
 
 ### Ontological Foundations
 
