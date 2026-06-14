@@ -107,7 +107,66 @@ All SPARC fits use this derived profile.
 
 Consistent FLRW background. MCMC reduces Hubble to ~0.1σ and S₈ to ~1.8σ. Modified TOV yields finite non-singular cores (200–500 km). Ghost-free and causal.
 
----
+### Hawking Radiation as the Shadow of a Black Hole: Full Derivation from First Principles
+
+In Logic Relativity (LR), spacetime is described by a single nearly incompressible relativistic superfluid — the **Exotic Displacement Field** \(\phi\) — governed by the fundamental action (see [Fundamental Action](#fundamental-action)):
+
+\[
+S = \int d^4x \sqrt{-g} \left[ \frac{R}{16\pi G} - \rho_0 \sqrt{1 - \frac{X}{c_s^2}} - \lambda(x) (\nabla_\mu u^\mu) - \frac{\kappa}{2} (\nabla_\mu u^\mu)^2 - V(\sigma) - \frac{1}{12} H_{\mu\nu\lambda} H^{\mu\nu\lambda} - \alpha F_{\mu\nu}(\partial u) B^{\mu\nu} - \xi R \sigma \right]
+\]
+
+where \(X = \frac{1}{2} g^{\mu\nu} \partial_\mu \phi \partial_\nu \phi\), \(u^\mu = \frac{\partial^\mu \phi}{\sqrt{2X}}\) (normalized 4-velocity), and the remaining terms encode topological and curvature couplings.
+
+#### Step 1: Effective Metric and Acoustic Horizon
+Varying the k-essence term yields the fluid stress-energy tensor. Linear perturbations \(\delta\phi\) propagate on the **acoustic metric** (see [Field Equations](#field-equations) and [Acoustic Metric](#acoustic-metric)):
+
+\[
+\tilde{g}_{\mu\nu} = \frac{\rho}{c_s} \begin{pmatrix}
+-(c_s^2 - v^2) & -v_i \\
+-v_j & \delta_{ij}
+\end{pmatrix}
+\]
+
+The **acoustic horizon** forms where \(|v| = c_s\), coinciding with the apparent event horizon for compact objects.
+
+#### Step 2: Modified Photon Sphere and Shadow
+Kinetic Vainshtein screening (see [Derived Kinetic Vainshtein Screening](#derived-kinetic-vainshtein-screening)) gives:
+
+\[
+\frac{1}{r^2} \frac{d}{dr} \left( r^2 K_X(r) \frac{d\phi}{dr} \right) = 4\pi G \rho_m(r) + S_{\rm topo}(r), \quad K_X = \frac{\rho_0 / c_s^2}{\sqrt{1 - X/c_s^2}}.
+\]
+
+Vainshtein radius: \(R_V \approx \left( \frac{G M_b c_s^2}{\Lambda^3} \right)^{1/3}\).  
+The shadow’s critical impact parameter receives topological corrections:
+
+\[
+b_c^2 \approx \frac{r_{\rm ph}^2}{1 - \frac{2M}{r_{\rm ph}} - \delta_{\rm topo}(K_X, c_s, \nabla\phi)},
+\]
+
+with \(r_{\rm ph} = 3M\) (Schwarzschild limit, \(G=c=1\)).
+
+#### Step 3: Hawking-like Radiation from Acoustic Excitations
+Quantum fluctuations obey \(\Box_{\tilde{g}} \delta\phi = 0\). Bogoliubov transformations yield:
+
+\[
+T_H^{\rm LR} = \frac{\hbar \kappa_{\rm surf}}{2\pi k_B} \left(1 + \mathcal{O}\left( \frac{\nabla \phi \cdot \partial_u}{c_s^2} \right) \right),
+\]
+
+where \(\kappa_{\rm surf} = \frac{1}{2} \left| \frac{d}{dr} (c_s^2 - v^2) \right|_{r=r_h}\).  
+Mass-loss rate:
+
+\[
+\frac{dM}{dt} \approx - \frac{\hbar c^4}{15360 \pi G^2 M^2} \, f(K_X, S_{\rm topo}, c_s).
+\]
+
+#### Step 4: Final Stages — Shadow Dissolution and Information Preservation
+As \(M_b\) decreases, \(R_V\) contracts. When the photon sphere reaches the minimum stable topological soliton core (\~200–500 km, see [`TOV_test.ipynb`](TOV_test.ipynb)), the shadow vanishes abruptly. The remnant is a stable, non-singular rotating topological soliton.
+
+**Information is preserved** in the continuous \(\phi\) field and topological structures. Unitarity is guaranteed by the ghost-free action (verified in [`Ghost_free_stability_check.ipynb`](Ghost_free_stability_check.ipynb) and [`K_essence_stability_check.ipynb`](K_essence_stability_check.ipynb)).
+
+This unifies the black hole shadow with Hawking radiation as its dynamical acoustic imprint. Observable signatures include distorted shadow polarization (testable with EHT) and a sharp cutoff at the core scale.
+
+Further numerical details in [`K_essence.ipynb`](K_essence.ipynb).
 
 ## Numerical Validation (Test Results)
 
@@ -130,7 +189,7 @@ cd LR
 pip install -r requirements.txt
 ```
 
-Your existing notebooks and test results remain unchanged. All notebooks are Colab-compatible.
+The existing notebooks and test results remain unchanged. All notebooks are Colab-compatible.
 
 ---
 
