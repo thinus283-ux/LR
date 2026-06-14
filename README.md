@@ -101,7 +101,10 @@ v^2(r) = \frac{G M_b(r)}{r} + \frac{r}{2} \frac{d\Phi_{\rm topo}}{dr}
 
 All SPARC fits use this derived profile.
 
----
+
+The displacement interaction model describes celestial mechanics by treating mass as a phenomenon that floats on an underlying field, with a phase transition to a "submerged" vortex state when density gradients exceed a critical threshold $\Sigma_\phi$. This framework, which suggests that constant galactic rotation velocities occur when the local field gradient $\nabla \phi$ is less than $\Sigma_\phi$, can be modeled by determining the state as either floating or submerged, where $R_S = \sqrt{GM/\Sigma_\phi}$ defines the transition radius.
+
+
 
 ## Cosmological Sector, Compact Objects & Stability
 
