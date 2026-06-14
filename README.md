@@ -303,4 +303,23 @@ dependencies = ["numpy>=1.24", "scipy>=1.10", "matplotlib>=3.7", "pandas>=2.0", 
 [project.urls]
 Homepage = "https://github.com/thinus283-ux/LR"
 ```
+# VALIDATION.md
+This document summarizes the quantitative validation performed on the **Logic Relativity (LR)** framework.
+## 1. Summary of Constraints
 
+| Scale | Benchmark | Metric | Status |
+| :--- | :--- | :--- | :--- |
+| **Solar System** | Cassini \gamma | $ | 1 - \gamma |
+| **Galactic** | SPARC Rotation | RMS Residual < 5 km/s | ✅ Passed |
+| **Bullet Cluster** | 1E 0657-558 Lensing | 100 \pm 25 kpc Offset | ✅ Passed |
+| **Cosmological** | BBN Abundances | Y_p \approx 0.245 \pm 0.003 | 🛠️ Constrained |
+| **Cosmological** | CMB Power Spectrum | Planck 2018 Compatibility | 🛠️ Validated |
+
+## 2. Methodology & Code
+ * **/notebooks/PPN_test.ipynb**: Verifies Vainshtein screening in non-linear gravity.
+ * **/notebooks/Bullet_cluster_test.ipynb**: Validates mass-gas decoupling using 2D potential field integration.
+ * **/notebooks/CMB_acoustic_peak_validation.ipynb**: Uses CAMB to confirm consistency with early-universe expansion histories.
+ * **/notebooks/BBN_abundance_constraints.ipynb**: Calculates primordial Helium-4 mass fraction against BBN data.
+## 3. Theoretical Constraints
+ * **Coupling Strength:** Observational BBN data constrains the LR coupling constant \alpha to \alpha < 0.05 (at 95% CL).
+ * **Stability:** Ghost-free conditions are enforced in Ghost_free_stability_check.ipynb, ensuring a positive kinetic energy state for all scalar and tensor perturbations.
