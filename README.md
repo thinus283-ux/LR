@@ -177,7 +177,7 @@ In Logic Relativity, Hawking radiation emerges as the dynamical acoustic imprint
 - The shadow is a result of Hawking radiation that surrounds the core concealed underneath the shadow is a stable non-singular topological soliton core (200–500 km).
 - Information is preserved in the continuous \(\phi\) field (no paradox).
 
-Time dilation also play's a role in preserving the core solution my argument is you can't fold a piece of paper into non existence.
+Time dilation also play's a role in preserving the core solution my argument is you can't fold a piece of paper into non existence R=0.
 
 **Stability Note:** The underlying k-essence sector is ghost-free (\(K > 0\)) and stable (\(c_s^2 > 0\)) — see Colab test and `Ghost_free_stability_check.ipynb`.
 
