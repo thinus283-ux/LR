@@ -163,7 +163,7 @@ Mass-loss rate:
 \]
 
 #### Step 4: Final Stages — Shadow Dissolution and Information Preservation
-As \(M_b\) decreases, \(R_V\) contracts. When the photon sphere reaches the minimum stable topological soliton core (\~200–500 km, see [`TOV_test.ipynb`](TOV_test.ipynb)), the shadow vanishes abruptly. The remnant is a stable, non-singular rotating topological soliton.
+As \(M_b\) decreases, \(R_V\) contracts. When the photon sphere reaches the minimum stable topological soliton core (\~200–500 km, see [`TOV_test.ipynb`](TOV_test.ipynb)), The remnant is a stable, non-singular rotating topological soliton.
 
 **Information is preserved** in the continuous \(\phi\) field and topological structures. Unitarity is guaranteed by the ghost-free action (verified in [`Ghost_free_stability_check.ipynb`](Ghost_free_stability_check.ipynb) and [`K_essence_stability_check.ipynb`](K_essence_stability_check.ipynb)).
 
