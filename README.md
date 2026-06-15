@@ -120,7 +120,7 @@ S = \int d^4x \sqrt{-g} \left[ \frac{R}{16\pi G} - \rho_0 \sqrt{1 - \frac{X}{c_s
 
 where \(X = \frac{1}{2} g^{\mu\nu} \partial_\mu \phi \partial_\nu \phi\), \(u^\mu = \frac{\partial^\mu \phi}{\sqrt{2X}}\) (normalized 4-velocity), and the remaining terms encode topological and curvature couplings.
 
-#### Step 1: Effective Metric and Acoustic Horizon
+#### Stage 1: Effective Metric and Acoustic Horizon
 Varying the k-essence term yields the fluid stress-energy tensor. Linear perturbations \(\delta\phi\) propagate on the **acoustic metric** (see [Field Equations](#field-equations) and [Acoustic Metric](#acoustic-metric)):
 
 \[
@@ -132,7 +132,7 @@ Varying the k-essence term yields the fluid stress-energy tensor. Linear perturb
 
 The **acoustic horizon** forms where \(|v| = c_s\), coinciding with the apparent event horizon for compact objects.
 
-#### Step 2: Modified Photon Sphere and Shadow
+#### Stage 2: Modified Photon Sphere and Shadow
 Kinetic Vainshtein screening (see [Derived Kinetic Vainshtein Screening](#derived-kinetic-vainshtein-screening)) gives:
 
 \[
@@ -148,7 +148,7 @@ b_c^2 \approx \frac{r_{\rm ph}^2}{1 - \frac{2M}{r_{\rm ph}} - \delta_{\rm topo}(
 
 with \(r_{\rm ph} = 3M\) (Schwarzschild limit, \(G=c=1\)).
 
-#### Step 3: Hawking-like Radiation from Acoustic Excitations
+#### Stage 3: Hawking-like Radiation from Acoustic Excitations
 Quantum fluctuations obey \(\Box_{\tilde{g}} \delta\phi = 0\). Bogoliubov transformations yield:
 
 \[
@@ -162,7 +162,7 @@ Mass-loss rate:
 \frac{dM}{dt} \approx - \frac{\hbar c^4}{15360 \pi G^2 M^2} \, f(K_X, S_{\rm topo}, c_s).
 \]
 
-#### Step 4: Final Stages — Shadow Dissolution and Information Preservation
+#### Stages 4 — Shadow Dissolution and Information Preservation
 As \(M_b\) decreases, \(R_V\) contracts. When the photon sphere reaches the minimum stable topological soliton core (\~200–500 km, see [`TOV_test.ipynb`](TOV_test.ipynb)), The remnant is a stable, non-singular rotating topological soliton.
 
 **Information is preserved** in the continuous \(\phi\) field and topological structures. Unitarity is guaranteed by the ghost-free action (verified in [`Ghost_free_stability_check.ipynb`](Ghost_free_stability_check.ipynb) and [`K_essence_stability_check.ipynb`](K_essence_stability_check.ipynb)).
@@ -177,7 +177,7 @@ In Logic Relativity, Hawking radiation emerges as the dynamical acoustic imprint
 - The shadow is a result of Hawking radiation that surrounds the core concealed underneath the shadow is a stable non-singular topological soliton core (200–500 km).
 - Information is preserved in the continuous \(\phi\) field (no paradox).
 
-## 🕳️ Step 5: Shadow Dissolution and Information Preservation
+## 🕳️ Stage 5: Shadow Dissolution and Information Preservation
 As the baryonic mass ($M_b$) decreases, the Vainshtein radius ($R_V$) contracts. When the photon sphere reaches the scale of the topological soliton core, coordinate collapse is halted.
 
 * The Paper-Folding Argument: You cannot fold a physical piece of paper into non-existence ($R = 0$). In this framework, the continuous displacement field $(\phi)$ possesses an inherent physical geometric limit that regulates structural collapse.
