@@ -177,7 +177,15 @@ In Logic Relativity, Hawking radiation emerges as the dynamical acoustic imprint
 - The shadow is a result of Hawking radiation that surrounds the core concealed underneath the shadow is a stable non-singular topological soliton core (200–500 km).
 - Information is preserved in the continuous \(\phi\) field (no paradox).
 
-Time dilation also play's a role in preserving the core solution my argument is you can't fold a piece of paper into non existence R=0.
+## 🕳️ Final Stages: Shadow Dissolution and Information Preservation
+As the baryonic mass ($M_b$) decreases, the Vainshtein radius ($R_V$) contracts. When the photon sphere reaches the scale of the topological soliton core, coordinate collapse is halted.
+
+* The Paper-Folding Argument: You cannot fold a physical piece of paper into non-existence ($R = 0$). In this framework, the continuous displacement field $(\phi)$ possesses an inherent physical geometric limit that regulates structural collapse.
+* Soliton Remnants: The core does not shrink into a mathematical singularity. Instead, it leaves behind a stable, non-singular rotating topological soliton remnant with a finite radius:
+$$r_{\text{core}} \approx 200\text{–}500 \text{ km}$$ 
+* Information Preservation: Because the field $(\phi)$ remains entirely continuous throughout this process, information is never lost. Unitarity is completely preserved across the acoustic horizon, eliminating the black hole information paradox without requiring abstract quantum gravity fixes:
+$$\Box_{\tilde{g}} \delta\phi = 0$$
+
 
 **Stability Note:** The underlying k-essence sector is ghost-free (\(K > 0\)) and stable (\(c_s^2 > 0\)) — see Colab test and `Ghost_free_stability_check.ipynb`.
 
