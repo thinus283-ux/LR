@@ -197,7 +197,8 @@ Further numerical details in [`K_essence.ipynb`](K_essence.ipynb).
 
 All results obtained with the action-derived screened profile. Precomputed MCMC chains and median curves are in your results.
 
----
+Matter accumulates it displaces the field matter tells the dark energy field how to curve the field tells matter how to move heavier matter tells lighter matter how to move around it planets are bryonic matter gyrochops. Disc's that forms around celestial bodies is matter laying on the surface tention of the field that revolves around celestial bodies like Jupiter. 
+
 
 ## Quick Start & Reproducibility
 
