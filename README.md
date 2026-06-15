@@ -197,7 +197,15 @@ Further numerical details in [`K_essence.ipynb`](K_essence.ipynb).
 
 All results obtained with the action-derived screened profile. Precomputed MCMC chains and median curves are in your results.
 
-Matter accumulates it displaces the field matter tells the dark energy field how to curve the field tells matter how to move heavier matter tells lighter matter how to move around it planets are bryonic matter gyrochops. Disc's that forms around celestial bodies is matter laying on the surface tention of the field that revolves around celestial bodies like Jupiter. 
+## 🌌 Cosmic Mechanics: How Matter Interacts with Space
+To understand the core physics of this framework, you must picture the mechanical interactions directly, rather than relying on abstract, non-physical geometry:
+
+* Planets as Gyrochops: Celestial bodies like Jupiter do not just passively sit in a vacuum. They function as baryonic matter gyrochops—localized, spinning mechanical structures that actively cut through and drag the surrounding fluid medium. This mechanical spinning drives the angular velocity components of the acoustic metric:
+$$\tilde{g}_{0i} \propto \Omega_i(r)$$ 
+Where the gyrochop’s rotation actively modifies the frame-dragging potential of the fluid spacetime fabric.
+* Surface Tension Stability: Matter does not just pool randomly; it lays directly on the surface tension of the fluid fabric. This structural surface tension acts as a physical boundary that dictates orbital mechanics and prevents gravitational collapse. This is governed by the gradient of the scalar field potential V(φ), where the effective surface tension $\sigma_{\text{eff}}$ prevents singularities:
+$$\sigma_{\text{eff}} = \xi R \sigma \geq 0$$ 
+Because the fluid fabric possesses this inherent surface tension, the curvature scalar R is naturally regulated, ensuring that matter cannot collapse into a mathematical point of infinite density (R → ∞).
 
 
 ## Quick Start & Reproducibility
