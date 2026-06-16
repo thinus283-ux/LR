@@ -95,32 +95,43 @@ To map the macro-evolution of the universe, the four-dimensional pseudo-Riemanni
 **Condensation:** As the field drops through its steepest gradient, localized geometric gradients \nabla_\mu \psi \nabla_\nu \psi form. Excess vacuum energy decays via localized phase transitions (\rho_{\text{vac}} \to \rho_m + \rho_r). Highly localized topological distortions and metric condensates form the structural framework for complex mass systems out of twisted spacetime.
 ## V. Gravitational Collapse and Compact Remnants (Black Holes)
 When a massive body exhausts its internal structural buoyancy against the surrounding dark vacuum energy displacement field, it triggers gravitational collapse. The formation and stabilization of the resulting geometry proceed through seven definitive physical phases.
+
  * **Phase 1: Extreme Time Dilation and Boundary time freezing at the centre**
    As infalling matter accelerates toward the event horizon, it enters a region of maximum gravitational redshift (g_{tt} \to 0). For an external observer, coordinate time dilates exponentially relative to the proper time of the falling material:
-   The matter undergoes extreme time dilation, effectively freezing at the physical threshold.
+   The matter undergoes extreme time dilation, effectively freezing at the centre of the black hole time gradually slowes down when matter crosses the event horizon.
+
  * **Phase 2: Surface Manifold Transition**
    Because matter is structurally frozen by time dilation at the centre, the dynamics transition from volumetric space to a two-dimensional surface manifold. Matter settles across the physical surface area of the displaced field boundary.
+
  * **Phase 3: Geometric Surface Tension**
    This boundary layer possesses a macroscopic vacuum surface tension (\sigma) sustained by the geometry of the displacement field. As incoming matter adds localized energy-momentum gradients, the external geometry widens, expanding the horizon's total surface area outward.
+
  * **Phase 4: Acoustic-Geometric Marangoni Dynamics**
    The accumulation of matter creates intense kinetic energy and density gradients. Because vacuum surface tension drops where kinetic energy spikes, an Acoustic Marangoni effect triggers a surface shear-stress tensor:
    These geometric shear stresses compel infalling matter to flatten and align along the surface area of the interface, forming a highly structured accretion disc.
+ 
  * **Phase 5: Semiclassical Quantum Dissolution**
    According to quantum field theory in curved spacetime, the extreme tidal forces of the curved spacetime tensor (g_{\mu\nu}) separate virtual particle-antiparticle pairs near the horizon. Negative energy states cross the boundary, while positive energy escapes to infinity as thermal Hawking Radiation.
+
  * **Phase 6: Mass-Loss and Thermal Equilibrium**
    The black hole loses mass-energy at a rate dictated by the surface gravity (\kappa):
    As total mass (M) decreases, the geometric push weakens. The metric strains contract, and the horizon’s total surface area shrinks.
+
  * **Phase 7: Shadow Dissolution and Stable Remnant**
    As mass decreases, the visual shadow dissolves. Once the horizon shrinks to the scale of the inner core (r_{\text{core}} \approx 200\text{--}500\text{ km}), the structural geometry stabilizes. The outgoing radiation reaches thermal equilibrium with the surface tension of the remaining field, leaving a stable, non-singular remnant.
+
 ## VI. Geometrically Regulated Hydrostatic Equilibrium
 During dynamic flow conditions within compact structures, the radial balance of the fabric is strictly governed by the Geometrically Regulated Tolman-Oppenheimer-Volkoff (TOV) equation. It incorporates hydrostatic vacuum pressure P_{\text{DVE}}, baryonic pressure P_m, and viscous feedback fields:
 The effective encapsulated mass profile M_{\text{eff}}(r) structurally accounts for both the localized material overdensities and the background vacuum displacement field:
+
 ## VII. Empirical Validation & Simulation Results
 Logic Relativity 1.2 has been subjected to rigorous computational stress-testing against cosmological data, galactic rotation curves, and weak-field constraints.
+
 ### 1. Statistical Superiority (AIC & BIC)
 Evaluated against the standard \LambdaCDM model utilizing a combined dataset of ~8,500 points (SPARC, Planck, BAO). Logic Relativity yields strong statistical superiority even when penalizing for parameter space.
  * **\DeltaAIC:** +58.0 (Strong evidence favoring Logic Relativity)
  * **\DeltaBIC:** +15.7 (Favors Logic Relativity)
+
 ### 2. Resolution of Cosmological Tensions (H0 & S8)
 Advanced MCMC pipeline via CLASS (classy) utilizing observational data (H0_planck = 67.4, H0_sh0es = 73.04, S8_planck = 0.834, S8_kids = 0.759).
  * **Hubble (H_0) Tension Reduced To:** 0.14 \sigma
