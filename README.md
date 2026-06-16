@@ -148,19 +148,7 @@ Integration of the Modified TOV solver implementing internal displacement pressu
    * PPN \beta \approx 1.000000
    * **Conclusion:** Seamlessly recovers Standard General Relativity in local weak-field limits.
 
-# The Statistical Arrow of Time and the Past Hypothesis
-In Logic Relativity 1.2, we do not assign fluid-like properties, bulk viscosity, or thermal temperatures to the metric or the Dynamic Vacuum Energy (\phi_{\text{DVE}}). Instead, the macroscopic Arrow of Time is derived strictly through the lens of Boltzmann statistical mechanics as a consequence of the Past Hypothesis: the requirement that the universe began in an exceptionally low-entropy macrostate.
-1 Phase Space Volume and Boltzmann Entropy
-Consider the total phase space \Gamma of the cosmic system (the matter, radiation, and fields contained within the causal horizon). A macrostate M is defined by coarse-grained macroscopic observables, such as average energy density and cosmic volume. The volume of phase space corresponding to a specific macrostate M is denoted by \Omega(M). Following Boltzmann, the statistical entropy S of the macrostate is given by:
-The fundamental asymmetry of time does not originate from time-asymmetric dynamical laws; the underlying field equations and the metric evolution equations are invariant under the discrete time-reversal transformation t \to -t. Rather, it arises because the number of microstates corresponding to disordered, high-entropy macrostates vastly outnumbers those corresponding to ordered, low-entropy macrostates (\Omega(M_{\text{disordered}}) \gg \Omega(M_{\text{ordered}})).
-2 Geometric Phase Space Dilution via Space Expansion
-The dynamic evolution of the metric driven by the \phi_{\text{DVE}} field continuously alters the physical volume V(t) \propto a(t)^3 of the spatial hypersurface. As space expands, the maximum possible entropy bounds of the universe, S_{\text{max}}(t), scale dramatically due to the increasing phase-space volume available to the particles and the growing geometric horizon area:
-Because the dynamic vacuum energy drives cosmic expansion (H(t) > 0), the phase space capacity of the universe expands continuously. If the universe is initialized in a highly special, localized, low-entropy initial state (S(t_{\text{initial}}) \ll S_{\text{max}}), any random trajectory through phase space will, with overwhelming statistical probability, evolve into a larger macrostate volume \Omega(M) simply because there are more ways for matter and radiation to distribute themselves across a larger spatial arena.
-3 Strict T-Invariance Breaking
-Let the time derivative of the phase-space macrostate trajectory be dictated by the statistical transition probability P(M_1 \to M_2). For an expanding volume element V(t_2) > V(t_1) driven by the background metric evolution, the ratio of phase space volumes forces:
-Differentiating the Boltzmann entropy relation with respect to coordinate time yields a strictly positive statistical trend for a macro-observer:
-While micro-level interactions remain perfectly time-symmetric, a discrete macro-level time-reversal transformation (t \to -t) is statistically impossible on a cosmic scale. The probability of the universe spontaneously transitioning into a smaller phase-space macrostate volume goes to zero as e^{-\Delta S / k_B}.
-The macroscopic Arrow of Time is therefore a pure statistical consequence of the second law of thermodynamics: the expanding spatial metric—modeled by our MCMC pipeline to resolve the H_0 and S_8 tensions—acts as a continuous phase-space dilutor, ensuring that the future is mathematically defined as the direction of increasing phase space volume.
+
 
 
 
