@@ -44,6 +44,7 @@ As the mass continually decreases through Hawking radiation, the visual shadow o
  * data_results/mcmc_hubble_s8.txt
  * data_results/bullet_cluster_mcmc_summary.txt
  * data_results/aic_bic_comparison.txt
+
 # Logic Relativity 1.2: The Pure Geometric Field Theory of Vacuum Displacement
 ## I. The Fundamental Axioms and Unified Action
 Logic Relativity posits that the universe is underpinned by a fundamental, dynamic vacuum field, characterized as a dark vacuum energy displacement field, that constitutes the fabric of spacetime. Matter does not exist independently of this fabric; rather, it acts to displace this background medium. Celestial bodies warp this medium such that orbital systems and accretion discs represent localized matter resting upon the effective surface tension of the displacement field. Through this mechanism, matter dictates the geometric curvature of spacetime, and spacetime geometry dictates the geodesic motion of matter.
@@ -94,11 +95,11 @@ To map the macro-evolution of the universe, the four-dimensional pseudo-Riemanni
 **Condensation:** As the field drops through its steepest gradient, localized geometric gradients \nabla_\mu \psi \nabla_\nu \psi form. Excess vacuum energy decays via localized phase transitions (\rho_{\text{vac}} \to \rho_m + \rho_r). Highly localized topological distortions and metric condensates form the structural framework for complex mass systems out of twisted spacetime.
 ## V. Gravitational Collapse and Compact Remnants (Black Holes)
 When a massive body exhausts its internal structural buoyancy against the surrounding dark vacuum energy displacement field, it triggers gravitational collapse. The formation and stabilization of the resulting geometry proceed through seven definitive physical phases.
- * **Phase 1: Extreme Time Dilation and Boundary Freezing**
+ * **Phase 1: Extreme Time Dilation and Boundary time freezing at the centre**
    As infalling matter accelerates toward the event horizon, it enters a region of maximum gravitational redshift (g_{tt} \to 0). For an external observer, coordinate time dilates exponentially relative to the proper time of the falling material:
    The matter undergoes extreme time dilation, effectively freezing at the physical threshold.
  * **Phase 2: Surface Manifold Transition**
-   Because matter is structurally frozen by time dilation at the boundary layer, the dynamics transition from volumetric space to a two-dimensional surface manifold. Matter settles across the physical surface area of the displaced field boundary.
+   Because matter is structurally frozen by time dilation at the centre, the dynamics transition from volumetric space to a two-dimensional surface manifold. Matter settles across the physical surface area of the displaced field boundary.
  * **Phase 3: Geometric Surface Tension**
    This boundary layer possesses a macroscopic vacuum surface tension (\sigma) sustained by the geometry of the displacement field. As incoming matter adds localized energy-momentum gradients, the external geometry widens, expanding the horizon's total surface area outward.
  * **Phase 4: Acoustic-Geometric Marangoni Dynamics**
