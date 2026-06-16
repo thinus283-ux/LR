@@ -1,5 +1,9 @@
-The universe in Logic relativity 
+      # Logic relativity
 
+Author: Thinus Pieterse 
+     
+           # Abstract 
+           
 Dark energy is the fabric of space time matter displaces the field through M celestial bodies with disc revolving around them is matter that's laying on the surface tention of the displacement field matter tells space time how to curve and space time tell matter how to move through geometry bigger bodies of M tells smaller bodies of mass how to move through gravity and motion the vacuum of space time is caused by expansion of the dark energy the field expands in one direction while gravity pulls in the opposite direction creating the vacuum we all know as stars loose their buoyancy and burns up their energy they become black holes we all know how this process goes
 
  "A massive body of mass \(M\) undergoes gravitational collapse when its internal pressure can no longer counteract its own self-gravity. As the matter collapses, it leaves behind an empty vacuum region of extreme spacetime curvature governed by the Schwarzschild metric. The boundary of this region forms the event horizon, a null hypersurface from which nothing can escape. If the collapsing mass possesses angular momentum, it twists the surrounding spacetime fabric through frame-dragging and non-zero spacetime torsion. As the black hole accretes more mass, the event horizon expands, widening the Schwarzschild radius and severely warping the external geometry, causing surrounding matter to rush inward along curved geodesics.
