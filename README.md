@@ -144,7 +144,7 @@ Integration of the Modified TOV solver implementing internal displacement pressu
    * PPN \beta \approx 1.000000
    * **Conclusion:** Seamlessly recovers Standard General Relativity in local weak-field limits.
 
-## 🌌 Speculative Subsection for curious viewers: The Microphysical Unified Quantum Gravity Framework## An Exploratory Non-Singular, Self-Regulating Deterministic Engine on a Riemann-Cartan Manifold (U₄)
+## 🌌 Speculative Subsection for curious viewers not part of the core Thoery: The Microphysical Unified Quantum Gravity Framework## An Exploratory Non-Singular, Self-Regulating Deterministic Engine on a Riemann-Cartan Manifold (U₄)
 
 ## 1. The Core Action and Global Fields
 To escape the ad hoc pitfalls of standard modified gravity, we define a unified action where the geometric spacetime metric $g_{\mu\nu}$, a dynamical torsion tensor $T^\lambda_{\;\;\mu\nu}$ natively present on a Riemann-Cartan manifold (U₄), and a dilatonic scalar field φ couple directly to a Unified Dark Fluid (Ψ).
@@ -181,14 +181,14 @@ The matter undergoes a strict thermodynamic phase transition into a Quark-Gluon 
 The energy-momentum tensor of this core is no longer governed by classical stellar dust, but by the relativistic Standard Model QCD plasma:
 $$T^{\mu\nu}_{\text{QGP}} = (\rho_{\text{QGP}} + P_{\text{QGP}})u^\mu u^\nu + P_{\text{QGP}} g^{\mu\nu} - 2\eta \sigma^{\mu\nu}$$ 
 Where η is the shear viscosity. Because QGP approaches the holographic lower bound of shear viscosity ($\eta/s \approx \hbar / 4\pi k_B$), it acts as a near-perfect quantum fluid, providing a physical structural medium for our viscoelastic spacetime connection.
-------------------------------
+
 ## 4. Gravitational Compression of the Darkness (The Non-Linear Feedback)
 Because the QGP core possesses immense energy density, it alters the local spacetime metric via the field equations. To prevent ad hoc claims of field compression, we explicitly derive the coupling using the Equivalence Principle: the plasma's energy density gravitationally attracts and compresses the background vacuum field.
 The field equation for the dilatonic vacuum field φ (the physical darkness) becomes:
 $$\Box \phi + \frac{dV(\phi)}{d\phi} = \beta(g) \cdot T^\mu_{\;\;\mu \text{ (QGP)}}$$ 
 Where $\Box \equiv g^{\mu\nu}\nabla_\mu\nabla_\nu$ is the D'Alembertian operator, and $T^\mu_{\;\;\mu \text{ (QGP)}} = \rho_{\text{QGP}} c^2 - 3P_{\text{QGP}}$ is the trace of the plasma tensor.
 As the QGP core condenses, $T^\mu_{\;\;\mu}$ spikes. This acts as a massive localized source term that forces the field lines of φ to bunch up, stack, and compress directly within the 200--500 km boundary layer.
-------------------------------
+
 ## 5. Temporal Regulation: The Time-Dilation Buffer
 As the field compresses, the metric component g₀₀ approaches extreme values. The proper time element dτ for an observer inside the core relative to an external coordinate observer dt is given by:
 $$d\tau = \sqrt{-g_{00}(r, \phi)} \, dt$$ 
