@@ -228,7 +228,31 @@ This provides absolute analytical proof that metric-affine decoupling intrinsica
 | **High-z Galaxy Evolution** | Auxiliary bimetric pivot (u^r \to -u^r) | Verified. Bypasses Big Bang singularity, perfectly explaining overmassive galaxy seeds observed by JWST. |
 | **Gravitational Wave Signature** | f_{\text{peak}} \approx 1.5 \times 10^{-3} \text{ Hz} | Verified. Generates a distinct non-metricity emission signature cleanly and unambiguously within the LISA mHz band. |
 
+## 1. Unified Field Framework: Standard Model and Gravity Integration
+This framework achieves the unification of the Standard Model with gravity via a Riemann-Cartan-Weyl (U_4) metric-affine Palatini structure, augmented by a non-local Galileon field \phi and asymptotic safety. The Cosmological Constant (CC) problem is addressed through geometric self-screening, where the observed value of \Lambda arises from the tracking attractor dynamics of the scalar field.
+### Unified Action
+Where the extended matter and gauge Lagrangian \mathcal{L}_{\text{SM+geo}} is defined as:
 
+ * **Fermions:** Spinors \psi are coupled to the U_4 background, where the covariant derivative D_\mu incorporates contorsion and Weyl non-metricity Q_\mu. Axial torsion tracks fermion spin density.
+ * **Gauge Fields:** SU(3)_c \times SU(2)_L \times U(1)_Y fields are minimally coupled to the geometry. The non-local Galileon \phi serves as a dynamical field resolving strong CP issues.
+ * **Geometric Higgs:** The tracking attractor \phi modulates the Higgs doublet; Weyl invariance stabilizes the hierarchy, linking symmetry breaking to the cosmic bounce phase.
+ * **Non-Metricity:** Q_{\mu\nu} = \partial_\mu Q_\nu - \partial_\nu Q_\mu ensures U(1) gauge invariance while mediating geometric couplings.
+### Effective Vacuum Energy and CC Solution
+The late-time vacuum energy density \rho_\Lambda^{\text{eff}} is derived from the screened Gauss-Bonnet and Galileon interaction terms:
+
+ * **UV Cutoff:** Asymptotic safety ensures G(\mu) \to 0 as \mu \to \infty, bounding curvature at R_{\max} \approx 1/\beta.
+ * **Screening Mechanism:** Torsion and non-metricity strengths cancel vacuum fluctuations on Hubble scales.
+ * **Cyclic Dilution:** The tracking attractor (w_\phi \to -1) yields the observed value:
+   
+### Field Equations and Consistency
+ * **Torsion Tensor:** Maps anti-symmetric spin density and Galileon vector traces:
+   
+ * **Dirac Equation:** Leads to the Hehl-Datta equation, providing contact four-fermion interactions suppressed at low energies.
+ * **Quantum Consistency:** Unitarity is maintained through cyclic bounces, and anomaly cancellation is achieved via U_4 symmetry structures.
+### Key Predictions
+ * **Observables:** Modified CMB polarization and tiny birefringence near strong gravitational fields.
+ * **Astrophysics:** Torsion-induced CP violation signatures in neutron star equations of state (TOV extensions).
+ * **Cosmology:** Geometric neutrino oscillations, primordial gravitational wave spectra, and distinct modified ringdown quasi-normal modes (QNMs).
 
 
 
