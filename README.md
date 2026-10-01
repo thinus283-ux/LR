@@ -1,262 +1,148 @@
-Logic Relativity — Unified Continuum (LR-UC)
-LR-UC v3.2.1 — Peer-Review / Reproducibility Release
-Author: Thinus Pieterse
-Date: 1 October 2026
-Scope: 4D Einstein gravity + conserved relativistic UC continuum + closed effective IR response
-�
-What this repository is
-LR-UC is a research framework in which the dark-matter sector is represented by one conserved relativistic material continuum described by three comoving scalar fields
-[ \Phi^A(x^\mu),\qquad A=1,2,3, ]
-while the gravitational sector remains ordinary four-dimensional Einstein gravity.
-The working ontology is
-[ \boxed{ \text{4D Einstein geometry} + \text{baryons} + \text{one conserved UC continuum} + \Lambda. } ]
-The continuum is the dark-matter sector. (\Lambda) is dark energy.
-The framework deliberately does not introduce:
-a fifth spacetime dimension;
-a direct baryon–continuum fifth force;
-a modified Einstein tensor;
-galaxy-specific NFW concentration/scale/truncation parameters;
-a hand-imposed halo cutoff;
-a fundamental MOND/RAR interpolation law.
-The central chain
-[ \boxed{ \text{baryonic matter} \rightarrow \text{Einstein geometry} \rightarrow \text{UC deformation / phase-space organization} \rightarrow T_{\mu\nu}^{\rm UC} \rightarrow \text{Einstein geometry}. } ]
-The galactic halo is interpreted as a self-gravitating phase-space-organized overdensity of the same universe-filling UC continuum.
-The intended formation sequence is
-[ \boxed{ \text{cosmological UC} \rightarrow \text{gravitational organization} \rightarrow \text{UC self-gravity} \rightarrow \text{energy + angular-momentum sorting} \rightarrow \text{extended bound population} \rightarrow \text{diffuse overdensity} \rightarrow \rho_{\rm UC,0}. } ]
-Angular momentum is not treated as an outward force; energy and angular momentum jointly determine the orbital population.
-1. Fundamental equations
-The action is
-[ S=S_{\rm EH}+S_b+S_{\rm UC}+S_\Lambda ]
+Logic Relativity - Dark Continuum (LR-DC)
+Overview
+Logic Relativity - Dark Continuum (LR-DC) is a 4D relativistic dark-sector framework in which one conserved, universe-filling continuum is described microscopically by three comoving scalar material coordinates Phi^A(x^mu), A=1,2,3.
+The gravitational field remains an Einstein metric g_mu_nu. Ordinary baryons couple minimally to that metric. The dark continuum does not introduce a fifth dimension and does not exert a direct baryon fifth force.
+The central physical chain is:
+baryonic stress-energy -> spacetime geometry -> DC displacement/deformation -> DC stress-energy -> spacetime geometry
+The same ontology is intended to cover:
+clustered/cold DC, behaving as a dark-matter-like component;
+diffuse/expanding DC, intended to provide a dark-energy-like effective stress.
+The second regime remains a derivation problem.
+Fundamental action
+S = S_EH + S_b + S_DC + S_Lambda
+S_EH = (c^3/16 pi G) integral sqrt(-g) R d^4x
+S_DC = - integral sqrt(-g) epsilon_DC(b,Q) d^4x
 with
-[ S_{\rm EH}
-\frac{c^3}{16\pi G} \int d^4x,\sqrt{-g},R ]
+epsilon_DC = rho_0 c^2 b + W_def(Q) + W_P(b).
+Material geometry:
+B^{AB}=g^{mu nu} partial_mu Phi^A partial_nu Phi^B
+C^A_B=gamma_BC B^{AC}
+b=sqrt(det C)
+Conserved current:
+J^mu=(1/3!) epsilon^{mu nu rho sigma} epsilon_ABC partial_nu Phi^A partial_rho Phi^B partial_sigma Phi^C
+with nabla_mu J^mu=0.
+Objective deformation
+Cbar=b^(-2/3) C, S=(1/2) ln Cbar, Q=Tr(S^2) >= 0.
+The representative local deformation energy is
+W_def = mu_0 q_0^2 [sqrt(1+Q/q_0^2)-1],
+with mu_0=4e-16 and q_0=1e-3. A positive Planck-density regulator is retained for UV control only.
+Homogeneous cosmology
+For FLRW:
+b=a^-3, Q=0, rho_DC=rho_DC,0 a^-3, p_DC=0.
+Thus
+H^2=(8 pi G/3)(rho_r+rho_b+rho_DC)+Lambda c^2/3.
+The derived characteristic acceleration scale is
+a_LR=c sqrt(G rho_DC,0).
+For rho_DC,0 about 2.30e-27 kg m^-3, a_LR is about 1.17e-10 m s^-2.
+Spherical deformation and the r^-2 branch
+For r=r(R):
+b=R^2/(r^2 r'),
+delta=ln[r/(Rr')],
+Q=(2/3)delta^2.
+The spherical stress equations are
+p_r=bW_b-W+(4/3)delta W_Q,
+p_t=bW_b-W-(2/3)delta W_Q,
+dp_r/dr+(2/r)(p_r-p_t)=-rho_DC g,
+dg/dr+2g/r=4 pi G(rho_b+rho_DC).
+Assuming r=C R^n and requiring rho_DC proportional to r^-2 gives n=3, hence an admissible similarity solution with rho_DC proportional to r^-2 and V_c^2 approximately constant.
+Galaxy scaling
+r_* = sqrt(G M_b/a_LR),
+v_* = (G M_b a_LR)^(1/4).
+For M_DC(<r)/M_b approximately A r/r_*,
+V_f^2=A sqrt(G M_b a_LR),
+V_f^4=A^2 G M_b a_LR.
+This is the mathematical route to a BTFR-type fourth-power scaling.
+Collective IR response
+An effective polarization is introduced as a coarse-grained description:
+rho_DC = rho_mono - div(P_DC).
+With p=4 pi G P/a_LR, the effective energy used in the galaxy diagnostics is
+W_IR = a_LR^2/(4 pi G) [p^2/2 + p^3/(3 chi) + alpha_IR p^5/(5 chi)].
+Variation gives
+g_N/a_LR = (p^2+alpha_IR p^4)/chi.
+This relation is monotonic on the physical branch. Its microscopic derivation remains an open calculation.
+SPARC
+The SPARC sample contains 175 galaxies. The current numerical calibration uses
+V_b^2=V_gas^2+0.5 s_g V_disk^2+0.7 s_g V_bul^2.
+Representative population results:
+alpha_IR about 0.3009683
+RMS about 10.55 km/s
+MAE about 6.09 km/s
+reduced chi^2 about 4.45
+median s_g about 0.88
+median chi_g about 0.67
+These are empirical calibration quantities, not fundamental constants.
+DDO 161
+At 13.37 kpc:
+V_obs=66.1 km/s; V_b about 29.42 km/s; V_DC,required about 59.19 km/s.
+Required enclosed DC mass is about 1.089e10 solar masses. A simplified cored diagnostic gives about 1.114e10 solar masses, a difference of about 2.3 percent.
+N-body formation
+The corrected cosmological equations are
+abla_x^2 Phi=4 pi G a^2 delta rho,
+dv/dt+Hv=-(1/a) grad_x Phi+a_baryon,phys,
+dt=da/(aH), dx/dt=v/a.
+Corrected N=2048, 48^3 runs with seed amplitudes 0.3, 1 and 3 produce late-time regions close to the intended similarity:
+Seed
+d ln rho/d ln r
+d ln Vc^2/d ln r
+0.3
+-2.0007
++0.0075
+1.0
+-2.0105
++0.0371
+3.0
+-2.0166
+-0.0160
+Higher-resolution calculations show the same qualitative structure. The physical normalization, full convergence and relaxed phase-space state are not yet determined.
+CMB and early universe
+Representative background values:
+H0=67.4 km/s/Mpc, Omega_m=0.315, Omega_b h^2=0.02237, N_eff=3.046, Omega_DC about 0.266, r_s about 144.27 Mpc, D_M about 13.86 Gpc, 100 theta_* about 1.0406.
+Compressed CMB diagnostics include R about 1.74943, ell_A about 301.928, Omega_b h^2=0.022370 and chi^2 about 6.08 for 3 degrees of freedom.
+BBN estimates at z about 1e9 give rho_DC/rho_r about 2.93e-6, Delta H/H about 1.46e-6 and Delta N_eff about 2.18e-5.
+The full TT/TE/EE spectra, high-l damping tail, CMB lensing reconstruction and complete isocurvature constraints are currently unknown because the full Boltzmann implementation has not yet been completed.
+Lensing and local gravity
+For the spherical r^-2 regime:
+Sigma(b)=V_f^2/(4Gb), kappa=gamma_t=V_f^2/(4Gb Sigma_crit), alpha_hat=2 pi V_f^2/c^2.
+The same Einstein stress-energy produces both dynamics and lensing. A dedicated Bullet Cluster / merger simulation is currently unknown.
+The galaxy-scale two-scale polarization filter strongly suppresses the response at AU scales. A complete PPN audit remains unknown.
+Microscopic bridge
+The bridge seeks to derive the collective IR potential from the original three-scalar action. For a spherical radial mode, define a critical configuration r_c by delta E/delta r=0 and a zero mode H phi=0. Expanding
+r=r_c+q phi+y, y=q^2 y_2+...
+gives
+y_2=-(1/2) H_perp^(-1) E_3[phi,phi,.]
 and
-[ S_{\rm UC}
--\int d^4x,\sqrt{-g} \left[ \rho_0c^2b+W_{\rm def}(Q)+W_P(b) \right]. ]
-The material metric is
-[ B^{AB}
-g^{\mu\nu} \partial_\mu\Phi^A\partial_\nu\Phi^B. ]
-The conserved material current is
-[ J^\mu
-\frac1{3!} \epsilon^{\mu\nu\rho\sigma} \epsilon_{ABC} \partial_\nu\Phi^A \partial_\rho\Phi^B \partial_\sigma\Phi^C, \qquad \nabla_\mu J^\mu=0. ]
-Define
-[ b=\sqrt{\det C}, \qquad \bar C=b^{-2/3}C, \qquad S=\frac12\ln\bar C, \qquad Q={\rm Tr}(S^2)\ge0. ]
-The representative microscopic deformation law is
-[ W_{\rm def}
-\mu_0q_0^2 \left[ \sqrt{1+\frac{Q}{q_0^2}}-1 \right], ]
-with
-[ \mu_0=4\times10^{-16}, \qquad q_0=10^{-3}. ]
-The positive Planck-density term is a UV regulator only.
-2. Cosmological cold branch
-Homogeneous FLRW gives
-[ b=a^{-3}, \qquad Q=0, ]
-and therefore
-[ \boxed{ \rho_{\rm UC}\propto a^{-3}, \qquad p_{\rm UC}=0. } ]
-The background equation is
-[ H^2= \frac{8\pi G}{3} (\rho_r+\rho_b+\rho_{\rm UC}) + \frac{\Lambda c^2}{3}. ]
-The present UC density defines
-[ \boxed{ a_{\rm LR}=c\sqrt{G\rho_{\rm UC,0}} \simeq1.1746\times10^{-10}\ {\rm m,s^{-2}}. } ]
-3. Weak-field phase space
-The exact flow-map construction gives
-[ f(\mathbf x,\mathbf v,t)
-\int d^3q,\rho_0(\mathbf q) \delta^3[\mathbf x-\mathbf X(\mathbf q,t)] \delta^3[\mathbf v-\dot{\mathbf X}(\mathbf q,t)]. ]
-On galactic weak-field scales,
-[ \partial_tf + \mathbf v\cdot\nabla_xf
-\nabla\Psi\cdot\nabla_vf=0, ]
-[ \nabla^2\Psi
-4\pi G(\rho_b+\rho_{\rm UC}). ]
-The halo therefore has a genuine phase-space state
-[ f(E,L_z,L). ]
-4. Galactic effective response
-The collective polarization is a coarse-grained observable of the same UC material degrees of freedom:
-[ P_{\rm UC}
-\bar\rho_{\rm UC}(\xi_\ell-\xi_L). ]
-Define
-[ p=\frac{4\pi GP_{\rm UC}}{a_{\rm LR}}. ]
-The current closed infrared energy is
-[ \boxed{ W_{\rm IR}
-\frac{a_{\rm LR}^2}{4\pi G} \left[ \frac{p^2}{2} + \frac{p^3}{3\chi} + \frac{\alpha_{\rm IR}p^5}{5\chi} \right]. } ]
-Its response is
-[ \boxed{ g=g_N+a_{\rm LR}p, } ]
-[ \boxed{ \frac{g_N}{a_{\rm LR}}
-\frac{p^2+\alpha_{\rm IR}p^4}{\chi}. } ]
-The physical branch is
-[ p^2= \frac{ \sqrt{1+4\alpha_{\rm IR}\chi g_N/a_{\rm LR}}-1 }{ 2\alpha_{\rm IR} }. ]
-The effective sector is convex on the physical branch and the solution is single-valued.
-5. Deep and high-acceleration limits
-Deep infrared:
-[ \boxed{ g\simeq\sqrt{\chi a_{\rm LR}g_N}. } ]
-High acceleration:
-[ \boxed{ \frac{g-g_N}{g_N} \sim \left( \frac{\chi}{\alpha_{\rm IR}} \right)^{1/4} \left( \frac{a_{\rm LR}}{g_N} \right)^{3/4} \rightarrow0. } ]
-For a spherical baryon-dominated source:
-[ g_{\rm P}
-\frac{\sqrt{\chi GM_ba_{\rm LR}}}{r}, ]
-[ \rho_{\rm P}
-\frac{\sqrt{\chi GM_ba_{\rm LR}}}{4\pi Gr^2}, ]
-and
-[ \boxed{ V_f^4=\chi GM_ba_{\rm LR}. } ]
-The (r^{-2}) branch is an intermediate nonlinear regime, not the final (r\to\infty) law.
-6. Finite-mass outer halo
-The actual density must be written
-[ \rho_{\rm UC}(r)
-\rho_{\rm UC,0} + \delta\rho_{\rm UC}(r), ]
-with
-[ \delta\rho_{\rm UC}\rightarrow0 ]
-and
-[ \boxed{ 4\pi\int_0^\infty [\rho_{\rm UC}(r)-\rho_{\rm UC,0}]r^2dr<\infty. } ]
-The required structure is
-[ \boxed{ \text{inner nonlinear} \rightarrow r^{-2}\text{ intermediate} \rightarrow \text{phase-space transition} \rightarrow \rho_{\rm UC,0}. } ]
-There is no hand-imposed (r_{\rm cut}).
-For a weak-binding population
-[ \delta f\propto\mathcal E^n, ]
-one obtains
-[ \delta\rho\propto\psi^{n+3/2}. ]
-A Kepler-like infinite tail has finite excess mass when
-[ n>\frac32. ]
-A finite binding separatrix gives a smooth outer law
-[ \delta\rho\propto (r_{\rm tr}-r)^{n+3/2}. ]
-7. Current empirical SPARC calibration
-The repository contains a derived 175-galaxy / 3391-point calibration input table.
-The baseline baryonic model is
-[ V_b^2
-V_{\rm gas}^2 + 0.5s_gV_{\rm disk}^2 + 0.7s_gV_{\rm bul}^2. ]
-The current rerun gives
-[ \boxed{\alpha_{\rm IR}=0.3009683} ]
-with
-RMS = (10.54648\ {\rm km,s^{-1}})
-MAE = (6.09252\ {\rm km,s^{-1}})
-reduced (\chi^2=4.44750)
-median (s_g=0.88024)
-median (\chi_g=0.66706)
-geometric-mean (\chi_g=0.52056)
-residual-vs-acceleration correlation (r=0.00682).
-The earlier (\alpha_{\rm IR}\simeq0.30099) result is therefore reproducible.
-8. Baryonic-systematics diagnostic
-A separate diagnostic adds one universal gas normalization
-[ V_b^2= \eta_gV_{\rm gas}^2 + 0.5s_gV_{\rm disk}^2 + 0.7s_gV_{\rm bul}^2. ]
-The diagnostic gives approximately
-[ \eta_g=0.40039, \qquad \alpha_{\rm IR}=0.43805, ]
-with
-RMS = (10.37876\ {\rm km,s^{-1}})
-MAE = (5.91569\ {\rm km,s^{-1}})
-reduced (\chi^2=4.19520).
-This branch is not adopted. It is retained solely to quantify the degree to which baryonic-systematic freedom can absorb residuals.
-9. Formation status
-The decisive microscopic formation problem remains unresolved.
-Existing formation tests did not establish a universal converged (r^{-2}) attractor. This is explicitly retained as a negative/YELLOW result.
-The repository therefore does not claim that the microscopic (\Phi^A) dynamics have already derived:
-the universal halo normalization (\chi);
-the full (f(E,L_z,L));
-the (r^{-2}) formation attractor;
-the smooth finite-mass outer transition.
-Those remain falsifiable targets.
-10. Phase-space control test
-A lowered-isothermal control with (W_0=16) is included solely as a numerical/mathematical unit test.
-It gives:
-[ \langle d\ln\rho/d\ln r\rangle\simeq-2.029 ]
-over an approximately 1.03-dex interval,
-[ \langle d\ln V_c^2/d\ln r\rangle\simeq0.016, ]
-finite excess mass, and a near-separatrix exponent
-[ 2.534\approx\frac52. ]
-This is a control calculation, not a new LR-UC constitutive assumption.
-11. What is established vs unresolved
-GREEN
-4D Einstein geometry
-three-scalar conserved continuum
-cold FLRW branch
-objective deformation invariant
-spherical material reduction
-corrected IR response algebra
-response convexity and uniqueness
-analytical BTFR relation
-spherical same-source lensing relation
-background BBN/CMB-scale checks
-reproducible SPARC calibration
-phase-space outer-transition control benchmark
-YELLOW
-microscopic derivation of the effective (W_{\rm IR})
-microscopic prediction of (\alpha_{\rm IR})
-nonlinear prediction of (\chi_g)
-formation of the (r^{-2}) regime
-cosmological capture/assembly history
-fully derived finite-mass outer transition
-3D (f(E,L_z,L))
-exact TT/TE/EE spectra
-nonlinear matter power spectrum
-cluster/merger lensing
-full nonlinear hyperbolicity/stability
-RED / REMOVED
-fifth dimension
-direct fifth force
-automatic bounce
-negative-energy UV branch
-hand-inserted RAR interpolation
-hard halo cutoff
-NFW-like galaxy-specific truncation parameters
-phenomenological response lag
-quartic fold as the microscopic (p^5) completion
-local 114-pc gradient as the final IR law
-12. Reproduce everything
-Create an environment:
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-Run the full calibration:
-PYTHONPATH=src python scripts/calibrate_sparc.py
-Run the phase-space control:
-PYTHONPATH=src python scripts/run_phase_space_benchmark.py
-Run unit tests:
-PYTHONPATH=src pytest -q
-The current tests cover:
-physical response root;
-deep infrared normalization;
-high-acceleration recovery;
-BTFR identity.
-13. Repository structure
-LR-UC-v3.2.1/
-├── README.md
-├── CITATION.cff
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE_NOTE.md
-├── pyproject.toml
-├── requirements.txt
-├── .github/
-│   └── workflows/
-│       └── tests.yml
-├── src/
-│   └── lr_uc/
-│       ├── __init__.py
-│       ├── response.py
-│       └── calibration.py
-├── scripts/
-│   ├── calibrate_sparc.py
-│   ├── run_phase_space_benchmark.py
-│   └── run_all_checks.py
-├── tests/
-│   └── test_response.py
-├── docs/
-│   ├── THEORY.md
-│   ├── REPRODUCIBILITY.md
-│   ├── SCIENTIFIC_STATUS.md
-│   └── REVIEW_RESPONSE.md
-├── paper/
-│   ├── main.tex
-│   └── references.bib
-├── data/
-│   └── derived/
-│       ├── README.md
-│       └── SPARC_175_pointwise_input.csv
-└── results/
-    ├── calibration/
-    ├── formation/
-    ├── figures/
-    └── NEW_RUN_REPORT.md
-14. Scientific standard for this release
-The repository explicitly separates:
-[ \boxed{ \text{fundamental theory} \neq \text{effective closure} \neq \text{empirical calibration} \neq \text{unresolved formation prediction}. } ]
-A successful fit is not presented as proof of microscopic derivation.
-A mathematical asymptotic solution is not presented as proof of dynamical formation.
-A lower-(\chi^2) nuisance branch is not silently adopted.
-A failed numerical experiment remains a failed test.
-That is the reproducibility standard of this branch.
+U_qqqqq=E_5[phi^5]+15E_3[phi,w,w]-10E_4[phi,phi,phi,w],
+where w=H_perp^(-1)E_3[phi,phi,.].
+For the fold convention p=2 lambda_p s,
+m_5/(kappa lambda_p^2)=-8 alpha_IR.
+With alpha_IR=0.3009683, this target is approximately -2.4077464. The algebraic reduction is available; the physical critical configuration, zero mode and lambda_p from the microscopic action remain unknown.
+Test map
+Analytically established
+conserved three-scalar current
+cold homogeneous branch
+spherical reduction
+r^-2 similarity solution and flat-Vc consequence
+phase-space representation
+outer separatrix mathematics
+standard-GR lensing formulas
+Numerically supported
+SPARC 175-galaxy calibration
+DDO 161 diagnostic
+corrected N-body similarity over tested seeds
+multistream formation in cold-sheet tests
+compressed CMB/background checks
+early-universe estimates
+strong local scale separation of the collective filter
+Unknown
+full TT/TE/EE Boltzmann spectra
+CMB lensing reconstruction
+Bullet Cluster / merger simulation
+complete PPN / solar-system audit
+full nonlinear Einstein-DC stability
+microscopic derivation of W_IR
+first-principles alpha_IR and chi_form
+fully relaxed phase-space normalization
+derived diffuse dark-energy branch
+Development rule
+derive -> solve -> compare -> calibrate only where justified -> re-test
+The goal is to make every empirical input traceable and every unresolved prediction explicit.
